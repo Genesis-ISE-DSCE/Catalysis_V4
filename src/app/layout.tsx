@@ -3,8 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer"; // 1. Import the component
 import "./globals.css";
-// add footer
-import Footer from "@/components/layout/Footer";
 import PokeCursor from "@/components/ui/Pokecursor";
 
 const geistSans = Geist({

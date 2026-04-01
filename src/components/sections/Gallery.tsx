@@ -86,16 +86,12 @@ export default function Gallery() {
             </div>
 
             <div className="mb-8">
-              <Image
-                src="/gallery-heading.png"
-                alt="Moments from the Past"
-                width={600}
-                height={120}
-                className="object-contain w-[80%] md:w-auto mx-auto"
-              />
+              <h1 className="font-gliker font-medium text-[34px] sm:text-[42px] md:text-[52px] leading-[1.08] tracking-[-0.005em] text-[#3A001D] max-w-[650px]">
+                Moments from the Past
+              </h1>
             </div>
 
-            <p className="text-[#3b0a1e] font-medium text-base md:text-xl max-w-2xl leading-relaxed">
+            <p className="text-[#3b0a1e] font-nunito text-base md:text-xl max-w-2xl leading-relaxed">
               Explore a detailed look at our past events and experience the vibrant energy that truly defines Catalysis, showcasing the passion and innovation that drive our community forward.
             </p>
           </div>

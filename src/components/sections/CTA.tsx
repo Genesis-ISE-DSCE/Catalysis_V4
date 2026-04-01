@@ -31,17 +31,13 @@ export default function CTA() {
               />
             </div>
             <div className="hidden md:block">
-              <Image
-                src="/last/heading.png"
-                alt="Ready to Be Part of Catalysis?"
-                width={800}
-                height={176}
-                className="max-w-full h-auto"
-              />
+              <h1 className="font-gliker font-semibold text-[34px] sm:text-[42px] md:text-[62px] leading-[1.08] tracking-[-0.005em] text-white max-w-[650px]">
+                Ready to Be Part of Catalysis?
+              </h1>
             </div>
           </div>
 
-          <p className="mb-12 text-lg md:text-xl font-medium opacity-100 max-w-xl">
+          <p className="mb-12 text-lg md:text-xl font-nunito opacity-100 max-w-xl">
             Don&apos;t miss your chance to innovate, compete, and win.
           </p>
 
@@ -62,7 +58,7 @@ export default function CTA() {
                 bg-white text-black
                 font-black tracking-widest uppercase
                 px-14 md:px-20 py-4 md:py-5
-                rounded-3xl
+                rounded-3xl cursor-pointer
                 border-[3px] border-black
                 transition-transform duration-150
                 group-hover:-translate-y-1

@@ -18,7 +18,7 @@ export default function Navbar() {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); 
+      setIsOpen(false);
     }
   };
 
@@ -26,15 +26,12 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
 
+        {/* LOGO */}
         <div className="cursor-pointer" onClick={() => handleScroll("hero")}>
-          <Image
-            src="/catalysis.png"
-            alt="Catalysis"
-            width={110}
-            height={45}
-          />
+          <Image src="/catalysis.png" alt="Catalysis" width={110} height={45} />
         </div>
 
+        {/* DESKTOP NAV */}
         <div className="hidden md:flex gap-8 font-medium">
           {navItems.map((item) => (
             <button
@@ -47,20 +44,17 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* DESKTOP BUTTON */}
         <div
           className="hidden md:block cursor-pointer"
           onClick={() => handleScroll("cta")}
         >
-          <Image
-            src="/nav-register-now.png"
-            alt="Register"
-            width={110}
-            height={50}
-          />
+          <Image src="/nav-register-now.png" alt="Register" width={110} height={50} />
         </div>
 
+        {/* HAMBURGER */}
         <div
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer z-50"
+          className="md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer z-[60]"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span
@@ -81,35 +75,53 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* 🔥 MOBILE OVERLAY MENU */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[#FFEEF0] shadow-lg transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-[400px] py-6" : "max-h-0"
+        className={`md:hidden fixed inset-0 bg-[#FFEEF0]/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 transition-all duration-300 z-50 ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col items-center gap-6 font-medium">
+        {/* NAV ITEMS */}
+        <div className="flex flex-col items-center gap-8">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleScroll(item.id)}
-              className="text-lg hover:text-red-500 transition"
+              className="
+                font-gliker
+                text-[24px]
+                tracking-[-0.01em]
+                text-[#3A001D]
+                hover:scale-110
+                transition
+              "
             >
               {item.label}
             </button>
           ))}
-
-
-          <div
-            className="cursor-pointer mt-2"
-            onClick={() => handleScroll("cta")}
-          >
-            <Image
-              src="/nav-register-now.png"
-              alt="Register"
-              width={120}
-              height={60}
-            />
-          </div>
         </div>
+
+        {/* CTA BUTTON */}
+        <button
+          onClick={() => handleScroll("cta")}
+          className="
+            mt-4
+            bg-[#E63946]
+            text-white
+            px-6 py-3
+            rounded-full
+            border-2 border-black
+            shadow-[3px_3px_0px_black]
+            font-semibold
+            hover:scale-105
+            active:scale-95
+            transition
+          "
+        >
+          Register Now
+        </button>
       </div>
     </nav>
   );
