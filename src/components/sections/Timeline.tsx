@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Container from "@/components/common/Container";
-import SectionHeader from "@/components/common/SectionHeader";
+// import SectionHeader from "@/components/common/SectionHeader";
 import { useState } from "react";
 
 const timeline = [
@@ -16,7 +16,7 @@ const timeline = [
       time: "10:15 - 12:30",
       title: "Technoseek",
       type: "event",
-      pokemon: "venusaur",
+      pokemon: "venusaur.svg",
       description: "Your journey to becoming a champion begins now.",
     },
     {
@@ -28,7 +28,7 @@ const timeline = [
       time: "01:30 - 03:30",
       title: "Typemaster",
       type: "event",
-      pokemon: "wartortle",
+      pokemon: "wartortle.png",
       description: "Your journey to becoming a champion begins now.",
     },
     {
@@ -40,7 +40,7 @@ const timeline = [
       time: "02:30 - 03:30",
       title: "Coding Relay",
       type: "event",
-      pokemon: "charmeleon",
+      pokemon: "charmeleon.svg",
       description: "Your journey to becoming a champion begins now.",
     },
   ],
@@ -50,7 +50,7 @@ const timeline = [
       time: "10:15 - 12:30",
       title: "DSA Challenge",
       type: "event",
-      pokemon: "charmeleon",
+      pokemon: "charmeleon.svg",
       description: "Your journey to becoming a champion begins now.",
     },
     {
@@ -62,7 +62,7 @@ const timeline = [
       time: "01:30 - 03:30",
       title: "Valorant",
       type: "event",
-      pokemon: "wartortle",
+      pokemon: "wartortle.png",
       description: "Enter the battlefield.",
     },
     {
@@ -74,7 +74,7 @@ const timeline = [
       time: "01:30 - 03:30",
       title: "Coding Relay (Final)",
       type: "event",
-      pokemon: "charmeleon",
+      pokemon: "charmeleon.svg",
       description: "Your journey to becoming a champion begins now.",
     },
   ],
@@ -84,7 +84,7 @@ const timeline = [
       time: "10:15 - 12:30",
       title: "DSA Challenge",
       type: "event",
-      pokemon: "charmeleon",
+      pokemon: "charmeleon.svg",
       description:
         "Crack the DSA Challenge and become a true champion.",
     },
@@ -97,7 +97,7 @@ const timeline = [
       time: "01:30 - 02:30",
       title: "Pitch Event",
       type: "event",
-      pokemon: "venusaur",
+      pokemon: "venusaur.svg",
       description:
         "Make your presentation stand out and secure victory.",
     },
@@ -140,13 +140,13 @@ export default function Timeline() {
               alt="Stay on track, Trainer"
               width={500}
               height={200}
-              className="w-full h-auto max-w-[420px] lg:max-w-[480px]"
+              className="w-full h-auto max-w-[300px] lg:max-w-[350px]"
               priority
             />
           </div>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+          <p className="text-[#3b0a1e] font-medium text-sm md:text-xl leading-relaxed max-w-xl -mb-8 md:mb-10">
             Embarking on the path to becoming a true champion is a profound and
             transformative journey that starts at this very moment, filled with
             countless challenges, opportunities for growth, and moments of triumph
@@ -187,7 +187,7 @@ export default function Timeline() {
                 >
                   {item.pokemon && (
                     <Image
-                      src={`/pokemons/${item.pokemon}.png`}
+                      src={`/pokemons/${item.pokemon}`}
                       alt={item.title}
                       width={48}
                       height={48}
@@ -257,7 +257,7 @@ export default function Timeline() {
                     >
                       {item.pokemon && (
                         <Image
-                          src={`/pokemons/${item.pokemon}.png`}
+                          src={`/pokemons/${item.pokemon}`}
                           alt={item.title}
                           width={40}
                           height={40}

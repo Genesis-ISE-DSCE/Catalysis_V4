@@ -1,6 +1,6 @@
 import EventCard from "@/components/ui/eventcard";
-import ArenaPageFooter from "@/components/layout/ArenaPageFooter";
-import Footer from "@/components/layout/Footer";
+// import ArenaPageFooter from "@/components/layout/ArenaPageFooter";
+// import Footer from "@/components/layout/Footer";
 
 export default function EventsPage() {
 
@@ -50,7 +50,7 @@ export default function EventsPage() {
         </div>
 {/* <ArenaPageFooter ></ArenaPageFooter> */}
     </main>
-    <Footer></Footer>
+    {/* <Footer></Footer> */}
     </>
   
   );

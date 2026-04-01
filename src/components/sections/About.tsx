@@ -3,25 +3,24 @@ import Container from "@/components/common/Container";
 
 function AboutMobile() {
   const MOBILE_BADGES = [
-    { src: "/about/pitch.png", top: "5%", left: "46%" },
-    { src: "/about/dsa.png", top: "20%", left: "10%" },
-    { src: "/about/valorant.png", top: "20%", left: "82%" },
-    { src: "/about/technoseek.png", top: "50%", left: "10%" },
-    { src: "/about/typemaster.png", top: "50%", left: "82%" },
-    { src: "/about/coding-relay.png", top: "68%", left: "25%" },
-    { src: "/about/ui-ux.png", top: "68%", left: "68%" },
+    { src: "/about/pitch.png", top: "5%", left: "46%", label: "Pitching" },
+    { src: "/about/dsa.png", top: "20%", left: "10%", label: "DSA" },
+    { src: "/about/valorant.png", top: "20%", left: "82%", label: "Valorant" },
+    { src: "/about/technoseek.png", top: "50%", left: "10%", label: "Technoseek" },
+    { src: "/about/typemaster.png", top: "50%", left: "82%", label: "Typemaster" },
+    { src: "/about/coding-relay.png", top: "68%", left: "25%", label: "Coding Relay" },
+    { src: "/about/ui-ux.png", top: "68%", left: "68%", label: "UI/UX" },
   ];
 
   return (
     <div className="relative w-full h-[320px] flex items-center justify-center">
-
       <div className="absolute -mt-22 z-20">
         <Image
           src="/hero/Pokeball.png"
-          alt="Pokeball"
+          alt="Central Pokeball"
           width={100}
           height={100}
-          className="drop-shadow-xl"
+          className="drop-shadow-xl h-auto"
         />
       </div>
 
@@ -39,8 +38,9 @@ function AboutMobile() {
         >
           <Image
             src={badge.src}
-            alt="event"
+            alt={`${badge.label} badge`}
             fill
+            sizes="110px"
             className="object-contain drop-shadow-md"
           />
         </div>
@@ -53,7 +53,13 @@ function AboutLeft() {
   return (
     <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10">
       <div className="mb-6">
-        <Image src="/about/about-us.png" alt="About Us" width={120} height={40} />
+        <Image 
+          src="/about/about-us.png" 
+          alt="About Us heading" 
+          width={120} 
+          height={40} 
+          className="h-auto"
+        />
       </div>
       <div className="mb-8">
         <Image
@@ -61,28 +67,29 @@ function AboutLeft() {
           alt="What is Catalysis?"
           width={450}
           height={80}
-          className="mx-auto lg:mx-0"
+          className="mx-auto lg:mx-0 h-auto"
         />
       </div>
       <div className="space-y-6 text-[#3b0a1e] text-lg font-medium leading-relaxed max-w-xl">
         <p>
-          Catalysis is not just an event, it's a platform designed to spark innovation and accelerate ideas into reality. Over the course of three days, participants will engage in multiple events ranging from technical challenges to creative competitions.
+          Catalysis is not just an event, it&apos;s a platform designed to spark innovation and accelerate ideas into reality. Over the course of three days, participants will engage in multiple events ranging from technical challenges to creative competitions.
         </p>
         <p>
-          Catalysis offers something for everyone. It's a space to learn, compete, collaborate, and grow.
+          Catalysis offers something for everyone. It&apos;s a space to learn, compete, collaborate, and grow.
         </p>
       </div>
     </div>
   );
 }
+
 const BADGES = [
-  { src: "/about/pitch.png", top: "11%", left: "45%" },
-  { src: "/about/dsa.png", top: "24%", left: "25%" },
-  { src: "/about/valorant.png", top: "24%", left: "78%" },
-  { src: "/about/technoseek.png", top: "37%", left: "5%" },
-  { src: "/about/typemaster.png", top: "37%", left: "58%" },
-  { src: "/about/coding-relay.png", top: "50%", left: "38%" },
-  { src: "/about/ui-ux.png", top: "63%", left: "58%" },
+  { src: "/about/pitch.png", top: "11%", left: "45%", label: "Pitching" },
+  { src: "/about/dsa.png", top: "24%", left: "25%", label: "DSA" },
+  { src: "/about/valorant.png", top: "24%", left: "78%", label: "Valorant" },
+  { src: "/about/technoseek.png", top: "37%", left: "5%", label: "Technoseek" },
+  { src: "/about/typemaster.png", top: "37%", left: "58%", label: "Typemaster" },
+  { src: "/about/coding-relay.png", top: "50%", left: "38%", label: "Coding Relay" },
+  { src: "/about/ui-ux.png", top: "63%", left: "58%", label: "UI/UX" },
 ];
 
 const LINES = [
@@ -96,7 +103,6 @@ const LINES = [
 function AboutRight() {
   return (
     <div className="relative w-full h-[600px] flex items-center">
-
       <div className="absolute inset-0 z-10">
         {LINES.map((line, i) => (
           <div
@@ -106,15 +112,14 @@ function AboutRight() {
               top: line.top,
               left: line.left,
               width: `${line.width}px`,
-              height: "auto",
             }}
           >
             <Image
               src={line.src}
-              alt="connection line"
+              alt="Decorative connection line"
               width={line.width}
               height={100}
-              className="object-contain opacity-80"
+              className="object-contain opacity-80 h-auto"
             />
           </div>
         ))}
@@ -133,8 +138,9 @@ function AboutRight() {
           >
             <Image
               src={badge.src}
-              alt="Event Type"
+              alt={`${badge.label} event badge`}
               fill
+              sizes="240px"
               className="object-contain drop-shadow-lg"
             />
           </div>
@@ -151,36 +157,28 @@ export default function About() {
       className="relative w-full bg-[#FFEEF0] py-16 md:py-24 overflow-hidden"
     >
       <Container>
-
         <div className="block lg:hidden space-y-10">
-
           <AboutLeft />
-
           <AboutMobile />
-
         </div>
 
         <div className="hidden lg:grid grid-cols-3 gap-8 items-center">
-
           <div className="lg:col-span-1">
             <AboutLeft />
           </div>
           <div className="flex justify-center z-20">
             <Image
               src="/hero/Pokeball.png"
-              alt="Pokeball"
+              alt="Large Central Pokeball"
               width={250}
               height={250}
-              className="transition-transform hover:scale-105 drop-shadow-2xl"
+              className="transition-transform hover:scale-105 drop-shadow-2xl h-auto"
             />
           </div>
-
           <div className="lg:col-span-1">
             <AboutRight />
           </div>
-
         </div>
-
       </Container>
 
       <div className="absolute top-0 right-0 w-64 h-64 bg-red-100/30 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />

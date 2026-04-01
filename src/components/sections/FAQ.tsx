@@ -20,7 +20,7 @@ const qna = [
   },
   {
     question: "How do I register?",
-    answer: "You can register using the register button on the homepage. Simply fill out the form and you'll receive a confirmation email.",
+    answer: "You can register using the register button on the homepage. Simply fill out the form and you&apos;ll receive a confirmation email.",
   },
 ];
 
@@ -44,17 +44,19 @@ export default function FAQ() {
                     alt="Frequently Asked Questions" 
                     width={500} 
                     height={100}
-                    className="object-contain"
+                    className="object-contain h-auto"
                  />
                </div>
 
                <p className="text-[#3b0a1e] font-medium text-lg leading-relaxed mb-10">
-                Don't hesitate to reach out with any questions you might have, whether they're big or small. We're always ready and eager to assist you with anything you need, ensuring you get the support and answers you're looking for every step of the way!
+                Don&apos;t hesitate to reach out with any questions you might have, whether they&apos;re big or small. We&apos;re always ready and eager to assist you with anything you need, ensuring you get the support and answers you&apos;re looking for every step of the way!
                </p>
             </div>
 
             <div className="relative bg-white border-2 border-black rounded-[2rem] p-6 h-36 flex flex-col justify-between shadow-sm">
+              <label htmlFor="faq-input" className="sr-only">Type your message</label>
               <input
+                id="faq-input"
                 placeholder="Type message..."
                 className="bg-transparent outline-none w-full text-lg placeholder:text-gray-400 font-medium"
               />
