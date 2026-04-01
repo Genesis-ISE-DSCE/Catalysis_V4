@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 // add footer
 import Footer from "@/components/layout/Footer";
+import PokeCursor from "@/components/ui/Pokecursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
     >
       <body>
         <Navbar />
+        <PokeCursor />
         {children}
         <Footer />
       </body>
