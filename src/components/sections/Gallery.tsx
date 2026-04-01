@@ -32,7 +32,7 @@ export default function Gallery() {
                 alt="Moments from the Past" 
                 width={600} 
                 height={120}
-                className="object-contain"
+                className="object-contain w-auto h-auto"
               />
             </div>
 
@@ -44,37 +44,37 @@ export default function Gallery() {
           <div className="hidden md:grid grid-cols-12 auto-rows-[100px] gap-4">
             
             <div className="col-span-2 row-span-3 relative rounded-[2rem] overflow-hidden border-2 border-black">
-              <Image src="/gallery/1.jpg" alt="Past event" fill className="object-cover" />
+              <Image src="/gallery/1.jpg" alt="Past event" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>
             <div className="col-span-2 row-span-2 relative rounded-[2rem] overflow-hidden border-2 border-black mt-[-40px]">
-              <Image src="/gallery/2.jpg" alt="Coding session" fill className="object-cover" />
+              <Image src="/gallery/2.jpg" alt="Coding session" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>
 
             <div className="col-span-2 row-span-4 relative rounded-[2rem] overflow-hidden border-2 border-black">
-              <Image src="/gallery/3.jpg" alt="Workshop" fill className="object-cover" />
+              <Image src="/gallery/3.jpg" alt="Workshop" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>
 
             <div className="col-span-4 row-span-5 relative rounded-[3rem] overflow-hidden border-2 border-black">
-              <Image src="/gallery/4.jpg" alt="Team collab" fill className="object-cover" />
+              <Image src="/gallery/4.jpg" alt="Team collab" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
             </div>
 
             <div className="col-span-2 row-span-4 relative rounded-[2rem] overflow-hidden border-2 border-black">
-              <Image src="/gallery/5.jpg" alt="Presenting" fill className="object-cover" />
+              <Image src="/gallery/5.jpg" alt="Presenting" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>
 
             <div className="col-span-3 row-span-3 relative rounded-[2rem] overflow-hidden border-2 border-black mt-[-100px]">
-              <Image src="/gallery/6.jpg" alt="Focus" fill className="object-cover" />
+              <Image src="/gallery/6.jpg" alt="Focus" fill sizes="(min-width: 768px) 25vw, 100vw" className="object-cover" />
             </div>
 
             <div className="col-span-5 row-span-3 relative rounded-[3rem] overflow-hidden border-2 border-black mt-[-100px]">
-              <Image src="/gallery/7.jpg" alt="Workspace" fill className="object-cover" />
+              <Image src="/gallery/7.jpg" alt="Workspace" fill sizes="(min-width: 768px) 41vw, 100vw" className="object-cover" />
             </div>
 
             <div className="col-span-2 row-span-2 relative rounded-[2rem] overflow-hidden border-2 border-black mt-[-100px]">
-              <Image src="/gallery/8.jpg" alt="Networking" fill className="object-cover" />
+              <Image src="/gallery/8.jpg" alt="Networking" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>
             <div className="col-span-2 row-span-2 relative rounded-[2rem] overflow-hidden border-2 border-black mt-[-100px]">
-              <Image src="/gallery/9.jpg" alt="Tech setup" fill className="object-cover" />
+              <Image src="/gallery/9.jpg" alt="Tech setup" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export default function Gallery() {
               {images.map((src, i) => (
                 <SwiperSlide key={i}>
                   <div className="relative aspect-[4/5] w-full rounded-[2.5rem] overflow-hidden border-2 border-black">
-                    <Image src={src} alt={`Gallery ${i}`} fill className="object-cover" />
+                    <Image src={src} alt={`Gallery ${i + 1}`} fill sizes="80vw" className="object-cover" />
                   </div>
                 </SwiperSlide>
               ))}

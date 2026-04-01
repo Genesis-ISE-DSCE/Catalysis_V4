@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Container from "@/components/common/Container";
 import SectionHeader from "@/components/common/SectionHeader";
+import { useState } from "react";
 
 const timeline = [
-
   [
     {
       time: "09:00 - 10:00",
@@ -42,7 +44,6 @@ const timeline = [
       description: "Your journey to becoming a champion begins now.",
     },
   ],
-
 
   [
     {
@@ -113,13 +114,16 @@ const timeline = [
   ],
 ];
 
+const dayLabels = ["Day 1", "Day 2", "Day 3"];
+
 export default function Timeline() {
+  const [activeDay, setActiveDay] = useState(0);
+
   return (
     <section id="timeline" className="py-20 bg-[#FFEEF0]">
       <Container>
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10">
 
-    
           <div>
             <SectionHeader
               label="Timeline"
@@ -128,35 +132,87 @@ export default function Timeline() {
             />
           </div>
 
+          {/* Mobile/Tablet: Day tabs + single column */}
+          <div className="lg:hidden">
+            <div className="flex gap-3 mb-6">
+              {dayLabels.map((label, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveDay(i)}
+                  className={`flex-1 py-3 rounded-xl font-bold text-sm border-2 border-black transition-all duration-200 ${
+                    activeDay === i
+                      ? "bg-yellow-300 text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                      : "bg-white text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
 
-          <div className="flex gap-6">
+            <div className="flex flex-col gap-4">
+              {timeline[activeDay].map((item, i) => (
+                <div
+                  key={i}
+                  className={`rounded-2xl p-5 border-2 border-black shadow-sm ${
+                    item.type === "event"
+                      ? "bg-yellow-300"
+                      : item.type === "ceremony"
+                      ? "bg-red-100"
+                      : "bg-gray-100"
+                  }`}
+                >
+                  {item.pokemon && (
+                    <Image
+                      src={`/pokemons/${item.pokemon}.png`}
+                      alt={item.title}
+                      width={48}
+                      height={48}
+                      className="mb-2"
+                    />
+                  )}
 
-   
+                  <p className="text-sm text-gray-600 font-medium">
+                    {item.time}
+                  </p>
+
+                  <h3 className="font-bold text-lg mt-1">
+                    {item.title}
+                  </h3>
+
+                  {item.description && (
+                    <p className="text-sm mt-2 text-gray-700 leading-relaxed">
+                      {item.description}
+                    </p>
+                  )}
+
+                  {item.type === "event" && (
+                    <button className="mt-3 text-sm bg-black text-white px-5 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors">
+                      Register
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop: Full 3-column grid with time labels */}
+          <div className="hidden lg:flex gap-6">
             <div className="flex flex-col justify-between text-sm text-gray-600 pr-2">
               {[
-                "09:00",
-                "09:30",
-                "10:00",
-                "10:30",
-                "11:00",
-                "11:30",
-                "12:00",
-                "12:30",
-                "01:00",
-                "01:30",
-                "02:00",
-                "02:30",
-                "03:00",
+                "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+                "12:00", "12:30", "01:00", "01:30", "02:00", "02:30", "03:00",
               ].map((t, i) => (
                 <span key={i}>{t}</span>
               ))}
             </div>
 
             <div className="grid grid-cols-3 gap-6 w-full">
-
               {timeline.map((col, colIndex) => (
                 <div key={colIndex} className="flex flex-col gap-4">
-
+                  <div className="text-center font-bold text-sm text-gray-500 mb-2">
+                    {dayLabels[colIndex]}
+                  </div>
                   {col.map((item, i) => (
                     <div
                       key={i}
@@ -166,7 +222,6 @@ export default function Timeline() {
                           : "bg-gray-100"
                       }`}
                     >
-    
                       {item.pokemon && (
                         <Image
                           src={`/pokemons/${item.pokemon}.png`}
@@ -197,10 +252,8 @@ export default function Timeline() {
                       )}
                     </div>
                   ))}
-
                 </div>
               ))}
-
             </div>
           </div>
         </div>

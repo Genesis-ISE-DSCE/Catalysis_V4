@@ -173,7 +173,7 @@ export default function Hero() {
 
       <div className="relative z-10 mt-4 md:mt-5 mb-3 md:mb-4">
         <Image 
-          src="/Pokeball.png" 
+          src="/hero/Pokeball.png" 
           alt="pokeball" 
           width={50}  
           height={50} 
