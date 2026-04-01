@@ -124,13 +124,36 @@ export default function Timeline() {
       <Container>
         <div className="grid lg:grid-cols-2 gap-10">
 
-          <div>
-            <SectionHeader
-              label="Timeline"
-              title="Stay on track, Trainer"
-              subtitle="Embark on a journey filled with challenges and growth."
+         <div className="flex flex-col justify-start lg:pt-2 max-w-lg">
+
+          {/* Timeline Label */}
+          <div className="mb-4">
+            <span className="px-6 py-2 text-sm border border-black rounded-full bg-white font-medium">
+              TIMELINE
+            </span>
+          </div>
+
+          {/* Heading Image */}
+          <div className="mb-6">
+            <Image
+              src="/timeline-heading.png"
+              alt="Stay on track, Trainer"
+              width={500}
+              height={200}
+              className="w-full h-auto max-w-[420px] lg:max-w-[480px]"
+              priority
             />
           </div>
+
+          {/* Description */}
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+            Embarking on the path to becoming a true champion is a profound and
+            transformative journey that starts at this very moment, filled with
+            countless challenges, opportunities for growth, and moments of triumph
+            that will shape your character and define your legacy for years to come.
+          </p>
+
+        </div>
 
           {/* Mobile/Tablet: Day tabs + single column */}
           <div className="lg:hidden">
@@ -141,7 +164,7 @@ export default function Timeline() {
                   onClick={() => setActiveDay(i)}
                   className={`flex-1 py-3 rounded-xl font-bold text-sm border-2 border-black transition-all duration-200 ${
                     activeDay === i
-                      ? "bg-yellow-300 text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                      ? "bg-red-500 text-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
                       : "bg-white text-gray-600 hover:bg-gray-50"
                   }`}
                 >
@@ -198,7 +221,7 @@ export default function Timeline() {
 
           {/* Desktop: Full 3-column grid with time labels */}
           <div className="hidden lg:flex gap-6">
-            <div className="flex flex-col justify-between text-sm text-gray-600 pr-2">
+            <div className="flex flex-col justify-between mt-25 text-sm text-gray-600 pr-2">
               {[
                 "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
                 "12:00", "12:30", "01:00", "01:30", "02:00", "02:30", "03:00",
@@ -210,8 +233,18 @@ export default function Timeline() {
             <div className="grid grid-cols-3 gap-6 w-full">
               {timeline.map((col, colIndex) => (
                 <div key={colIndex} className="flex flex-col gap-4">
-                  <div className="text-center font-bold text-sm text-gray-500 mb-2">
+                  {/* <div className="text-center font-bold text-sm text-gray-500 mb-2">
                     {dayLabels[colIndex]}
+                  </div> */}
+                  <div className="mb-3">
+                    <div className="bg-red-500 border-2 border-black rounded-2xl text-center py-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                      {/* <p className="text-[10px] text-white font-medium tracking-wide uppercase">
+                        {dayLabels[colIndex]}
+                      </p> */}
+                      <p className="text-white font-bold text-lg leading-tight">
+                        {dayLabels[colIndex]}
+                      </p>
+                    </div>
                   </div>
                   {col.map((item, i) => (
                     <div

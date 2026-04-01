@@ -173,7 +173,7 @@ export default function Hero() {
 
       <div className="relative z-10 mt-4 md:mt-5 mb-3 md:mb-4">
         <Image 
-          src="/Pokeball.png" 
+          src="/hero/Pokeball.png" 
           alt="pokeball" 
           width={50}  
           height={50} 
@@ -212,7 +212,7 @@ export default function Hero() {
           text-[13px] sm:text-sm md:text-lg 
           leading-relaxed md:leading-relaxed"
         >
-          Join us for three electrifying days of hackathons, design battles, workshops, and competitions — all under one roof. Catalysis is where thinkers, creators, and innovators come to transform ideas into impact.
+          Join us for three electrifying days of hackathons, design battles, workshops, and competitions, all under one roof. Catalysis is where thinkers, creators, and innovators come to transform ideas into impact.
         </p>
       </div>
 <div className="relative w-full max-w-6xl mt-10">

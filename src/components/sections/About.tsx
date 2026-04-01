@@ -66,10 +66,10 @@ function AboutLeft() {
       </div>
       <div className="space-y-6 text-[#3b0a1e] text-lg font-medium leading-relaxed max-w-xl">
         <p>
-          Catalysis is not just an event — it’s a platform designed to spark innovation and accelerate ideas into reality. Over the course of three days, participants will engage in multiple events ranging from technical challenges to creative competitions.
+          Catalysis is not just an event, it's a platform designed to spark innovation and accelerate ideas into reality. Over the course of three days, participants will engage in multiple events ranging from technical challenges to creative competitions.
         </p>
         <p>
-          Catalysis offers something for everyone. It’s a space to learn, compete, collaborate, and grow.
+          Catalysis offers something for everyone. It's a space to learn, compete, collaborate, and grow.
         </p>
       </div>
     </div>
