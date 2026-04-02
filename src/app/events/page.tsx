@@ -10,7 +10,7 @@ export default function EventsPage() {
     type: "TECHNICAL", 
     image: "/pokemons/alakazam.svg", 
     color: "#FFD1D1", 
-    detailsLink: "/events/pitch",
+    detailsLink: "/rules/dsa-smackdown",
     tags: ["Data Structures", "Logic", "Problem Solving", "Optimization"]
   },
   { 
@@ -18,7 +18,7 @@ export default function EventsPage() {
     type: "ENTREPRENEURSHIP", 
     image: "/pokemons/jigglypuff.svg", 
     color: "#D1FFE9", 
-    detailsLink: "/events/code", 
+    detailsLink: "/rules/pitch-wala", 
     width: 175, 
     height: 175,
     tags: ["Business Model", "Ideation", "Public Speaking", "Presentation"]
@@ -28,7 +28,7 @@ export default function EventsPage() {
     type: "TEAM BATTLE", 
     image: "/pokemons/ditto.svg", 
     color: "#FFD1D1", 
-    detailsLink: "/events/pitch", 
+    detailsLink: "/rules/code-relay", 
     top: "top-[-25px]",
     tags: ["Algorithms", "Endurance", "Team Sync"]
   },
@@ -37,7 +37,7 @@ export default function EventsPage() {
     type: "EXPLORATION", 
     image: "/pokemons/zoroark.svg", 
     color: "#D1FFE9", 
-    detailsLink: "/events/code", 
+    detailsLink: "/rules/technoseek", 
     top: "top-[-30px]",
     tags: ["Scavenger Hunt", "Teamwork", "Tech Puzzles", "Treasure Hunt"]
   },
@@ -46,7 +46,7 @@ export default function EventsPage() {
     type: "GAMING", 
     image: "/pokemons/arceus.svg", 
     color: "#FFD1D1", 
-    detailsLink: "/events/pitch", 
+    detailsLink: "/rules/clash-royale", 
     width: 175, 
     height: 160,
     tags: ["Strategy Builder", "Deck Master", "Live Combat", "Real-time"]
@@ -56,7 +56,7 @@ export default function EventsPage() {
     type: "SKILL", 
     image: "/pokemons/rayquaza.svg", 
     color: "#D1FFE9", 
-    detailsLink: "/events/code", 
+    detailsLink: "/rules/typemaster", 
     width: 200, 
     height: 175,
     tags: ["Speed Demon", "Precision Master", "Combo Builder"]

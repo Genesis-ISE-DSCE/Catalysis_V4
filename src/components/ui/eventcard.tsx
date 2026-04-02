@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface EventCardProps {
   event: {
@@ -10,6 +11,7 @@ interface EventCardProps {
     width?: number;
     height?: number;
     tags?: string[];
+    detailsLink?: string;
   };
 }
 
@@ -89,7 +91,7 @@ export default function EventCard({ event }: EventCardProps) {
           })}
         </div>
         
-        <button className="
+        <Link href={event.detailsLink || "#"} className="
           w-[254px]
           h-[44px] 
           bg-[#DD273E] 
@@ -108,7 +110,7 @@ export default function EventCard({ event }: EventCardProps) {
           active:shadow-none
         ">
           VIEW DETAILS
-        </button>
+        </Link>
       </div>
     </div>
   );
