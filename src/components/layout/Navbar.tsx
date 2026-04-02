@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const navItems = [
   { label: "Home", id: "hero" },
@@ -17,7 +17,7 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
   const pathname = usePathname();
-
+  const router = useRouter();
   useEffect(() => {
     const handleScrollEvent = () => {
       const currentScrollY = window.scrollY;
@@ -44,6 +44,11 @@ export default function Navbar() {
   }
 
   const handleScroll = (id: string) => {
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      setIsOpen(false);
+      return;
+    }
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
@@ -77,7 +82,7 @@ export default function Navbar() {
 
         <div
           className="hidden md:block cursor-pointer"
-          onClick={() => handleScroll("cta")}
+          onClick={() => router.push("/register")}
         >
           <Image src="/nav-register-now.png" alt="Register" width={110} height={50} />
         </div>
@@ -132,7 +137,7 @@ export default function Navbar() {
         </div>
 
         <button
-          onClick={() => handleScroll("cta")}
+          onClick={() => { router.push("/register"); setIsOpen(false); }}
           className="
             mt-4
             bg-[#E63946]
