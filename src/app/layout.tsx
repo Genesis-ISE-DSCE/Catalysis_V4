@@ -27,13 +27,13 @@ export default function RootLayout({
       className={`${nunito.variable} h-full antialiased`}
     >
       <body className="flex flex-col min-h-screen">
-        <Navbar />
         <PokeCursor />
+        <Navbar />
         <main className="flex-grow">
           {children}
         </main>
 
-        <Footer /> 
+        <Footer />
       </body>
     </html>
   );
