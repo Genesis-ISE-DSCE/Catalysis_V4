@@ -5,13 +5,63 @@ import EventCard from "@/components/ui/eventcard";
 export default function EventsPage() {
 
     const ARENAS_DATA = [
-        { name: "DSA SMACKDOWN", type: "STRATEGY TYPE", image: "/pokemons/alakazam.svg", color: "#FFD1D1", detailsLink: "/events/pitch",},
-        { name: "PITCH PERFECT", type: "STRATEGY TYPE", image: "/pokemons/jigglypuff.svg", color: "#D1FFE9", detailsLink: "/events/code", width: 175, height: 175},
-        { name: "CODING RELAY", type: "STRATEGY TYPE", image: "/pokemons/ditto.svg", color: "#FFD1D1", detailsLink: "/events/pitch", top: "-top-[25px]", },
-        { name: "TECHNOSEEK", type: "STRATEGY TYPE", image: "/pokemons/zoroark.svg", color: "#D1FFE9", detailsLink: "/events/code", top: "-top-[30px]", },
-        { name: "CLASH ROYALE", type: "STRATEGY TYPE", image: "/pokemons/arceus.svg", color: "#FFD1D1", detailsLink: "/events/pitch", width: 175, height: 160,},
-        { name: "TYPEMASTER", type: "STRATEGY TYPE", image: "/pokemons/rayquaza.svg", color: "#D1FFE9", detailsLink: "/events/code", width: 200, height: 175, },
-        ];
+  { 
+    name: "DSA SMACKDOWN", 
+    type: "TECHNICAL", 
+    image: "/pokemons/alakazam.svg", 
+    color: "#FFD1D1", 
+    detailsLink: "/events/pitch",
+    tags: ["Data Structures", "Logic", "Problem Solving", "Optimization"]
+  },
+  { 
+    name: "PITCH PERFECT", 
+    type: "ENTREPRENEURSHIP", 
+    image: "/pokemons/jigglypuff.svg", 
+    color: "#D1FFE9", 
+    detailsLink: "/events/code", 
+    width: 175, 
+    height: 175,
+    tags: ["Business Model", "Ideation", "Public Speaking", "Presentation"]
+  },
+  { 
+    name: "CODING RELAY", 
+    type: "TEAM BATTLE", 
+    image: "/pokemons/ditto.svg", 
+    color: "#FFD1D1", 
+    detailsLink: "/events/pitch", 
+    top: "top-[-25px]",
+    tags: ["Algorithms", "Endurance", "Team Sync"]
+  },
+  { 
+    name: "TECHNOSEEK", 
+    type: "EXPLORATION", 
+    image: "/pokemons/zoroark.svg", 
+    color: "#D1FFE9", 
+    detailsLink: "/events/code", 
+    top: "top-[-30px]",
+    tags: ["Scavenger Hunt", "Teamwork", "Tech Puzzles", "Treasure Hunt"]
+  },
+  { 
+    name: "CLASH ROYALE", 
+    type: "GAMING", 
+    image: "/pokemons/arceus.svg", 
+    color: "#FFD1D1", 
+    detailsLink: "/events/pitch", 
+    width: 175, 
+    height: 160,
+    tags: ["Strategy Builder", "Deck Master", "Live Combat", "Real-time"]
+  },
+  { 
+    name: "TYPEMASTER", 
+    type: "SKILL", 
+    image: "/pokemons/rayquaza.svg", 
+    color: "#D1FFE9", 
+    detailsLink: "/events/code", 
+    width: 200, 
+    height: 175,
+    tags: ["Speed Demon", "Precision Master", "Combo Builder"]
+  },
+];
 
   return (
     <>

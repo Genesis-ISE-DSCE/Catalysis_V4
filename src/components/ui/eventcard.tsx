@@ -9,10 +9,21 @@ interface EventCardProps {
     top?: string;
     width?: number;
     height?: number;
+    tags?: string[];
   };
 }
 
 export default function EventCard({ event }: EventCardProps) {
+  const defaultTags = ["Strategy Builder", "Idea Master", "Idea Master", "Pitch Pro"];
+  const displayTags = event.tags || defaultTags;
+
+  const tagStyles = [
+    { bg: "bg-[#FFD9C3]", border: "border-[#FBB993]" },
+    { bg: "bg-[#E6DBED]", border: "border-[#CCB8E6]" },
+    { bg: "bg-[#CEF2FF]", border: "border-[#A6E0F4]" },
+    { bg: "bg-[#D6EBDC]", border: "border-[#ADD6B8]" },
+  ];
+
   return (
     <div className="
       relative 
@@ -59,10 +70,23 @@ export default function EventCard({ event }: EventCardProps) {
         </p>
 
         <div className="grid grid-cols-2 gap-2 w-full mb-6">
-          <div className="bg-[#FFD9C3] rounded-full py-2 px-1 text-[13px] text-center font-nunito font-medium border border-[2px] border-[#FBB993]">Strategy Builder</div>
-          <div className="bg-[#E6DBED] rounded-full py-2 px-1 text-[13px] text-center font-nunito font-medium border border-[2px] border-[#CCB8E6]">Idea Master</div>
-          <div className="bg-[#CEF2FF] rounded-full py-2 px-1 text-[13px] text-center font-nunito font-medium border border-[2px] border-[#A6E0F4]">Idea Master</div>
-          <div className="bg-[#D6EBDC] rounded-full py-2 px-1 text-[13px] text-center font-nunito font-medium border border-[2px] border-[#ADD6B8]">Pitch Pro</div>
+          {displayTags.slice(0, 4).map((tag, index) => {
+            const isTriangleBase = displayTags.length === 3 && index === 2;
+            
+            return (
+              <div 
+                key={index} 
+                className={`
+                  ${tagStyles[index % 4].bg} 
+                  ${tagStyles[index % 4].border} 
+                  ${isTriangleBase ? "col-span-2 mx-auto w-1/2" : "w-full"}
+                  rounded-full py-2 px-1 text-[11px] text-center font-nunito font-bold border-2 text-black truncate
+                `}
+              >
+                {tag}
+              </div>
+            );
+          })}
         </div>
         
         <button className="
