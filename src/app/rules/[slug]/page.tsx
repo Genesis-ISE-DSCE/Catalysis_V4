@@ -76,7 +76,7 @@ const RulesPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Container>
         <div className="relative py-16 md:py-20">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-            <Image src="/bulbasaur.png" alt="bulbasaur watermark" width={441} height={438} className="opacity-[0.1]" style={{ width: 'auto', height: 'auto' }} />
+            <Image src={event.image} alt={`${event.title} watermark`} width={441} height={441} className="opacity-[0.1]" style={{ width: 'auto', height: 'auto' }} />
           </div>
           
           <div className="relative grid md:grid-cols-2 gap-y-[60px] max-w-[1000px] mx-auto z-10 px-4 md:px-0">
