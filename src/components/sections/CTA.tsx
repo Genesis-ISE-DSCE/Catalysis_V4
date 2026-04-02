@@ -1,6 +1,10 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function CTA() {
+  const router = useRouter();
   return (
     <section id="cta" className="relative pt-32 pb-0 bg-[#f5eaea]">
       <div className="w-full relative">
@@ -60,6 +64,7 @@ export default function CTA() {
                 group-hover:-translate-y-1
                 group-active:translate-y-[5px] group-active:translate-x-[3px]
               "
+              onClick={() => router.push("/register")}
               style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)" }}
             >
               REGISTER NOW

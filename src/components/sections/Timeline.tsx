@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Container from "@/components/common/Container";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export interface TimelineEvent {
   day: 1 | 2 | 3;
@@ -64,6 +65,7 @@ function heightPct(from: string, till: string): string {
 
 function EventCard({ item }: { item: TimelineEvent }) {
   const isWhite = item.panelColor === "#FFFFFF";
+  const router = useRouter();
 
   return (
     <div
@@ -110,7 +112,7 @@ function EventCard({ item }: { item: TimelineEvent }) {
       )}
 
       {item.hasRegister && (
-        <button className="mt-1.5 self-start flex-shrink-0 bg-black text-white text-[9px] sm:text-[10px] font-bold px-2.5 py-1 rounded-full hover:bg-gray-800 transition-colors">
+        <button  onClick={() => router.push("/register")} className="mt-1.5 self-start flex-shrink-0 bg-black text-white text-[9px] sm:text-[10px] font-bold px-2.5 py-1 rounded-full hover:bg-gray-800 transition-colors">
           Register
         </button>
       )}

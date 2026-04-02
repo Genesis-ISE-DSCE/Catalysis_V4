@@ -1,28 +1,31 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 function RegisterCard() {
+  const router = useRouter();
   return (
     <div className="relative w-[360px] h-[300px] bg-[#DD273E] border-[3px] border-black rounded-[3rem] flex flex-col items-center justify-center shadow-xl overflow-visible">
       
       <div
-  className="absolute 
-    -top-12 sm:-top-16 md:-top-24 
-    left-1/2 -translate-x-1/2 
-    z-50 pointer-events-none"
->
-  <Image
-    src="/hero/hero-finger.png"
-    alt="finger"
-    width={180}
-    height={180}
-    className="
-      object-contain 
-      w-[110px] sm:w-[140px] md:w-[180px]
-      h-auto
-      finger-tap
-    "
-  />
-</div>
+        className="absolute 
+          -top-12 sm:-top-16 md:-top-24 
+          left-1/2 -translate-x-1/2 
+          z-50 pointer-events-none"
+      >
+        <Image
+          src="/hero/hero-finger.png"
+          alt="finger"
+          width={180}
+          height={180}
+          className="
+            object-contain 
+            w-[110px] sm:w-[140px] md:w-[180px]
+            h-auto
+            finger-tap
+          "
+        />
+      </div>
 
       <div className="relative mt-4 mb-8 flex flex-col items-center">
         <div className="absolute -bottom-3 z-10">
@@ -58,6 +61,7 @@ function RegisterCard() {
             alt="Register Now"
             width={240}
             height={80}
+            onClick={() => router.push("/register")}
           />
         </div>
       </div>
