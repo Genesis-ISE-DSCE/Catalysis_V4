@@ -9,7 +9,7 @@ export default function EventsPage() {
         { name: "PITCH PERFECT",  type: "STRATEGY TYPE", image: "/pokemons/jigglypuff.svg", color: "#D1FFE9", detailsLink: "/rules/pitch-event",   width: 175, height: 175 },
         { name: "CODING RELAY",   type: "STRATEGY TYPE", image: "/pokemons/ditto.svg",      color: "#FFD1D1", detailsLink: "/rules/coding-relay",   top: "-top-[25px]" },
         { name: "TECHNOSEEK",     type: "STRATEGY TYPE", image: "/pokemons/zoroark.svg",    color: "#D1FFE9", detailsLink: "/rules/technoseek",     top: "-top-[30px]" },
-        { name: "CLASH ROYALE",   type: "STRATEGY TYPE", image: "/pokemons/arceus.svg",     color: "#FFD1D1", detailsLink: "/rules/valorant",       width: 175, height: 160 },
+        { name: "CLASH ROYALE",   type: "STRATEGY TYPE", image: "/pokemons/arceus.svg",     color: "#FFD1D1", detailsLink: "/rules/clash-royale",   width: 175, height: 160 },
         { name: "TYPEMASTER",     type: "STRATEGY TYPE", image: "/pokemons/rayquaza.svg",   color: "#D1FFE9", detailsLink: "/rules/typemaster",     width: 200, height: 175 },
         ];
 

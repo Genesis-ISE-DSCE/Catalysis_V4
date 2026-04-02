@@ -38,29 +38,29 @@ export const eventData: Record<string, EventDetails> = {
       "- Punctuality"
     ]
   },
-  "valorant": {
-    title: "Valorant Tournament",
+  "clash-royale": {
+    title: "Clash Royale",
     subtitle: "Enter the battlefield.",
-    tags: ["FPS", "5v5", "Tactical Shooter"],
-    description: "Coordinate, aim, and outsmart your opponents in this 5v5 tactical shooter. Prove your team's synergy and raw mechanical skill to claim the title of campus champions.",
+    tags: ["Strategy", "1v1", "Card Battle"],
+    description: "Coordinate, outmaneuver, and outsmart your opponents in this fast-paced card battle. Prove your deck-building strategy and raw mechanical skill to claim the title of campus champions.",
     rules: [
-      "Standard 5v5 Custom Game rules apply",
-      "No toxic behavior in all-chat (instant warning)",
-      "Bring your own peripherals (Mouse/Keyboard) is allowed",
-      "- Exploiting map bugs is strictly forbidden"
+      "Standard 1v1 Clash Royale rules apply",
+      "No toxic behavior (instant warning)",
+      "Bring your own device with Clash Royale installed",
+      "- Exploiting bugs is strictly forbidden"
     ],
     prizes: [
-      "🥇 Winning Team: ₹XXXX + Trophy",
-      "🥈 Runner-up Team: ₹XXXX + Certificate",
-      "🎖️ MVP Award for top fragger"
+      "🥇 Winner: ₹XXXX + Trophy",
+      "🥈 Runner-up: ₹XXXX + Certificate",
+      "🎖️ MVP Award for top player"
     ],
     schedule: [
-      "Date: Day 2", 
+      "Date: Day 2",
       "Time: 01:30 PM – 03:30 PM"
     ],
     requirements: [
-      "Valid Riot Games account", 
-      "Team of 5 registered players", 
+      "Valid Clash Royale account",
+      "Fully charged device with the game installed",
       "- Student ID proof"
     ]
   },
