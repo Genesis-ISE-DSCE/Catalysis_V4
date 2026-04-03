@@ -1,6 +1,7 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { dbConnect } from "@/lib/dbConnect";
 import Participant from "@/models/Participant";
+import { requireAdminAuth } from "@/lib/adminAuth";
 
 const ALL_EVENTS = [
   "technoseek",
@@ -11,8 +12,11 @@ const ALL_EVENTS = [
   "pitch_perfect",
 ];
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const { response } = await requireAdminAuth(req);
+    if (response) return response;
+
     await dbConnect();
 
     const total = await Participant.countDocuments();

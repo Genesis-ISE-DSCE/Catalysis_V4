@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { dbConnect } from "@/lib/dbConnect";
 import Participant from "@/models/Participant";
+import { requireAdminAuth } from "@/lib/adminAuth";
 
 export async function GET(req: NextRequest) {
   try {
+    const { response } = await requireAdminAuth(req);
+    if (response) return response;
+
     await dbConnect();
 
     const { searchParams } = req.nextUrl;

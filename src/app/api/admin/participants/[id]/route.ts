@@ -1,12 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { dbConnect } from "@/lib/dbConnect";
 import Participant from "@/models/Participant";
+import { requireAdminAuth } from "@/lib/adminAuth";
 
 export async function DELETE(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { response } = await requireAdminAuth(req);
+    if (response) return response;
+
     await dbConnect();
     const { id } = await params;
 
@@ -26,6 +30,9 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { response } = await requireAdminAuth(req);
+    if (response) return response;
+
     await dbConnect();
     const { id } = await params;
     const updateData = await req.json();

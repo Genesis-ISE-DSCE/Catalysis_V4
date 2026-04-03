@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { dbConnect } from "@/lib/dbConnect";
 import Participant, { IParticipant } from "@/models/Participant";
+import { requireAdminAuth } from "@/lib/adminAuth";
 
 function escapeCsv(value: unknown): string {
   const str = value == null ? "" : String(value);
@@ -46,6 +47,9 @@ function participantToRows(p: IParticipant): string[] {
 
 export async function GET(req: NextRequest) {
   try {
+    const { response } = await requireAdminAuth(req);
+    if (response) return response;
+
     await dbConnect();
 
     const event = req.nextUrl.searchParams.get("event");
