@@ -12,21 +12,47 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const images: string[] = [
-  "/gallery/1.JPG","/gallery/2.JPG","/gallery/3.JPG",
-  "/gallery/4.JPG","/gallery/5.JPG","/gallery/6.JPG",
-  "/gallery/7.JPG","/gallery/8.JPG","/gallery/9.JPG",
-  "/gallery/10.JPG","/gallery/11.JPG","/gallery/12.JPG","/gallery/13.JPG",
-  "/gallery/14.JPG","/gallery/15.JPG","/gallery/16.JPG",
-  "/gallery/17.JPG","/gallery/18.JPG","/gallery/19.JPG",
-  "/gallery/20.JPG","/gallery/11.JPG","/gallery/12.JPG","/gallery/13.JPG",
-  "/gallery/14.JPG","/gallery/15.JPG","/gallery/16.JPG",
-  "/gallery/17.JPG","/gallery/18.JPG","/gallery/19.JPG",
-  "/gallery/20.JPG"
+  "/gallery/1.JPG",
+  "/gallery/2.JPG",
+  "/gallery/3.JPG",
+  "/gallery/4.JPG",
+  "/gallery/5.JPG",
+  "/gallery/6.JPG",
+  "/gallery/7.JPG",
+  "/gallery/8.JPG",
+  "/gallery/9.JPG",
+  "/gallery/10.JPG",
+  "/gallery/12.JPG",
+  "/gallery/13.JPG",
+  "/gallery/14.JPG",
+  "/gallery/15.JPG",
+  "/gallery/16.JPG",
+  "/gallery/17.JPG",
+  "/gallery/18.JPG",
+  "/gallery/19.JPG",
+  "/gallery/20.JPG",
+  "/gallery/21.JPG",
+  "/gallery/21.jpeg",
+  "/gallery/23.JPG",
+  "/gallery/24.JPG",
+  "/gallery/25.JPG",
+  "/gallery/26.JPG",
+  "/gallery/27.JPG",
+  "/gallery/28.JPG",
+  "/gallery/29.JPG",
+  "/gallery/30.JPG",
+  "/gallery/IMG_4635.jpg",
+  "/gallery/IMG_4707.jpg",
+  "/gallery/IMG_4722.jpg",
+  "/gallery/IMG_4724.jpg",
+  "/gallery/DSC_0060.jpeg",
+  "/gallery/z.jpeg"
 ];
 
-const imagesRow1 = [...images.slice(0, 10)];
-const imagesRow2 = [...images.slice(10, 20)];
-const imagesRow3 = [...images.slice(20, 30)];
+// Evenly split 35 images across 3 rows: 12, 12, 11
+const imagesRow1 = images.slice(0, 12);
+const imagesRow2 = images.slice(12, 24);
+const imagesRow3 = images.slice(24);
 
 interface DesktopRowProps {
   images: string[];
