@@ -22,8 +22,8 @@ export async function POST(req: Request) {
       );
     }
 
-    await createSession(username);
-    return NextResponse.json({ success: true }, { status: 200 });
+    const token = await createSession(username);
+    return NextResponse.json({ success: true, token }, { status: 200 });
   } catch {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }

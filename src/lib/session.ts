@@ -41,6 +41,7 @@ export async function createSession(username: string) {
     sameSite: "lax",
     path: "/",
   });
+  return token;
 }
 
 export async function deleteSession() {
