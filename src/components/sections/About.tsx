@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Container from "@/components/common/Container";
 import { useInView } from "@/hooks/useInView";
+import { useRouter } from "next/navigation";
 
 interface BadgeProps {
   label: string;
@@ -9,6 +10,7 @@ interface BadgeProps {
   icon: string;
   primaryColor?: string;
   secondaryColor?: string;
+  path?: string;
 }
 
 interface BadgeData extends BadgeProps {
@@ -29,7 +31,9 @@ function Badge({
   icon,
   primaryColor = "#F08080",
   secondaryColor = "#C0392B",
+  path ,
 }: BadgeProps) {
+  const router = useRouter();
   return (
     <div
       className="
@@ -41,6 +45,7 @@ function Badge({
         shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)]
         w-full
       "
+      onClick={() => router.push("/rules/"+path)}
       style={{
         fontFamily: "inherit",
         padding: "clamp(3px, 0.6vw, 6px) clamp(8px, 2vw, 18px) clamp(3px, 0.6vw, 6px) clamp(3px, 0.6vw, 6px)",
@@ -113,23 +118,23 @@ function Badge({
 }
 
 const MOBILE_BADGES: BadgeData[] = [
-  { top: "5%",  left: "48%", label: "Pitch Wala",      content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
-  { top: "20%", left: "14%", label: "DSA Smackdown",  content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A" },
-  { top: "20%", left: "82%", label: "Clash Royale",   content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E" },
-  { top: "50%", left: "14%", label: "Technoseek",     content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E" },
-  { top: "50%", left: "82%", label: "Typemaster",     content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF" },
-  { top: "68%", left: "27%", label: "Code Relay",     content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E" },
-  { top: "68%", left: "68%", label: "Pitch Wala",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
+  { top: "5%",  left: "48%", label: "Pitch Wala",     content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
+  { top: "20%", left: "14%", label: "DSA Smackdown",  content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A", path: "/dsa-smackdown" },
+  { top: "20%", left: "82%", label: "Clash Royale",   content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E", path: "/clash-royale" },
+  { top: "50%", left: "14%", label: "Technoseek",     content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E", path: "/technoseek" },
+  { top: "50%", left: "82%", label: "Typemaster",     content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF", path: "/typemaster" },
+  { top: "68%", left: "27%", label: "Code Relay",     content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E", path: "/code-relay" },
+  { top: "68%", left: "68%", label: "Pitch Wala",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
 ];
 
 const BADGES: BadgeData[] = [
-  { top: "11%", left: "45%", label: "Pitch Wala",      content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
-  { top: "24%", left: "25%", label: "DSA Smackdown",  content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A" },
-  { top: "24%", left: "78%", label: "Clash Royale",   content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E" },
-  { top: "37%", left: "5%",  label: "Technoseek",     content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E" },
-  { top: "37%", left: "58%", label: "Typemaster",     content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF" },
-  { top: "50%", left: "38%", label: "Code Relay",     content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E" },
-  { top: "63%", left: "58%", label: "Pitch Wala",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
+  { top: "11%", left: "45%", label: "Pitch Wala",      content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
+  { top: "24%", left: "25%", label: "DSA Smackdown",  content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A", path: "/dsa-smackdown" },
+  { top: "24%", left: "78%", label: "Clash Royale",   content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E", path: "/clash-royale" },
+  { top: "37%", left: "5%",  label: "Technoseek",     content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E", path: "/technoseek" },
+  { top: "37%", left: "58%", label: "Typemaster",     content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF", path: "/typemaster" },
+  { top: "50%", left: "38%", label: "Code Relay",     content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E", path: "/code-relay" },
+  { top: "63%", left: "58%", label: "Pitch Wala",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
 ];
 
 const LINES: LineData[] = [
@@ -182,6 +187,7 @@ function AboutMobile() {
             icon={badge.icon}
             primaryColor={badge.primaryColor}
             secondaryColor={badge.secondaryColor}
+            path={badge.path}
           />
         </div>
       ))}
@@ -278,6 +284,7 @@ function AboutRight() {
               icon={badge.icon}
               primaryColor={badge.primaryColor}
               secondaryColor={badge.secondaryColor}
+              path={badge.path}
             />
           </div>
         </div>

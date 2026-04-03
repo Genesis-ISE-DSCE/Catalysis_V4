@@ -28,7 +28,7 @@ const RulesPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <div className="relative pt-4 pb-40" style={{ backgroundColor: event.heroColor }}>
         
         {/* Navbar */}
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Container>
           {/* Increased padding here (pt-24 md:pt-28) to add space below the navbar */}
@@ -157,18 +157,18 @@ const RulesPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </p>
         <Link 
           href="/register"
-          className="mt-12 inline-block bg-[#DD273E] hover:bg-[#c22236] transition-colors text-[#FFFFFF] px-[30px] py-[20px] rounded-[20px] border-2 border-[#000000] font-['Nunito'] font-extrabold text-[20px] leading-none"
+          className="mt-12 inline-block bg-[#DD273E] hover:scale-105 transition-transform active:scale-95 shadow-[0_4px_0_#000000] text-[#FFFFFF] px-[30px] py-[20px] rounded-[20px] border-2 border-[#000000] font-['Nunito'] font-extrabold text-[20px] leading-none"
           style={{ transform: "matrix(1, 0.04, -0.05, 1, 0, 0)" }}
         >
           REGISTER NOW
         </Link>
       </div>
       
-      <footer className="text-center pb-8 bg-[#FFFFFF]">
+      {/* <footer className="text-center pb-8 bg-[#FFFFFF]">
         <p className="font-['Nunito'] font-medium text-[15px] leading-[20px] text-[#000000]">
           ©Copyright Catalysis 2026. All rights reserved.
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -111,11 +111,15 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
       )}
 
       {(item.hasRegister || item.slug) && (
-        <div className="flex gap-1.5 mt-auto pt-1.5 flex-wrap">
+        <div className="flex items-center gap-2 mt-auto pt-3 flex-wrap">
           {item.hasRegister && (
             <button
               onClick={() => router.push("/register")}
-              className="bg-black text-white text-[8px] sm:text-[9px] font-bold px-2.5 py-1 rounded-full hover:bg-gray-800 transition-colors flex-shrink-0"
+              className="relative bg-black text-white text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-7 py-3 rounded-full 
+                        border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]
+                        transition-all duration-200
+                        hover:scale-110 hover:bg-green-500 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+                        active:scale-95 active:shadow-none flex-shrink-0"
             >
               Register
             </button>
@@ -123,9 +127,13 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
           {item.slug && (
             <Link
               href={`/rules/${item.slug}`}
-              className="bg-white/80 text-black/70 text-[8px] sm:text-[9px] font-bold px-2.5 py-1 rounded-full border border-black/20 hover:bg-white hover:text-black transition-colors flex-shrink-0"
+              className="bg-white text-black text-[10px] sm:text-[11px] font-bold px-7 py-3 rounded-full 
+                        border-2 border-black transition-all duration-200
+                        hover:scale-110 hover:bg-[#E3242B] hover:text-white
+                        active:scale-95 flex items-center gap-1 flex-shrink-0 group"
             >
-              Details →
+              Details
+              <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
           )}
         </div>
