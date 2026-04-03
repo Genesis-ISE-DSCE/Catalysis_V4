@@ -12,6 +12,13 @@ function getBearerToken(request: NextRequest) {
 
 export async function requireAdminAuth(request: NextRequest) {
   const token = getBearerToken(request) ?? request.cookies.get("admin_session")?.value;
+  if (!token) {
+    return {
+      session: null,
+      response: NextResponse.json({ error: "Unauthorized" }, { status: 401 }),
+    };
+  }
+
   const session = await decrypt(token);
 
   if (!session) {
