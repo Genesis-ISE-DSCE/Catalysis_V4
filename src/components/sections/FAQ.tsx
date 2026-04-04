@@ -66,7 +66,7 @@ export default function FAQ() {
                </div>
 
                <p className="text-[#3b0a1e] font-nunito text-lg leading-relaxed">
-                Don&apos;t hesitate to reach out with any questions you might have, whether they&apos;re big or small. We&apos;re always ready and eager to assist you with anything you need, ensuring you get the support and answers you&apos;re looking for every step of the way!
+                Got questions? We&apos;ve got answers. Feel free to reach out anytime and we&apos;ll be happy to help.
                </p>
             </div>
           </div>

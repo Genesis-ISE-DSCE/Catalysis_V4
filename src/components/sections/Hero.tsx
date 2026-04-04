@@ -105,8 +105,8 @@ function EventHighlightsCard() {
       </div>
 
       <div className="flex flex-col items-center gap-1">
-        <p className="text-black font-black text-lg">3 Days</p>
-        <p className="text-black font-black text-lg">Multiple Events</p>
+        <p className="text-black font-black text-lg">2 Days</p>
+        <p className="text-black font-black text-lg">6 Events</p>
         <p className="text-black font-black text-lg">100+ Participants</p>
       </div>
 
@@ -208,7 +208,7 @@ export default function Hero() {
           text-[13px] sm:text-sm md:text-lg
           leading-relaxed md:leading-relaxed"
         >
-          Join us for three electrifying days of hackathons, design battles, workshops, and competitions, all under one roof. Catalysis is where thinkers, creators, and innovators come to transform ideas into impact.
+          Two days, six events, one arena. Join us for Catalysis V4, where coders, strategists, and creators compete, collaborate, and rise to the top.
         </p>
       </div>
 <div className={`relative w-full max-w-6xl mt-4 md:mt-5 reveal reveal-up ${inView} reveal-delay-2`}>
