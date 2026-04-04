@@ -22,19 +22,20 @@ export const eventData: Record<string, EventDetails> = {
     tags: ["Mobile Gaming", "Strategy", "Tournament"],
     description: "Coordinate, build your perfect deck, and outsmart your opponents in this fast-paced mobile strategy game. Prove your tactical synergy to claim the title of campus champions.",
     rules: [
+      "Individual participation only",
       "Standard Tournament rules apply",
       "No toxic behavior or BMing (instant warning)",
-      "Bring your own fully charged devices",
+      "Bring your own fully charged device",
       "- Exploiting game bugs is strictly forbidden"
     ],
     prizes: [
-      "🥇 Winning Team: ₹XXXX + Trophy",
-      "🥈 Runner-up Team: ₹XXXX + Certificate",
-      "🎖️ MVP Award for top player"
+      "🥇 1st Place: Rs. 1,000 + Certificate",
+      "🥈 2nd Place: Rs. 750 + Certificate",
+      "Total Prize Pool: Rs. 1,750"
     ],
     schedule: [
-      "Date: Day 2",
-      "Time: 01:30 PM – 03:30 PM"
+      "Date: Day 2 - Friday, 18 April",
+      "Time: 1:30 PM - 2:30 PM"
     ],
     requirements: [
       "Valid Supercell account",
@@ -57,13 +58,14 @@ export const eventData: Record<string, EventDetails> = {
       "- Accessing external code repositories is forbidden"
     ],
     prizes: [
-      "🥇 Winner: ₹XXXX + Certificate",
-      "🥈 Runner-up: ₹XXXX + Certificate",
-      "🎖️ Participation Certificates for all"
+      "🥇 1st Place: Rs. 1,500 + Certificate",
+      "🥈 2nd Place: Rs. 1,000 + Certificate",
+      "🥉 3rd Place: Rs. 500 + Certificate",
+      "Total Prize Pool: Rs. 3,000"
     ],
     schedule: [
-      "Day 2 Batch: 10:15 AM – 12:30 PM",
-      "Day 3 Batch: 10:15 AM – 12:30 PM"
+      "Date: Day 2 - Friday, 18 April",
+      "Time: 9:30 AM - 11:30 AM"
     ],
     requirements: [
       "Active HackerRank or LeetCode account",
@@ -80,20 +82,21 @@ export const eventData: Record<string, EventDetails> = {
     tags: ["Speed Demon", "Precision Master", "Combo Builder"],
     description: "Typemaster is a high-speed typing competition designed to test your accuracy, speed, and consistency. Participants will compete in multiple rounds where precision and quick reflexes are the key to survival.",
     rules: [
+      "Individual participation only",
       "Participants must use the assigned system",
       "No external keyboards allowed",
       "Any malpractice leads to disqualification",
-      "- Decisions by judges are final",
-      "- Late entries will not be allowed"
+      "- Decisions by judges are final"
     ],
     prizes: [
-      "🥇 Winner: ₹XXXX + Certificate",
-      "🥈 Runner-up: ₹XXXX + Certificate",
-      "🎖️ Participation Certificates for all"
+      "🥇 1st Place: Rs. 1,500 + Certificate",
+      "🥈 2nd Place: Rs. 1,000 + Certificate",
+      "🥉 3rd Place: Rs. 500 + Certificate",
+      "Total Prize Pool: Rs. 3,000"
     ],
     schedule: [
-      "Date: Day 1",
-      "Time: 01:30 PM – 03:30 PM"
+      "Date: Day 2 - Friday, 18 April",
+      "Time: 11:30 AM - 12:30 PM"
     ],
     requirements: [
       "Basic typing skills",
@@ -102,7 +105,7 @@ export const eventData: Record<string, EventDetails> = {
     ]
   },
   "pitch-wala": {
-    title: "Pitch Wala",
+    title: "Pitch Perfect",
     subtitle: "Turn your ideas into impact with the power of persuasion",
     image: "/pokemons/jigglypuff.svg",
     heroColor: "#FFB6C1",
@@ -116,13 +119,13 @@ export const eventData: Record<string, EventDetails> = {
       "- All business ideas must be original"
     ],
     prizes: [
-      "🥇 Best Pitch: ₹XXXX + Certificate",
-      "🥈 Runner-up: ₹XXXX + Certificate",
-      "🎖️ Potential Incubation/Mentorship opportunities"
+      "🥇 Best Pitch: Rs. 1,000 + Certificate",
+      "🥈 Runner-up: Rs. 750 + Certificate",
+      "Total Prize Pool: Rs. 1,750"
     ],
     schedule: [
-      "Date: Day 3",
-      "Time: 01:30 PM – 02:30 PM"
+      "Date: Day 2 - Friday, 18 April",
+      "Time: 2:30 PM - 3:30 PM"
     ],
     requirements: [
       "Pitch Deck (.PPT or .PDF) submitted prior to event",
@@ -139,28 +142,30 @@ export const eventData: Record<string, EventDetails> = {
     tags: ["Scavenger Hunt", "Tech Puzzles", "Teamwork"],
     description: "Navigate through mind-bending technical puzzles and clues hidden across the campus. Combine your technical knowledge with quick thinking to be the first team to crack the final code.",
     rules: [
-      "Teams must consist of 2-4 members",
+      "Team of 4 members required",
       "No outside internet assistance for offline clues",
       "Any destruction of campus property leads to disqualification",
       "- Decisions by the clue-masters are final"
     ],
     prizes: [
-      "🥇 Winner: ₹XXXX + Certificate",
-      "🥈 Runner-up: ₹XXXX + Certificate",
-      "🎖️ Participation Certificates for all"
+      "🥇 1st Place Team: Rs. 5,000 + Trophy",
+      "🥈 2nd Place Team: Rs. 3,000 + Certificate",
+      "🥉 3rd Place Team: Rs. 2,000 + Certificate",
+      "Total Prize Pool: Rs. 10,000"
     ],
     schedule: [
-      "Date: Day 1",
-      "Time: 10:15 AM – 12:30 PM"
+      "Date: Day 1 - Thursday, 17 April",
+      "Time: 10:15 AM - 12:30 PM"
     ],
     requirements: [
+      "Team of exactly 4 members",
       "At least one fully charged smartphone per team",
       "QR Code Scanner app installed",
       "- Student ID proof"
     ]
   },
   "code-relay": {
-    title: "Code Relay",
+    title: "Coding Relay",
     subtitle: "Pass the logic, carry the code, and race to victory together",
     image: "/pokemons/ditto.svg",
     heroColor: "#B39DDB",
@@ -168,21 +173,23 @@ export const eventData: Record<string, EventDetails> = {
     tags: ["Algorithms", "Team Sync", "Endurance"],
     description: "A fast-paced tag-team coding competition. One team member starts coding a solution, and when the buzzer rings, the next member must take over exactly where they left off without communicating!",
     rules: [
-      "Teams of 3 members are strictly required",
+      "Teams of exactly 3 members required",
       "Absolutely no verbal communication during handoffs",
       "Standard libraries only; no external APIs allowed",
       "- Code must compile to be evaluated"
     ],
     prizes: [
-      "🥇 Winning Team: ₹XXXX + Certificate",
-      "🥈 Runner-up Team: ₹XXXX + Certificate",
-      "🎖️ Participation Certificates for all"
+      "🥇 1st Place Team: Rs. 4,000 + Trophy",
+      "🥈 2nd Place Team: Rs. 2,500 + Certificate",
+      "🥉 3rd Place Team: Rs. 1,500 + Certificate",
+      "Total Prize Pool: Rs. 8,000"
     ],
     schedule: [
-      "Round 1: Day 1 | 02:30 PM – 03:30 PM",
-      "Finals: Day 2 | 01:30 PM – 03:30 PM"
+      "Date: Day 1 - Thursday, 17 April",
+      "Time: 1:30 PM - 3:30 PM"
     ],
     requirements: [
+      "Team of exactly 3 members",
       "Strong logic fundamentals",
       "Familiarity with C++, Java, or Python",
       "- Student ID proof"

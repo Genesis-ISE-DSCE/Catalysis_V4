@@ -7,21 +7,34 @@ import { useInView } from "@/hooks/useInView";
 
 const qna = [
   {
-    question: "Is there a participation fee?",
+    question: "What is Catalysis?",
     answer:
-      "No, there is absolutely no fee required to participate in this event or activity. You can join freely without any cost or hidden charges involved.",
+      "Catalysis is a 2-day interdepartmental technical fest organised by team Genesis of the Department of Information Science and Engineering.",
   },
   {
-    question: "Can I join multiple events?",
-    answer: "Yes, you can participate in multiple events. Our schedule is designed to allow participants to explore different tracks.",
+    question: "When and where will Catalysis V4 take place?",
+    answer:
+      "Catalysis V4 will take place on April 17-18, 2026, at the Department of Information Science and Engineering, DSCE Bangalore.",
   },
   {
-    question: "Will certificates be provided?",
-    answer: "Yes, all participants will receive digital certificates of participation, and winners will receive merit certificates.",
+    question: "What type of events can I expect?",
+    answer:
+      "The fest includes Technoseek (scavenger hunt), Coding Relay (team coding), DSA Smackdown (algorithms), Typemaster (typing speed), Clash Royale (gaming), and Pitch Perfect (startup pitching).",
   },
   {
-    question: "How do I register?",
-    answer: "You can register using the register button on the homepage. Simply fill out the form and you&apos;ll receive a confirmation email.",
+    question: "Can non-IT students join the action?",
+    answer:
+      "Absolutely! Catalysis welcomes tech enthusiasts from all branches to come and unleash their skills.",
+  },
+  {
+    question: "Will there be prizes?",
+    answer:
+      "Yes! There is a total prize pool of over Rs. 27,500 across all events, plus trophies, merit certificates, and bragging rights.",
+  },
+  {
+    question: "How can I participate in Catalysis V4?",
+    answer:
+      "Register online through the official website using the Register Now button and secure your spot at Catalysis V4.",
   },
 ];
 
@@ -47,23 +60,9 @@ export default function FAQ() {
                 </h1>
                </div>
 
-               <p className="text-[#3b0a1e] font-nunito text-lg leading-relaxed mb-10">
+               <p className="text-[#3b0a1e] font-nunito text-lg leading-relaxed">
                 Don&apos;t hesitate to reach out with any questions you might have, whether they&apos;re big or small. We&apos;re always ready and eager to assist you with anything you need, ensuring you get the support and answers you&apos;re looking for every step of the way!
                </p>
-            </div>
-
-            <div className="relative bg-white border-2 border-black rounded-[2rem] p-6 h-36 flex flex-col justify-between shadow-sm">
-              <label htmlFor="faq-input" className="sr-only">Type your message</label>
-              <input
-                id="faq-input"
-                placeholder="Type message..."
-                className="bg-transparent outline-none w-full text-lg placeholder:text-gray-400 font-medium"
-              />
-              <div className="flex justify-end">
-                <button className="bg-[#E3242B] cursor-pointer text-white font-bold px-6 py-3 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[1px] hover:shadow-none transition-all active:scale-95">
-                  SEND MESSAGE
-                </button>
-              </div>
             </div>
           </div>
 

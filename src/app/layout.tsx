@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 import PokeCursor from "@/components/ui/Pokecursor";
+import AudioPlayer from "@/components/ui/AudioPlayer";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -28,6 +29,7 @@ export default function RootLayout({
     >
       <body className="flex flex-col min-h-screen">
         <PokeCursor />
+        <AudioPlayer />
         <Navbar />
         <main className="flex-grow">
           {children}
