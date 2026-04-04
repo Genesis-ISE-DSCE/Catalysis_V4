@@ -9,7 +9,13 @@
       "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/Property 1=Pokeball-1.png\"  \"D:/CATALYSIS/new/Catalysis_V4/public/splash/pokeballs/pokeball-1.png\")",
       "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/Property 1=Pokeball-2.png\"  \"D:/CATALYSIS/new/Catalysis_V4/public/splash/pokeballs/pokeball-2.png\")",
       "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/Property 1=Pokeball-3.png\"  \"D:/CATALYSIS/new/Catalysis_V4/public/splash/pokeballs/pokeball-3.png\")",
-      "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/Property 1=Pokeball-4.png\"  \"D:/CATALYSIS/new/Catalysis_V4/public/splash/pokeballs/pokeball-4.png\")"
+      "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/Property 1=Pokeball-4.png\"  \"D:/CATALYSIS/new/Catalysis_V4/public/splash/pokeballs/pokeball-4.png\")",
+      "mcp__ide__getDiagnostics",
+      "Bash(npx next:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npx --yes next lint)",
+      "Bash(node_modules/.bin/next lint:*)",
+      "Bash(node_modules/.bin/eslint src:*)"
     ]
   }
 }

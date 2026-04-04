@@ -44,7 +44,6 @@ export default function AudioPlayer() {
   return (
     <>
       {/* Hidden audio element — persists for the lifetime of the app */}
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <audio ref={audioRef} src="/audio/bg-music.m4a" loop preload="auto" />
 
       {/* Floating mute button — appears after music starts */}

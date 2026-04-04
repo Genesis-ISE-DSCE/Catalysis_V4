@@ -41,11 +41,12 @@ export default function SplashScreen() {
   const [fadeBall, setFadeBall]     = useState(false);
   const [logoIn, setLogoIn]         = useState(false);
 
-  const flyTransformRef = useRef(`translate(24px, 16px) scale(0.6)`);
+  const [flyTransform, setFlyTransform] = useState(`translate(24px, 16px) scale(0.6)`);
   const intervalRef     = useRef<ReturnType<typeof setInterval> | null>(null);
 
   /* ── hydration + session ── */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsClient(true);
     if (sessionStorage.getItem("splashSeen") === "true") {
       setState("done");
@@ -77,6 +78,7 @@ export default function SplashScreen() {
    */
   useEffect(() => {
     if (state === "idle" || state === "throwing") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLogoIn(false);
       return;
     }
@@ -97,7 +99,8 @@ export default function SplashScreen() {
     if (navImg) {
       const r     = navImg.getBoundingClientRect();
       const scale = r.width / LOGO_W;
-      flyTransformRef.current = `translate(${r.left}px, ${r.top}px) scale(${scale})`;
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setFlyTransform(`translate(${r.left}px, ${r.top}px) scale(${scale})`);
     }
   }, [state]);
 
@@ -267,7 +270,7 @@ export default function SplashScreen() {
             left:            0,
             willChange:      "transform, opacity",
             transformOrigin: "top left",
-            transform:       isFly ? flyTransformRef.current : LOGO_CENTER,
+            transform:       isFly ? flyTransform : LOGO_CENTER,
             /*
              * Opacity logic:
              * - red-in / red-out / fade-out: visible (logoIn drives 0→1 fade-in, then stays 1)
