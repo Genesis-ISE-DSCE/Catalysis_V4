@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const TRACKS = [
@@ -71,7 +72,13 @@ export default function AudioPlayer() {
         aria-label={!playing ? "Play music" : muted ? "Unmute music" : "Mute music"}
         className="fixed bottom-6 right-6 z-[500] w-12 h-12 bg-white border-[3px] border-black rounded-full shadow-[3px_3px_0px_black] flex items-center justify-center text-xl hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_black] active:translate-y-0.5 active:shadow-[2px_2px_0px_black] transition-all duration-200"
       >
-        {!playing ? "🎵" : muted ? "🔇" : "🔊"}
+        {!playing ? (
+          <Image src="/sound-icon.png" alt="Play music" width={24} height={24} className="object-contain" />
+        ) : muted ? (
+          <Image src="/mute-icon.png" alt="Unmuted" width={24} height={24} className="object-contain" />
+        ) : (
+          <Image src="/sound-icon.png" alt="Sound on" width={24} height={24} className="object-contain" />
+        )}
       </button>
     </>
   );

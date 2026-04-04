@@ -66,7 +66,7 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
 
   return (
     <div
-      className={`h-full w-full rounded-2xl flex flex-col p-2.5 overflow-hidden transition-all duration-300 ${
+      className={`h-full w-full rounded-2xl flex flex-col p-1.5 sm:p-2.5 overflow-hidden transition-all duration-300 ${
         item.isEvent
           ? "border-2 border-black hover:shadow-[3px_3px_0_0_rgba(0,0,0,0.18)] hover:-translate-y-0.5"
           : "border border-black/10"
@@ -79,11 +79,11 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
     >
       {/* Icon */}
       {item.imagePath ? (
-        <div className="relative w-8 h-8 flex-shrink-0 mb-1">
+        <div className="relative w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0 mb-0.5 sm:mb-1">
           <Image src={item.imagePath} alt={item.title} fill sizes="32px" className="object-contain drop-shadow-sm" />
         </div>
       ) : (
-        <div className="w-2 h-2 rounded-full flex-shrink-0 mb-1.5 mt-0.5" style={{ backgroundColor: accentColor, opacity: 0.35 }} />
+        <div className="w-2 h-2 rounded-full flex-shrink-0 mb-1 mt-0.5" style={{ backgroundColor: accentColor, opacity: 0.35 }} />
       )}
 
       <p className={`font-black leading-tight tracking-tight ${item.isEvent ? "text-[12px] sm:text-[13px] text-[#3A001D]" : "text-[11px] text-black/50"}`}>
@@ -94,22 +94,22 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
         {item.venue}
       </p>
 
-      <p className="text-[10px] font-bold mt-1" style={{ color: item.isEvent ? accentColor : "#9CA3AF" }}>
+      <p className="text-[10px] font-bold mt-0.5 sm:mt-1" style={{ color: item.isEvent ? accentColor : "#9CA3AF" }}>
         {item.timeFrom} - {item.timeTill}
       </p>
 
       {item.description && (
-        <p className="text-[9px] sm:text-[10px] text-black/55 leading-snug mt-1 line-clamp-3 flex-1">
+        <p className="text-[9px] sm:text-[10px] text-black/55 leading-snug mt-0.5 sm:mt-1 line-clamp-2 flex-1">
           {item.description}
         </p>
       )}
 
       {(item.hasRegister || item.slug) && (
-        <div className="flex gap-1.5 mt-auto pt-1.5 flex-wrap">
+        <div className="flex gap-1 sm:gap-1.5 mt-auto pt-1 sm:pt-1.5 flex-wrap">
           {item.hasRegister && (
             <button
               onClick={() => router.push("/register")}
-              className="text-white text-[8px] sm:text-[9px] font-extrabold px-3 py-1 rounded-full border-2 border-black shadow-[1.5px_1.5px_0px_black] hover:shadow-[2.5px_2.5px_0px_black] hover:-translate-y-0.5 active:shadow-none active:translate-y-0 transition-all duration-150 flex-shrink-0"
+              className="text-white text-[8px] sm:text-[9px] font-extrabold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border-2 border-black shadow-[1.5px_1.5px_0px_black] hover:shadow-[2.5px_2.5px_0px_black] hover:-translate-y-0.5 active:shadow-none active:translate-y-0 transition-all duration-150 flex-shrink-0"
               style={{ backgroundColor: accentColor }}
             >
               Register
@@ -118,7 +118,7 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
           {item.slug && (
             <Link
               href={`/rules/${item.slug}`}
-              className="bg-white text-[#3A001D] text-[8px] sm:text-[9px] font-extrabold px-3 py-1 rounded-full border-2 border-black shadow-[1.5px_1.5px_0px_black] hover:shadow-[2.5px_2.5px_0px_black] hover:-translate-y-0.5 active:shadow-none active:translate-y-0 transition-all duration-150 flex-shrink-0"
+              className="bg-white text-[#3A001D] text-[8px] sm:text-[9px] font-extrabold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border-2 border-black shadow-[1.5px_1.5px_0px_black] hover:shadow-[2.5px_2.5px_0px_black] hover:-translate-y-0.5 active:shadow-none active:translate-y-0 transition-all duration-150 flex-shrink-0"
             >
               Details →
             </Link>

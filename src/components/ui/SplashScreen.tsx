@@ -138,11 +138,9 @@ export default function SplashScreen() {
 
   if (!isClient || state === "done") return null;
 
-  const showBall     = state === "idle" || state === "throwing";
-  const showEllipses = state === "red-in" || state === "red-out";
-  const showLogo     = state === "red-in" || state === "red-out" || state === "fly" || state === "fade-out";
-  const redActive    = state === "red-in";
-  const isFly        = state === "fly" || state === "fade-out";
+  const showBall = state === "idle" || state === "throwing";
+  const showLogo = state === "red-in" || state === "red-out" || state === "fly" || state === "fade-out";
+  const isFly    = state === "fly" || state === "fade-out";
 
   const LOGO_CENTER = `translate(calc(50vw - ${LOGO_W / 2}px), calc(50vh - ${LOGO_H / 2}px)) scale(1)`;
 
@@ -191,14 +189,6 @@ export default function SplashScreen() {
         .e3 { animation: eIn3 0.55s cubic-bezier(0.22,1,0.36,1) 0.18s both; }
       `}</style>
 
-      {/* red overlay */}
-      <div
-        className="absolute inset-0 bg-[#DD273E] pointer-events-none"
-        style={{
-          opacity:    redActive ? 1 : 0,
-          transition: redActive ? "opacity 0.4s ease" : "opacity 0.55s ease",
-        }}
-      />
 
       {/* ── POKEBALL ── */}
       {showBall && (
@@ -237,29 +227,6 @@ export default function SplashScreen() {
         </div>
       )}
 
-      {/* ── ELLIPSES ── */}
-      {showEllipses && (
-        <>
-          {[
-            { src: "/splash/ellipse-1.png", cls: "e1" },
-            { src: "/splash/ellipse-2.png", cls: "e2" },
-            { src: "/splash/ellipse-3.png", cls: "e3" },
-          ].map(({ src, cls }) => (
-            <div
-              key={src}
-              className={`absolute rounded-full overflow-hidden pointer-events-none ${cls}`}
-              style={{
-                top: "50%", left: "50%",
-                width: 900, height: 900,
-                opacity:    redActive ? undefined : 0,
-                transition: redActive ? undefined : "opacity 0.55s ease",
-              }}
-            >
-              <Image src={src} alt="" fill sizes="900px" className="object-cover" draggable={false} />
-            </div>
-          ))}
-        </>
-      )}
 
       {/* ── CATALYSIS LOGO ── */}
       {showLogo && (
@@ -292,8 +259,7 @@ export default function SplashScreen() {
             priority
             draggable={false}
             style={{
-              filter:     redActive ? "brightness(0) invert(1)" : "none",
-              transition: "filter 0.35s ease",
+              filter:     "none",
             }}
           />
         </div>

@@ -21,7 +21,9 @@
       "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio3.mp3\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-3.mp3\")",
       "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio 4.mp3\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-4.mp3\")",
       "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio 5.mp3\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-5.mp3\")",
-      "Bash(node_modules/.bin/eslint src/components/ui/AudioPlayer.tsx)"
+      "Bash(node_modules/.bin/eslint src/components/ui/AudioPlayer.tsx)",
+      "Bash(cp \"C:\\\\Users\\\\amanr\\\\Downloads\\\\mute icon.png\" \"D:\\\\CATALYSIS\\\\new\\\\Catalysis_V4\\\\public\\\\mute-icon.png\")",
+      "Bash(cp \"C:\\\\Users\\\\amanr\\\\Downloads\\\\sound icon.png\" \"D:\\\\CATALYSIS\\\\new\\\\Catalysis_V4\\\\public\\\\sound-icon.png\")"
     ]
   }
 }
