@@ -24,19 +24,19 @@ export interface TimelineEvent {
 }
 
 const timeline: TimelineEvent[] = [
-  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "OPENING CEREMONY",  venue: "MAIN AUDITORIUM",       timeFrom: "09:00", timeTill: "10:00", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFFFFF", hasRegister: false },
-  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "TECHNOSEEK",        venue: "ROOM 205",              timeFrom: "10:15", timeTill: "12:30", description: "Navigate mind-bending puzzles hidden across campus. First team to crack the final code wins.",   isEvent: true,  imagePath: "/pokemons/zoroark.svg",    panelColor: "#D1F5E3", hasRegister: true,  slug: "technoseek"    },
-  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "LUNCH BREAK",       venue: "MAIN AUDITORIUM",       timeFrom: "12:30", timeTill: "13:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFFFFF", hasRegister: false },
-  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "CODING RELAY",      venue: "DEV ARENA",             timeFrom: "13:30", timeTill: "15:30", description: "Tag-team coding under pressure. Pass the keyboard and never break the chain.",                 isEvent: true,  imagePath: "/pokemons/ditto.svg",      panelColor: "#FFD6EC", hasRegister: true,  slug: "code-relay"    },
-  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "BREAK",             venue: "MAIN AUDITORIUM",       timeFrom: "15:30", timeTill: "16:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFFFFF", hasRegister: false },
+  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "OPENING CEREMONY",  venue: "MAIN AUDITORIUM",       timeFrom: "09:00", timeTill: "10:00", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFF0F2", hasRegister: false },
+  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "TECHNOSEEK",        venue: "ROOM 205",              timeFrom: "10:15", timeTill: "12:30", description: "Navigate mind-bending puzzles hidden across campus. First team to crack the final code wins.",   isEvent: true,  imagePath: "/pokemons/zoroark.svg",    panelColor: "#FFD6DC", hasRegister: true,  slug: "technoseek"    },
+  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "LUNCH BREAK",       venue: "MAIN AUDITORIUM",       timeFrom: "12:30", timeTill: "13:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFF0F2", hasRegister: false },
+  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "CODING RELAY",      venue: "DEV ARENA",             timeFrom: "13:30", timeTill: "15:30", description: "Tag-team coding under pressure. Pass the keyboard and never break the chain.",                 isEvent: true,  imagePath: "/pokemons/ditto.svg",      panelColor: "#FFE4EA", hasRegister: true,  slug: "code-relay"    },
+  { day: 1, date: "17/04", dayLabel: "THURSDAY", title: "BREAK",             venue: "MAIN AUDITORIUM",       timeFrom: "15:30", timeTill: "16:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFF0F2", hasRegister: false },
 
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "DSA SMACKDOWN",     venue: "ROOM 205",              timeFrom: "09:30", timeTill: "11:30", description: "Crack algorithms under a strict time limit. Efficiency is your only ally.",                     isEvent: true,  imagePath: "/pokemons/alakazam.svg",   panelColor: "#FFF3CD", hasRegister: true,  slug: "dsa-smackdown" },
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "TYPEMASTER",        venue: "ROOM 205",              timeFrom: "11:30", timeTill: "12:30", description: "Type fast. Stay accurate. Only the swiftest and most precise will survive.",                   isEvent: true,  imagePath: "/pokemons/rayquaza.svg",   panelColor: "#D4F5E8", hasRegister: true,  slug: "typemaster"    },
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "LUNCH BREAK",       venue: "MAIN AUDITORIUM",       timeFrom: "12:30", timeTill: "13:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFFFFF", hasRegister: false },
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "CLASH ROYALE",      venue: "ROOM 205",              timeFrom: "13:30", timeTill: "14:30", description: "Outmaneuver opponents in this fast-paced 1v1 card battle. Prove your deck mastery.",           isEvent: true,  imagePath: "/pokemons/arceus.svg",     panelColor: "#E8E8F0", hasRegister: true,  slug: "clash-royale"  },
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "PITCH PERFECT",     venue: "ROOM 205",              timeFrom: "14:30", timeTill: "15:30", description: "Present your startup idea to judges. Impress with innovation, feasibility, and delivery.",     isEvent: true,  imagePath: "/pokemons/jigglypuff.svg", panelColor: "#FFD6F0", hasRegister: true,  slug: "pitch-wala"    },
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "PRIZE DISTRIBUTION", venue: "MAIN AUDITORIUM",      timeFrom: "15:30", timeTill: "16:00", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFFFFF", hasRegister: false },
-  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "CLOSING CEREMONY",  venue: "MAIN AUDITORIUM",       timeFrom: "16:00", timeTill: "16:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#FFFFFF", hasRegister: false },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "DSA SMACKDOWN",     venue: "ROOM 205",              timeFrom: "09:30", timeTill: "11:30", description: "Crack algorithms under a strict time limit. Efficiency is your only ally.",                     isEvent: true,  imagePath: "/pokemons/alakazam.svg",   panelColor: "#D6F0DC", hasRegister: true,  slug: "dsa-smackdown" },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "TYPEMASTER",        venue: "ROOM 205",              timeFrom: "11:30", timeTill: "12:30", description: "Type fast. Stay accurate. Only the swiftest and most precise will survive.",                   isEvent: true,  imagePath: "/pokemons/rayquaza.svg",   panelColor: "#DAEEDD", hasRegister: true,  slug: "typemaster"    },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "LUNCH BREAK",       venue: "MAIN AUDITORIUM",       timeFrom: "12:30", timeTill: "13:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#EEF8F0", hasRegister: false },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "CLASH ROYALE",      venue: "ROOM 205",              timeFrom: "13:30", timeTill: "14:30", description: "Outmaneuver opponents in this fast-paced 1v1 card battle. Prove your deck mastery.",           isEvent: true,  imagePath: "/pokemons/arceus.svg",     panelColor: "#D8ECDA", hasRegister: true,  slug: "clash-royale"  },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "PITCH PERFECT",     venue: "ROOM 205",              timeFrom: "14:30", timeTill: "15:30", description: "Present your startup idea to judges. Impress with innovation, feasibility, and delivery.",     isEvent: true,  imagePath: "/pokemons/jigglypuff.svg", panelColor: "#D4ECD7", hasRegister: true,  slug: "pitch-wala"    },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "PRIZE DISTRIBUTION", venue: "MAIN AUDITORIUM",      timeFrom: "15:30", timeTill: "16:00", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#EEF8F0", hasRegister: false },
+  { day: 2, date: "18/04", dayLabel: "FRIDAY",   title: "CLOSING CEREMONY",  venue: "MAIN AUDITORIUM",       timeFrom: "16:00", timeTill: "16:30", description: null,                                                                                           isEvent: false, imagePath: null,                       panelColor: "#EEF8F0", hasRegister: false },
 ];
 
 const START_MIN = 9 * 60;
@@ -61,19 +61,19 @@ function heightPct(from: string, till: string): string {
 }
 
 function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number }) {
-  const isWhite = item.panelColor === "#FFFFFF";
-  const router  = useRouter();
+  const router = useRouter();
+  const accentColor = item.day === 1 ? "#DD273E" : "#2E8A3E";
 
   return (
     <div
       className={`h-full w-full rounded-2xl flex flex-col p-2.5 overflow-hidden transition-all duration-300 ${
         item.isEvent
-          ? "border-2 border-black hover:shadow-[3px_3px_0_0_rgba(0,0,0,0.2)] hover:-translate-y-0.5"
-          : "border border-black/15"
+          ? "border-2 border-black hover:shadow-[3px_3px_0_0_rgba(0,0,0,0.18)] hover:-translate-y-0.5"
+          : "border border-black/10"
       }`}
       style={{
         backgroundColor: item.panelColor,
-        boxShadow: item.isEvent ? "2px 2px 0 0 rgba(0,0,0,0.12)" : "none",
+        boxShadow: item.isEvent ? "2px 2px 0 0 rgba(0,0,0,0.10)" : "none",
         animationDelay: `${delay}ms`,
       }}
     >
@@ -83,26 +83,23 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
           <Image src={item.imagePath} alt={item.title} fill sizes="32px" className="object-contain drop-shadow-sm" />
         </div>
       ) : (
-        <div className="w-2.5 h-2.5 rounded-full bg-gray-300 flex-shrink-0 mb-1.5 mt-0.5" />
+        <div className="w-2 h-2 rounded-full flex-shrink-0 mb-1.5 mt-0.5" style={{ backgroundColor: accentColor, opacity: 0.35 }} />
       )}
 
-      <p className={`font-black leading-tight tracking-tight ${item.isEvent ? "text-[12px] sm:text-[13px] text-black" : "text-[11px] text-black/60"}`}>
+      <p className={`font-black leading-tight tracking-tight ${item.isEvent ? "text-[12px] sm:text-[13px] text-[#3A001D]" : "text-[11px] text-black/50"}`}>
         {item.title}
       </p>
 
-      <p
-        className="text-[9px] font-semibold tracking-wider uppercase leading-none mt-0.5"
-        style={{ color: isWhite ? "#9CA3AF" : "rgba(0,0,0,0.38)" }}
-      >
+      <p className="text-[9px] font-semibold tracking-wider uppercase leading-none mt-0.5 text-black/40">
         {item.venue}
       </p>
 
-      <p className="text-[10px] font-bold mt-1" style={{ color: item.isEvent ? "#D92B4B" : "#9CA3AF" }}>
+      <p className="text-[10px] font-bold mt-1" style={{ color: item.isEvent ? accentColor : "#9CA3AF" }}>
         {item.timeFrom} - {item.timeTill}
       </p>
 
       {item.description && (
-        <p className="text-[9px] sm:text-[10px] text-black/60 leading-snug mt-1 line-clamp-3 flex-1">
+        <p className="text-[9px] sm:text-[10px] text-black/55 leading-snug mt-1 line-clamp-3 flex-1">
           {item.description}
         </p>
       )}
@@ -171,7 +168,7 @@ const HEADER_H = 52;
 const GRID_H   = 1200;
 
 // Day accent colors
-const DAY_COLORS = ["#DD273E", "#7C3AED"] as const;
+const DAY_COLORS = ["#DD273E", "#2E8A3E"] as const;
 
 function DesktopTimeline() {
   const days = [1, 2] as const;

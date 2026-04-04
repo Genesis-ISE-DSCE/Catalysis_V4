@@ -21,7 +21,7 @@ export default function Footer() {
       <div className="bg-white text-gray-800 pt-16 pb-12 text-center border-t-[3px] border-black">
         <div className="max-w-7xl mx-auto">
           <p className="font-nunito text-xl tracking-tight">
-            © Copyright Catalysis 2026. All rights reserved.
+            © Copyright Genesis 2026. All rights reserved.
           </p>
         </div>
       </div>

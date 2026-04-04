@@ -82,8 +82,7 @@ export default function Navbar() {
   };
 
   const handleRegister = () => {
-    if (isHome) scrollTo("cta");
-    else router.push("/register");
+    router.push("/register");
     setIsOpen(false);
   };
 

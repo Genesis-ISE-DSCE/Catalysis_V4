@@ -15,7 +15,13 @@
       "Bash(npx eslint:*)",
       "Bash(npx --yes next lint)",
       "Bash(node_modules/.bin/next lint:*)",
-      "Bash(node_modules/.bin/eslint src:*)"
+      "Bash(node_modules/.bin/eslint src:*)",
+      "Bash(node_modules/.bin/eslint src/components/sections/Timeline.tsx --ext .ts,.tsx)",
+      "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio 2.mp4\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-2.mp4\")",
+      "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio3.mp3\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-3.mp3\")",
+      "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio 4.mp3\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-4.mp3\")",
+      "Bash(cp \"C:/Users/amanr/OneDrive/Desktop/cata vid/audio 5.mp3\" \"D:/CATALYSIS/new/Catalysis_V4/public/audio/bg-music-5.mp3\")",
+      "Bash(node_modules/.bin/eslint src/components/ui/AudioPlayer.tsx)"
     ]
   }
 }

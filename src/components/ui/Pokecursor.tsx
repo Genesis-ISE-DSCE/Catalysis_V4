@@ -45,13 +45,16 @@ const CURSOR_DATA_URI = `data:image/svg+xml,${encodeURIComponent(`
 const GLOBAL_CSS = `
   *,
   *::before,
-  *::after {
+  *::after,
+  a, button, input, textarea, select, label,
+  [role="button"], [tabindex] {
     cursor: url("${CURSOR_DATA_URI}") 16 16, auto !important;
   }
 
   .poke-burst {
     position: fixed;
     pointer-events: none;
+    cursor: none !important;
     z-index: 99999;
     width: 40px;
     height: 40px;
