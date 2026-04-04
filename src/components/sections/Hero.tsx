@@ -51,12 +51,13 @@ function RegisterCard() {
             height={40}
           />
         </div>
-        <div className="relative ml-30 -bottom-3 z-20">
+        <div className="relative ml-30 transition-transform duration-200 hover:scale-115 active:scale-95 -bottom-3 z-20">
           <Image
             src="/hero/button.png"
             alt="press button"
             width={100}
             height={50}
+            onClick={() => router.push("/register")}
           />
         </div>
       </div>
@@ -70,7 +71,7 @@ function RegisterCard() {
           />
         </div>
 
-        <div className="relative top-7 z-20">
+        <div className="relative top-7 transition-transform duration-200 hover:scale-110 z-20">
           <Image
             src="/hero/register-now.png"
             alt="Register Now"
@@ -236,7 +237,7 @@ export default function Hero() {
       <RegisterCard />
     </div>
 
-    <div className="absolute right-10 bottom-10 z-20 top-6 transition-transform hover:-translate-y-2">
+    <div className="absolute right-10 bottom-10 z-20 top-18 transition-transform hover:-translate-y-2">
       <EventHighlightsCard />
     </div>
 

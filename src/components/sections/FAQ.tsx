@@ -17,6 +17,11 @@ const qna = [
       "Catalysis V4 will take place on April 17-18, 2026, at the Department of Information Science and Engineering, DSCE Bangalore.",
   },
   {
+    question: "Who can participate in Catalysis?",
+    answer:
+      "The fest is open to all students from DSCE, DSU, and DSATM. Students from all three campuses are welcome to join!",
+},
+  {
     question: "What type of events can I expect?",
     answer:
       "The fest includes Technoseek (scavenger hunt), Coding Relay (team coding), DSA Smackdown (algorithms), Typemaster (typing speed), Clash Royale (gaming), and Pitch Perfect (startup pitching).",
@@ -29,7 +34,7 @@ const qna = [
   {
     question: "Will there be prizes?",
     answer:
-      "Yes! There is a total prize pool of over Rs. 27,500 across all events, plus trophies, merit certificates, and bragging rights.",
+      "Yes! There is a total prize pool of over Rs. 25,000 across all events, plus trophies, merit certificates, and bragging rights.",
   },
   {
     question: "How can I participate in Catalysis V4?",

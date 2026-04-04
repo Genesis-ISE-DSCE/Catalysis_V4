@@ -105,11 +105,11 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
       )}
 
       {(item.hasRegister || item.slug) && (
-        <div className="flex gap-1 sm:gap-1.5 mt-auto pt-1 sm:pt-1.5 flex-wrap">
+        <div className="flex items-center gap-1 sm:gap-2 mt-auto pt-1 sm:pt-2 flex-wrap">
           {item.hasRegister && (
             <button
               onClick={() => router.push("/register")}
-              className="text-white text-[8px] sm:text-[9px] font-extrabold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border-2 border-black shadow-[1.5px_1.5px_0px_black] hover:shadow-[2.5px_2.5px_0px_black] hover:-translate-y-0.5 active:shadow-none active:translate-y-0 transition-all duration-150 flex-shrink-0"
+              className="text-white text-[8px] sm:text-[10px] font-black uppercase tracking-wider px-2 sm:px-5 py-0.5 sm:py-2 rounded-full border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 hover:scale-110 hover:bg-green-500 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:scale-95 active:shadow-none flex-shrink-0"
               style={{ backgroundColor: accentColor }}
             >
               Register
@@ -118,9 +118,10 @@ function EventCard({ item, delay = 0 }: { item: TimelineEvent; delay?: number })
           {item.slug && (
             <Link
               href={`/rules/${item.slug}`}
-              className="bg-white text-[#3A001D] text-[8px] sm:text-[9px] font-extrabold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border-2 border-black shadow-[1.5px_1.5px_0px_black] hover:shadow-[2.5px_2.5px_0px_black] hover:-translate-y-0.5 active:shadow-none active:translate-y-0 transition-all duration-150 flex-shrink-0"
+              className="bg-white text-black text-[8px] sm:text-[10px] font-bold px-2 sm:px-5 py-0.5 sm:py-2 rounded-full border-2 border-black transition-all duration-200 hover:scale-110 hover:bg-[#E3242B] hover:text-white active:scale-95 flex items-center gap-0.5 sm:gap-1 flex-shrink-0 group"
             >
-              Details →
+              Details
+              <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
           )}
         </div>
