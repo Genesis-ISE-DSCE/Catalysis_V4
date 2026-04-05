@@ -98,6 +98,8 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               width={400}
               height={146}
               priority
+              unoptimized
+              quality={100}
               className="w-[280px] sm:w-[350px] md:w-[400px] h-auto"
             />
           </div>

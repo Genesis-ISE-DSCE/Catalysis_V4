@@ -24,6 +24,9 @@ export default function CTA() {
               alt="Catalysis Logo"
               width={192}
               height={64}
+              unoptimized
+              priority
+              quality={100}
               className="h-auto w-auto"
             />
           </div>

@@ -261,6 +261,8 @@ export default function SplashScreen() {
             style={{
               filter:     "none",
             }}
+            unoptimized
+            quality={100}
           />
         </div>
       )}

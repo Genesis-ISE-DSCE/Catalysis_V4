@@ -110,6 +110,9 @@ export default function Navbar() {
               width={isScrolled ? 100 : 120}
               height={isScrolled ? 36 : 44}
               className="h-auto w-auto drop-shadow-md"
+              unoptimized
+              priority
+              quality={100}
             />
           </div>
 
