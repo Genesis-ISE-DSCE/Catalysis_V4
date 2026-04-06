@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Participant, Member } from "./ParticipantsClient";
-
-const ALL_EVENTS = ["technoseek", "typemaster", "clash_royale", "coding_relay", "dsa_smackdown", "pitch_perfect"];
+import { EVENT_IDS, EVENT_LABELS, BRANCHES, COLLEGES } from "@/lib/formConstants";
 
 interface EditModalProps {
   participant: Participant;
@@ -79,7 +78,6 @@ export default function EditModal({ participant, onClose, onSave }: EditModalPro
 
         <div style={{ padding: "24px 32px", overflowY: "auto", flex: 1 }}>
           <form id="edit-form" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-            {}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
               <div>
                 <label style={labelStyle}>Event</label>
@@ -89,8 +87,8 @@ export default function EditModal({ participant, onClose, onSave }: EditModalPro
                   style={inputStyle}
                   required
                 >
-                  {ALL_EVENTS.map(e => (
-                    <option key={e} value={e}>{e.replace(/_/g, " ").toUpperCase()}</option>
+                  {EVENT_IDS.map(e => (
+                    <option key={e} value={e}>{EVENT_LABELS[e]}</option>
                   ))}
                 </select>
               </div>
@@ -105,7 +103,6 @@ export default function EditModal({ participant, onClose, onSave }: EditModalPro
               </div>
             </div>
 
-            {}
             {(["member1", "member2", "member3"] as const).map((m, i) => (
               <div key={m} style={{ background: "rgba(255,255,255,0.03)", padding: 20, borderRadius: 12, border: "1px solid rgba(255,255,255,0.05)" }}>
                 <h4 style={{ color: "#a5b4fc", margin: "0 0 16px", fontSize: 13, textTransform: "uppercase", letterSpacing: "1px" }}>
@@ -116,8 +113,18 @@ export default function EditModal({ participant, onClose, onSave }: EditModalPro
                   <input placeholder="USN" value={formData[m].usn || ""} onChange={(e) => handleMemberChange(m, "usn", e.target.value)} style={inputStyle} required={i===0} />
                   <input placeholder="Email" type="email" value={formData[m].email || ""} onChange={(e) => handleMemberChange(m, "email", e.target.value)} style={inputStyle} required={i===0} />
                   <input placeholder="Phone" value={formData[m].phone || ""} onChange={(e) => handleMemberChange(m, "phone", e.target.value)} style={inputStyle} required={i===0} />
-                  <input placeholder="Semester" type="number" min="1" max="8" value={formData[m].semester || ""} onChange={(e) => handleMemberChange(m, "semester", parseInt(e.target.value))} style={inputStyle} required={i===0} />
-                  <input placeholder="Branch (e.g. ISE)" value={formData[m].branch || ""} onChange={(e) => handleMemberChange(m, "branch", e.target.value)} style={inputStyle} required={i===0} />
+                  <select value={formData[m].semester || ""} onChange={(e) => handleMemberChange(m, "semester", parseInt(e.target.value))} style={inputStyle} required={i===0}>
+                    <option value="">Semester</option>
+                    {["1","2","3","4","5","6","7","8"].map(s => <option key={s} value={s}>Semester {s}</option>)}
+                  </select>
+                  <select value={formData[m].college || ""} onChange={(e) => handleMemberChange(m, "college", e.target.value)} style={inputStyle} required={i===0}>
+                    <option value="">College</option>
+                    {COLLEGES.map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                  <select value={formData[m].branch || ""} onChange={(e) => handleMemberChange(m, "branch", e.target.value)} style={{ ...inputStyle, gridColumn: "1 / -1" }} required={i===0}>
+                    <option value="">Branch</option>
+                    {BRANCHES.map(b => <option key={b.value} value={b.value}>{b.label}</option>)}
+                  </select>
                 </div>
               </div>
             ))}

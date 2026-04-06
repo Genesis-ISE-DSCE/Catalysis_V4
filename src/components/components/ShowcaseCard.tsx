@@ -9,7 +9,7 @@ interface ShowcaseCardProps {
 export default function ShowcaseCard({ event, className = "" }: ShowcaseCardProps) {
   return (
     <div
-      className={`relative bg-white border-black flex flex-col items-center ${className}`}
+      className={`relative bg-white dark:bg-[#160030] border-black dark:border-white/15 flex flex-col items-center ${className}`}
       style={{
         "--card-w": "clamp(160px, 30vw, 320px)",
         width: "var(--card-w)",
@@ -35,7 +35,7 @@ export default function ShowcaseCard({ event, className = "" }: ShowcaseCardProp
 
       {/* Image container */}
       <div
-        className="w-full flex justify-center items-center border-b border-gray-100 overflow-hidden"
+        className="w-full flex justify-center items-center border-b border-gray-100 dark:border-white/10 overflow-hidden"
         style={{
           backgroundColor: event.imageBg,
           paddingTop: "calc(var(--card-w) * 0.12)",
@@ -61,7 +61,7 @@ export default function ShowcaseCard({ event, className = "" }: ShowcaseCardProp
         style={{ padding: "calc(var(--card-w) * 0.06)" }}
       >
         <h3
-          className="font-black tracking-tight text-black uppercase"
+          className="font-black tracking-tight text-black dark:text-white uppercase"
           style={{
             fontSize: "calc(var(--card-w) * 0.075)",
             marginBottom: "calc(var(--card-w) * 0.01)",

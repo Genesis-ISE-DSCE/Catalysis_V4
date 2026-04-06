@@ -51,23 +51,14 @@ export default function EventCard({ event }: EventCardProps) {
         />
       </div>
 
-      <div className="
-        w-[279px]
-        h-[337px]
-        bg-linear-to-t from-[#FFE296] to-[#FFFFFF]
-        border-[3px]
-        border-black
-        rounded-[40px]
-        flex flex-col
-        items-center
-        pt-24
-        px-4
-        pb-6
-      ">
-        <h3 className="font-nunito text-[22px] font-extrabold text-black uppercase leading-tight">
+      <div
+        className="event-card-body w-[279px] h-[337px] border-[3px] border-black dark:border-white/15 rounded-[40px] flex flex-col items-center pt-24 px-4 pb-6 dark:shadow-[0_0_24px_rgba(255,45,85,0.1)]"
+        style={{ "--event-color": event.color } as React.CSSProperties}
+      >
+        <h3 className="font-nunito text-[22px] font-extrabold text-black dark:text-white uppercase leading-tight">
           {event.name}
         </h3>
-        <p className="font-nunito text-[12px] font-semibold text-gray-400 mb-4 uppercase tracking-wider">
+        <p className="font-nunito text-[12px] font-semibold text-gray-400 dark:text-white/50 mb-4 uppercase tracking-wider">
           {event.type}
         </p>
 
@@ -82,7 +73,7 @@ export default function EventCard({ event }: EventCardProps) {
                   ${tagStyles[index % 4].bg} 
                   ${tagStyles[index % 4].border} 
                   ${isTriangleBase ? "col-span-2 mx-auto w-1/2" : "w-full"}
-                  rounded-full py-2 px-1 text-[11px] text-center font-nunito font-bold border-2 text-black truncate
+                  rounded-full py-2 px-1 text-[11px] text-center font-nunito font-bold border-2 text-black dark:text-black truncate
                 `}
               >
                 {tag}

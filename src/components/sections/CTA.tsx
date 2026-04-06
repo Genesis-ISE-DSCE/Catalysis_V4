@@ -10,7 +10,7 @@ export default function CTA() {
   const inView = isInView ? "in-view" : "";
 
   return (
-    <section ref={sectionRef} id="cta" className="relative pt-32 pb-0 bg-[#FFEEF0]">
+    <section ref={sectionRef} id="cta" className="relative pt-32 pb-0 bg-[#FFEEF0] dark:bg-[#0A0018]">
       <div className={`w-full relative reveal reveal-up ${inView}`}>
         <div className="absolute -top-12 left-0 right-0 h-20 bg-[#FF94a5] rounded-t-[3rem] border-t-2 border-x-2 border-black z-0" />
         <div className="absolute -top-8 left-0 right-0 h-20 bg-[#fc7d8d] rounded-t-[3rem] border-t-2 border-x-2 border-black z-10" />

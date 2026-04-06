@@ -18,10 +18,16 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-white text-gray-800 pt-16 pb-12 text-center border-t-[3px] border-black">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-nunito text-xl tracking-tight">
-            © Copyright Genesis 2026. All rights reserved.
+      <div className="bg-white dark:bg-[#0A0018] text-gray-800 dark:text-white/50 pt-16 pb-12 text-center border-t-[3px] border-black dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-2">
+          <p className="font-nunito font-black text-base tracking-tight text-[#3A001D] dark:text-white/70">
+            Catalysis V4.0
+          </p>
+          <p className="font-nunito text-sm text-gray-500 dark:text-white/40">
+            Organised by <span className="font-bold text-[#DD273E]">Club Genesis</span> · Department of Information Science &amp; Engineering · DSCE Bangalore
+          </p>
+          <p className="font-nunito text-xs text-gray-400 dark:text-white/25 mt-1">
+            © 2026 Club Genesis, ISE Dept, DSCE. All rights reserved.
           </p>
         </div>
       </div>

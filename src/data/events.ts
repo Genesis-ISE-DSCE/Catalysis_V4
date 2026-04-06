@@ -35,11 +35,11 @@ export const EVENTS_DATA: EventShowcase[] = [
     ],
   },
   {
-    name: "PITCH PERFECT",
+    name: "PITCHDEXS",
     type: "ENTREPRENEURSHIP",
     image: "/pokemons/jigglypuff.svg",
     color: "#D1FFE9",
-    detailsLink: "/rules/pitch-wala",
+    detailsLink: "/rules/pitchdexs",
     width: 175,
     height: 175,
     tags: ["Business Model", "Ideation", "Public Speaking", "Presentation"],

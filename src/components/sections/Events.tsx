@@ -40,14 +40,14 @@ export default function Events() {
   const secondEvent = EVENTS_DATA[(pairIndex + 1) % totalEvents];
 
   return (
-    <section ref={sectionRef} id="events" className="py-12 md:py-24 bg-[#FFEEF0] overflow-hidden">
+    <section ref={sectionRef} id="events" className="py-12 md:py-24 bg-[#FFEEF0] dark:bg-[#0A0018] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
 
           <div className={`flex flex-col items-start text-left reveal reveal-left ${inView}`}>
 
             <div className="mb-4 md:mb-6">
-              <div className="inline-block border border-black rounded-full px-5 py-1.5 md:px-6 md:py-2 bg-white text-xs md:text-sm font-medium tracking-wide">
+              <div className="inline-block border border-black dark:border-white/20 rounded-full px-5 py-1.5 md:px-6 md:py-2 bg-white dark:bg-[#160030] dark:text-white/70 text-xs md:text-sm font-medium tracking-wide">
                 EVENTS
               </div>
             </div>
@@ -60,14 +60,14 @@ export default function Events() {
                   text-[34px] sm:text-[42px] md:text-[52px]
                   leading-[1.08]
                   tracking-[-0.005em]
-                  text-[#3A001D]
+                  text-[#3A001D] dark:text-white
                   max-w-[650px]
                 "
               >
                 Discover and Explore Upcoming Events Near You
               </h1>
 
-            <p className="font-nunito text-[#3b0a1e] text-[14px] md:text-[18px] leading-relaxed max-w-xl -mb-36 md:mb-10">
+            <p className="font-nunito text-[#3b0a1e] dark:text-white/55 text-[14px] md:text-[18px] leading-relaxed max-w-xl -mb-36 md:mb-10">
               Explore an extensive variety of events designed to inspire and engage innovators of all kinds, offering unique opportunities to learn, connect, and grow in your creative journey.
             </p>
 

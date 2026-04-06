@@ -3,54 +3,9 @@
 import { useEffect } from 'react'
 
 // ---------------------------------------------------------------------------
-// Inline SVG Pokéball — used as a CSS cursor 
-// ---------------------------------------------------------------------------
-const POKEBALL_CURSOR_SVG = encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <!-- Outer ring -->
-  <circle cx="16" cy="16" r="15" fill="white" stroke="#1a1a1a" stroke-width="2"/>
-  <!-- Top half (red) -->
-  <path d="M1.35 14A15 15 0 0 1 30.65 14Z" fill="#EF4444" stroke="#1a1a1a" stroke-width="0"/>
-  <path d="M1 16 A15 15 0 0 1 31 16 L31 14 A15 15 0 0 0 1 14 Z" fill="#EF4444"/>
-  <!-- Full top arc -->
-  <path d="M1.1 15.5 A15 15 0 0 1 30.9 15.5" fill="#EF4444"/>
-  <!-- Cleaner top half -->
-  <path d="M1.2 16 A14.8 14.8 0 0 1 30.8 16 L16 16 Z" fill="#EF4444"/>
-  <!-- Divider line -->
-  <rect x="1" y="14.5" width="30" height="3" fill="#1a1a1a"/>
-  <!-- Center button outer -->
-  <circle cx="16" cy="16" r="5.5" fill="#1a1a1a"/>
-  <!-- Center button inner -->
-  <circle cx="16" cy="16" r="4" fill="white"/>
-  <!-- Center button shine -->
-  <circle cx="14.5" cy="14.5" r="1.2" fill="rgba(255,255,255,0.8)"/>
-</svg>
-`)
-
-// A cleaner, simpler Pokéball SVG that renders crisply at 32px
-const CURSOR_DATA_URI = `data:image/svg+xml,${encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <circle cx="16" cy="16" r="14.5" fill="white" stroke="#111" stroke-width="2"/>
-  <clipPath id="c"><circle cx="16" cy="16" r="14.5"/></clipPath>
-  <rect x="1.5" y="1.5" width="29" height="14.5" fill="#EF4444" clip-path="url(#c)"/>
-  <rect x="1.5" y="14" width="29" height="4" fill="#111" clip-path="url(#c)"/>
-  <circle cx="16" cy="16" r="5" fill="#111"/>
-  <circle cx="16" cy="16" r="3.5" fill="white"/>
-</svg>
-`)}`
-
-// ---------------------------------------------------------------------------
-// CSS injected once — defines cursor + click-burst keyframes
+// CSS injected once — click-burst keyframes only (cursor removed)
 // ---------------------------------------------------------------------------
 const GLOBAL_CSS = `
-  *,
-  *::before,
-  *::after,
-  a, button, input, textarea, select, label,
-  [role="button"], [tabindex] {
-    cursor: url("${CURSOR_DATA_URI}") 16 16, auto !important;
-  }
-
   .poke-burst {
     position: fixed;
     pointer-events: none;

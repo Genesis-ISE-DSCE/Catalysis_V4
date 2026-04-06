@@ -9,7 +9,7 @@ import CTA      from "@/components/sections/CTA";
 
 export default function Home() {
   return (
-    <main className="bg-[#f5eaea] text-black">
+    <main className="bg-[#f5eaea] dark:bg-[#0A0018] text-black dark:text-white">
       <SplashScreen />
       <Hero />
       <About />
