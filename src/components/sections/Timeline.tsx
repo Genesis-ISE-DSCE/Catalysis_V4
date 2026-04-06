@@ -210,7 +210,7 @@ function EventCard({ item, delay = 0, isDark }: { item: TimelineEvent; delay?: n
           {item.hasRegister && (
             <button
               onClick={() => router.push("/register")}
-              className="text-white text-[10px] font-black uppercase tracking-wider px-3 py-0.5 sm:py-1 rounded-full border-2 transition-all duration-200 hover:scale-110 active:scale-95 flex-shrink-0"
+              className="text-white text-[10px] sm:text-[15px] cursor-pointer font-black uppercase tracking-wider px-3 py-0.5 sm:py-1 rounded-full border-2 transition-all duration-200 hover:scale-110 active:scale-95 flex-shrink-0"
               style={{
                 backgroundColor: accent,
                 borderColor: isDark ? accent : "#000",
@@ -223,7 +223,7 @@ function EventCard({ item, delay = 0, isDark }: { item: TimelineEvent; delay?: n
           {item.slug && (
             <Link
               href={`/rules/${item.slug}`}
-              className={`text-[10px] font-bold px-3 py-0.5 sm:py-1 rounded-full border transition-all duration-200 hover:scale-110 active:scale-95 flex items-center gap-0.5 group flex-shrink-0 ${
+              className={`text-[10px] sm:text-[15px] font-bold px-3 py-0.5 sm:py-1 rounded-full border transition-all duration-200 hover:scale-110 active:scale-95 flex items-center gap-0.5 group flex-shrink-0 ${
                 isDark ? "text-white/60 hover:text-white" : "text-black/70 hover:text-black bg-white"
               }`}
               style={{ borderColor: isDark ? "rgba(255,255,255,0.18)" : "rgba(0,0,0,0.25)" }}
