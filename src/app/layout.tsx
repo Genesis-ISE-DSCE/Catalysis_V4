@@ -13,7 +13,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Catalysis V4.0 — Club Genesis, ISE Dept, DSCE",
+  title: "Catalysis V4.0 - Club Genesis, ISE Dept, DSCE",
   description: "Catalysis V4.0 is a 2-day interdepartmental technical fest organised by Club Genesis, Department of Information Science & Engineering, DSCE Bangalore.",
 };
 

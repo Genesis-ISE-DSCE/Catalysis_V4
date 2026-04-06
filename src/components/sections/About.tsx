@@ -41,7 +41,8 @@ function Badge({
         rounded-full
         overflow-visible
         bg-[#FAF5EC] dark:bg-[#160030]
-        border-2 border-black dark:border-white/15
+        border-2 border-black dark:border-white/15 cursor-pointer
+        transition-transform duration-200 hover:scale-105 active:scale-95
         shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] dark:shadow-none
         w-full
       "
@@ -225,7 +226,7 @@ function AboutLeft() {
 
       <div className="space-y-4 md:space-y-6 text-[#3b0a1e] dark:text-white/60 font-nunito text-[14px] md:text-[18px] leading-relaxed max-w-xl">
         <p>
-          Catalysis V4.0 is more than just an event — it&apos;s a platform built to spark
+          Catalysis V4.0 is more than just an event, it&apos;s a platform built to spark
           innovation and push ideas into reality. Organised by <strong>Club Genesis</strong> of
           the <strong>Department of Information Science &amp; Engineering, DSCE Bangalore</strong>,
           Catalysis brings together the best minds across two action-packed days of technical challenges,
