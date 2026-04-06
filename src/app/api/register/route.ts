@@ -6,7 +6,7 @@ import Participant, { TEAM_EVENTS } from "@/models/Participant";
 import { sendRegistrationEmail } from "@/lib/emailService";
 
 const EVENT_NAMES: Record<string, string> = {
-  pitch_perfect: "PitchDexs",
+  pitch_perfect: "Pitch Perfect",
   typemaster: "Typemaster",
   clash_royale: "Valorant Tournament",
   coding_relay: "Coding Relay",
@@ -25,9 +25,6 @@ export async function POST(req: Request) {
     // 1. Basic Presence Check
     if (!event || !member1?.usn) {
       return NextResponse.json({ error: "Lead member USN is required." }, { status: 400 });
-    }
-    if (!["DSCE", "DSATM", "DSU"].includes(member1?.college)) {
-      return NextResponse.json({ error: "Please select a valid college." }, { status: 400 });
     }
 
     // 2. Extract and Normalize USNs

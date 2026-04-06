@@ -160,25 +160,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Smooth dark/light mode transition */
-body,
-section,
-nav,
-footer {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-}
-
 main {
   width: 100%;
   overflow: hidden;
-}
-
-/* Event card gradient uses per-event color in light mode, dark palette in dark mode */
-.event-card-body {
-  background: linear-gradient(to top, var(--event-color, #FFE296), white);
-}
-.dark .event-card-body {
-  background: linear-gradient(to top, #0A0018, #160030);
 }
 
 /* hero page ka finger tap ka animation*/

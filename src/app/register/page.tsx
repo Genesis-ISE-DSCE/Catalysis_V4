@@ -4,10 +4,18 @@ import React, { useState } from "react";
 import Image from "next/image";
 import pokeball1 from "../../../public/poke-balls/pokeball1.png";
 import pokeball2 from "../../../public/poke-balls/pokeball2.png";
-import { BRANCHES, COLLEGES, TEAM_EVENT_IDS } from "@/lib/formConstants";
-import type { EventId } from "@/lib/formConstants";
 
 // ─── Constants & Types ────────────────────────────────────────────────────────
+
+export type EventId =
+  | "pitch_perfect"
+  | "typemaster"
+  | "clash_royale"
+  | "coding_relay"
+  | "dsa_smackdown"
+  | "technoseek";
+
+export const TEAM_EVENTS: EventId[] = ["technoseek", "coding_relay"];
 
 interface EventCard {
   id: EventId;
@@ -18,12 +26,35 @@ interface EventCard {
 }
 
 const ALL_EVENTS: EventCard[] = [
-  { id: "pitch_perfect",  name: "PitchDexs",    type: "STRATEGY TYPE", imgSrc: "/events/pitch.png",        iconBg: "#e74c3c" },
+  { id: "pitch_perfect",  name: "Pitch",        type: "STRATEGY TYPE", imgSrc: "/events/pitch.png",        iconBg: "#e74c3c" },
   { id: "typemaster",     name: "Typemaster",   type: "SKILL TYPE",    imgSrc: "/events/typemaster.png",   iconBg: "#27ae60" },
-  { id: "clash_royale",   name: "Clash Royale", type: "COMBAT TYPE",   imgSrc: "/events/clash-royale.png", iconBg: "#2980b9" },
+  { id: "clash_royale",   name: "Clash Royale",     type: "COMBAT TYPE",   imgSrc: "/events/clash-royale.png", iconBg: "#2980b9" },
   { id: "coding_relay",   name: "Coding Relay", type: "TECH TYPE",     imgSrc: "/events/coding-relay.png", iconBg: "#8e44ad" },
   { id: "dsa_smackdown",  name: "DSA",          type: "LOGIC TYPE",    imgSrc: "/events/dsa.png",          iconBg: "#e67e22" },
   { id: "technoseek",     name: "Technoseek",   type: "STRATEGY TYPE", imgSrc: "/events/technoseek.png",   iconBg: "#16a085" },
+];
+
+const BRANCHES: { value: string; label: string }[] = [
+  { value: "Artificial Intelligence and Machine Learning", label: "AI & ML" },
+  { value: "Aeronautical Engineering", label: "Aeronautical Engg" },
+  { value: "Automobile Engineering", label: "Automobile Engg" },
+  { value: "Biotechnology", label: "Biotechnology" },
+  { value: "Chemical Engineering", label: "Chemical Engg" },
+  { value: "Civil Engineering", label: "Civil Engg" },
+  { value: "Computer Science and Business Systems", label: "CS & Business Systems" },
+  { value: "Computer Science and Design", label: "CS & Design" },
+  { value: "Computer Science and Engineering", label: "CSE" },
+  { value: "Computer Science & Engineering (Cyber Security)", label: "CSE (Cyber Security)" },
+  { value: "Computer Science & Engineering (Data Science)", label: "CSE (Data Science)" },
+  { value: "Computer Science & Engineering (IoT and Cyber Security Including Block Chain Technology)", label: "CSE (IoT & Cyber Security)" },
+  { value: "Electrical & Electronics Engineering", label: "EEE" },
+  { value: "Electronics & Communication Engineering", label: "ECE" },
+  { value: "Electronics and Instrumentation Engineering", label: "EIE" },
+  { value: "Electronics and Telecommunication Engineering", label: "E&TC" },
+  { value: "Information Science and Engineering", label: "ISE" },
+  { value: "Mechanical Engineering", label: "Mechanical Engg" },
+  { value: "Medical Electronics Engineering", label: "Medical Electronics" },
+  { value: "Robotics and Artificial Intelligence", label: "Robotics & AI" },
 ];
 
 interface MemberData {
@@ -33,7 +64,6 @@ interface MemberData {
   phone: string;
   semester: string;
   branch: string;
-  college: string;
 }
 
 interface FieldErrorState {
@@ -43,7 +73,7 @@ interface FieldErrorState {
   phone?: string;
 }
 
-const BLANK_MEMBER: MemberData = { name: "", usn: "", email: "", phone: "", semester: "", branch: "", college: "" };
+const BLANK_MEMBER: MemberData = { name: "", usn: "", email: "", phone: "", semester: "", branch: "" };
 
 // ─── Validation Helper ────────────────────────────────────────────────────────
 
@@ -79,7 +109,7 @@ export default function RegisterPage() {
 
   const [errors, setErrors] = useState<FieldErrorState[]>([{}, {}, {}]);
 
-  const isTeam = selectedEvent !== "" && TEAM_EVENT_IDS.includes(selectedEvent as EventId);
+  const isTeam = selectedEvent !== "" && TEAM_EVENTS.includes(selectedEvent as EventId);
 
   const updateMember = (index: 0 | 1 | 2, field: keyof MemberData, value: string) => {
     const error = getFieldError(field, value);
@@ -135,16 +165,16 @@ export default function RegisterPage() {
 
   if (isSuccess) {
     return (
-      <div className="bg-[#f5eaea] dark:bg-[#0A0018] min-h-screen font-nunito flex items-center justify-center p-6">
-        <div className="bg-white dark:bg-[#160030] border-4 border-black dark:border-white/15 p-10 rounded-[2.5rem] shadow-[8px_8px_0_0_rgba(0,0,0,1)] dark:shadow-[8px_8px_0_0_rgba(255,45,85,0.2)] text-center max-w-lg w-full animate-in zoom-in duration-300">
+      <div className="bg-[#f5eaea] min-h-screen font-nunito flex items-center justify-center p-6">
+        <div className="bg-white border-4 border-black p-10 rounded-[2.5rem] shadow-[8px_8px_0_0_rgba(0,0,0,1)] text-center max-w-lg w-full animate-in zoom-in duration-300">
           <div className="text-6xl mb-6">🎉</div>
           <h1 className="font-gliker text-4xl text-[#dd273e] mb-4" style={{ fontWeight: 900 }}>Trainer Registered!</h1>
-          <p className="font-nunito font-bold text-gray-700 dark:text-white/60 mb-8">
+          <p className="font-nunito font-bold text-gray-700 mb-8">
             Registration successful. Your details have been recorded. See you at the battleground!
           </p>
-          <button
+          <button 
             onClick={() => window.location.href = "/"}
-            className="bg-black dark:bg-[#DD273E] text-white px-10 py-4 rounded-full font-black tracking-widest hover:scale-105 transition active:translate-y-1"
+            className="bg-black text-white px-10 py-4 rounded-full font-black tracking-widest hover:scale-105 transition active:translate-y-1"
           >
             GO TO HOME
           </button>
@@ -154,17 +184,17 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="bg-[#f5eaea] dark:bg-[#0A0018] min-h-screen font-nunito relative">
+    <div className="bg-[#f5eaea] min-h-screen font-nunito relative">
       
       {/* ── Custom Error Modal ── */}
       {modalError && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-white dark:bg-[#160030] border-[4px] border-black dark:border-white/15 rounded-[2rem] shadow-[8px_8px_0_0_rgba(0,0,0,1)] dark:shadow-none max-w-sm w-full p-8 text-center animate-in zoom-in-95 duration-300">
-            <div className="w-16 h-16 bg-[#dd273e] rounded-full border-4 border-black dark:border-transparent flex items-center justify-center mx-auto mb-4 text-white text-3xl font-black">
+          <div className="bg-white border-[4px] border-black rounded-[2rem] shadow-[8px_8px_0_0_rgba(0,0,0,1)] max-w-sm w-full p-8 text-center animate-in zoom-in-95 duration-300">
+            <div className="w-16 h-16 bg-[#dd273e] rounded-full border-4 border-black flex items-center justify-center mx-auto mb-4 text-white text-3xl font-black">
               !
             </div>
-            <h2 className="font-gliker text-2xl text-black dark:text-white mb-3">Notice!</h2>
-            <p className="font-nunito font-bold text-gray-600 dark:text-white/55 mb-6 leading-tight">
+            <h2 className="font-gliker text-2xl text-black mb-3">Notice!</h2>
+            <p className="font-nunito font-bold text-gray-600 mb-6 leading-tight">
               {modalError}
             </p>
             <button 
@@ -179,20 +209,10 @@ export default function RegisterPage() {
 
       {/* Hero Content */}
       <div className="text-center pt-28 pb-32 px-6">
-        {/* Organiser badge */}
-        <div className="flex items-center justify-center gap-2 flex-wrap mb-5">
-          <span className="inline-flex items-center gap-1.5 bg-white dark:bg-[#160030] border-2 border-black dark:border-white/20 rounded-full px-4 py-1 text-[11px] font-black tracking-widest uppercase text-[#3A001D] dark:text-white/80 shadow-[2px_2px_0_rgba(0,0,0,1)] dark:shadow-none">
-            <span className="w-2 h-2 rounded-full bg-[#DD273E] inline-block" />
-            Club Genesis &nbsp;·&nbsp; ISE Dept, DSCE
-          </span>
-          <span className="inline-flex items-center bg-[#DD273E] border-2 border-black dark:border-transparent rounded-full px-4 py-1 text-[11px] font-black tracking-widest uppercase text-white shadow-[2px_2px_0_rgba(0,0,0,1)] dark:shadow-[0_0_10px_rgba(255,45,85,0.4)]">
-            Catalysis V4.0
-          </span>
-        </div>
-        <h1 className="text-[#2d1216] dark:text-white text-5xl md:text-6xl mb-4 leading-tight" style={{ fontFamily: "'Gliker', 'Fredoka One', cursive", fontWeight: 900 }}>
+        <h1 className="text-[#2d1216] text-5xl md:text-6xl mb-4 leading-tight" style={{ fontFamily: "'Gliker', 'Fredoka One', cursive", fontWeight: 900 }}>
           Trainer Registration
         </h1>
-        <p className="max-w-xl mx-auto text-[#2d1216] dark:text-white/55 text-sm md:text-base opacity-70 leading-relaxed font-medium">
+        <p className="max-w-xl mx-auto text-[#2d1216] text-sm md:text-base opacity-70 leading-relaxed font-medium">
           Start your adventure today. Select your battleground carefully. Strive with determination and skill to ascend and claim your rightful place as a true champion.
         </p>
       </div>
@@ -238,7 +258,6 @@ export default function RegisterPage() {
             <div className="space-y-8">
               <Section title="ACADEMIC DETAILS" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-3xl mx-auto">
-                <SelectField label="College" placeholder="Select college" value={members[0].college} options={COLLEGES.map((c) => ({ value: c, label: c }))} onChange={(v: string) => updateMember(0, "college", v)} />
                 <SelectField label="Semester" placeholder="Select semester" value={members[0].semester} options={["1","2","3","4","5","6","7","8"].map((o) => ({ value: o, label: `Semester ${o}` }))} onChange={(v: string) => updateMember(0, "semester", v)} />
                 <BranchSelectField label="Branch" placeholder="Select branch" value={members[0].branch} onChange={(v) => updateMember(0, "branch", v)} />
               </div>
@@ -250,7 +269,6 @@ export default function RegisterPage() {
                   <Section title="MEMBER 2 DETAILS" />
                   <MemberForm member={members[1]} errors={errors[1]} index={1} label="Member 2" onChange={updateMember} showLabel />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-3xl mx-auto">
-                    <SelectField label="College" placeholder="Select college" value={members[1].college} options={COLLEGES.map((c) => ({ value: c, label: c }))} onChange={(v) => updateMember(1, "college", v)} />
                     <SelectField label="Semester" placeholder="Select semester" value={members[1].semester} options={["1","2","3","4","5","6","7","8"].map((o) => ({ value: o, label: `Semester ${o}` }))} onChange={(v) => updateMember(1, "semester", v)} />
                     <BranchSelectField label="Branch" placeholder="Select branch" value={members[1].branch} onChange={(v) => updateMember(1, "branch", v)} />
                   </div>
@@ -259,7 +277,6 @@ export default function RegisterPage() {
                   <Section title="MEMBER 3 DETAILS" />
                   <MemberForm member={members[2]} errors={errors[2]} index={2} label="Member 3" onChange={updateMember} showLabel />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-3xl mx-auto">
-                    <SelectField label="College" placeholder="Select college" value={members[2].college} options={COLLEGES.map((c) => ({ value: c, label: c }))} onChange={(v) => updateMember(2, "college", v)} />
                     <SelectField label="Semester" placeholder="Select semester" value={members[2].semester} options={["1","2","3","4","5","6","7","8"].map((o) => ({ value: o, label: `Semester ${o}` }))} onChange={(v) => updateMember(2, "semester", v)} />
                     <BranchSelectField label="Branch" placeholder="Select branch" value={members[2].branch} onChange={(v) => updateMember(2, "branch", v)} />
                   </div>
@@ -394,16 +411,16 @@ function BranchSelectField({ label, placeholder, value, onChange }: Omit<SelectF
 
 function EventCardItem({ event, selected, onSelect }: { event: EventCard; selected: boolean; onSelect: () => void }) {
   return (
-    <div onClick={onSelect} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && onSelect()} className={`flex items-center gap-3 px-3 py-2.5 rounded-full border-2 cursor-pointer transition-all duration-200 select-none ${selected ? "border-black dark:border-white/30 bg-[#fdf3d7] dark:bg-white/10 shadow-[2px_2px_0_0_rgba(0,0,0,1)] dark:shadow-[0_0_12px_rgba(255,45,85,0.25)]" : "border-black dark:border-white/10 bg-[#f5eaea] dark:bg-white/4 hover:bg-[#fdf3d7]/60 dark:hover:bg-white/8"}`}>
-      <div className="w-11 h-11 rounded-full border-2 border-black dark:border-white/20 flex items-center justify-center shrink-0 overflow-hidden" style={{ background: event.iconBg }}>
+    <div onClick={onSelect} role="button" tabIndex={0} onKeyDown={(e) => e.key === "Enter" && onSelect()} className={`flex items-center gap-3 px-3 py-2.5 rounded-full border-2 border-black cursor-pointer transition-all duration-200 select-none ${selected ? "bg-[#fdf3d7] shadow-[2px_2px_0_0_rgba(0,0,0,1)]" : "bg-[#f5eaea] hover:bg-[#fdf3d7]/60"}`}>
+      <div className="w-11 h-11 rounded-full border-2 border-black flex items-center justify-center shrink-0 overflow-hidden" style={{ background: event.iconBg }}>
         <Image src={event.imgSrc} alt={event.name} width={44} height={44} className="w-full h-full object-cover" />
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-black dark:text-white text-sm leading-tight font-bold truncate" style={{ fontFamily: "'Gliker','Fredoka One',cursive" }}>{event.name}</p>
-        <p className="text-[9px] font-bold text-black/40 dark:text-white/35 uppercase tracking-wider mt-0.5">{event.type}</p>
+        <p className="text-black text-sm leading-tight font-bold truncate" style={{ fontFamily: "'Gliker','Fredoka One',cursive" }}>{event.name}</p>
+        <p className="text-[9px] font-bold text-black/40 uppercase tracking-wider mt-0.5">{event.type}</p>
       </div>
-      <div className="w-8 h-8 rounded-full border-2 border-dashed border-black/30 dark:border-white/20 flex items-center justify-center shrink-0">
-        {selected && <div className="w-4 h-4 bg-black dark:bg-white rounded-full" />}
+      <div className="w-8 h-8 rounded-full border-2 border-dashed border-black/30 flex items-center justify-center shrink-0">
+        {selected && <div className="w-4 h-4 bg-black rounded-full" />}
       </div>
     </div>
   );

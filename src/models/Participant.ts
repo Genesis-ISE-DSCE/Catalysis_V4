@@ -1,5 +1,4 @@
 import mongoose, { Schema, Document } from "mongoose";
-import { COLLEGES } from "@/lib/formConstants";
 
 export type EventName = "technoseek" | "typemaster" | "clash_royale" | "coding_relay" | "dsa_smackdown" | "pitch_perfect";
 
@@ -12,7 +11,6 @@ interface Member {
   phone: string;
   semester: number;
   branch: string;
-  college: string;
 }
 
 export interface IParticipant extends Document {
@@ -31,7 +29,6 @@ const MemberSchema = new Schema<Member>({
   phone: { type: String },
   semester: { type: Number },
   branch: { type: String },
-  college: { type: String, enum: [...COLLEGES] },
 });
 
 const ParticipantSchema = new Schema<IParticipant>({

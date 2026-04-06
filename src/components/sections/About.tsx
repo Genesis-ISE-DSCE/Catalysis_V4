@@ -40,9 +40,9 @@ function Badge({
         inline-flex items-center
         rounded-full
         overflow-visible
-        bg-[#FAF5EC] dark:bg-[#160030]
-        border-2 border-black dark:border-white/15
-        shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] dark:shadow-none
+        bg-[#FAF5EC]
+        border-2 border-black
+        shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)]
         w-full
       "
       onClick={() => router.push("/rules/"+path)}
@@ -118,23 +118,23 @@ function Badge({
 }
 
 const MOBILE_BADGES: BadgeData[] = [
-  { top: "5%",  left: "48%", label: "PitchDexs",     content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitchdexs" },
+  { top: "5%",  left: "48%", label: "Pitch Wala",     content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
   { top: "20%", left: "14%", label: "DSA Smackdown",  content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A", path: "/dsa-smackdown" },
   { top: "20%", left: "82%", label: "Clash Royale",   content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E", path: "/clash-royale" },
   { top: "50%", left: "14%", label: "Technoseek",     content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E", path: "/technoseek" },
   { top: "50%", left: "82%", label: "Typemaster",     content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF", path: "/typemaster" },
   { top: "68%", left: "27%", label: "Code Relay",     content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E", path: "/code-relay" },
-  { top: "68%", left: "68%", label: "PitchDexs",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitchdexs" },
+  { top: "68%", left: "68%", label: "Pitch Wala",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
 ];
 
 const BADGES: BadgeData[] = [
-  { top: "11%", left: "45%", label: "PitchDexs",      content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitchdexs" },
+  { top: "11%", left: "45%", label: "Pitch Wala",      content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
   { top: "24%", left: "25%", label: "DSA Smackdown",  content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A", path: "/dsa-smackdown" },
   { top: "24%", left: "78%", label: "Clash Royale",   content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E", path: "/clash-royale" },
   { top: "37%", left: "5%",  label: "Technoseek",     content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E", path: "/technoseek" },
   { top: "37%", left: "58%", label: "Typemaster",     content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF", path: "/typemaster" },
   { top: "50%", left: "38%", label: "Code Relay",     content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E", path: "/code-relay" },
-  { top: "63%", left: "58%", label: "PitchDexs",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitchdexs" },
+  { top: "63%", left: "58%", label: "Pitch Wala",     content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555", path: "/pitch-wala" },
 ];
 
 const LINES: LineData[] = [
@@ -203,7 +203,7 @@ function AboutLeft() {
     <div className="flex flex-col items-start text-left z-10 px-4 md:px-0">
 
       <div className="mb-4 md:mb-6">
-        <div className="inline-block border border-black dark:border-white/20 rounded-full px-5 py-1.5 md:px-6 md:py-2 bg-white dark:bg-[#160030] dark:text-white/70 text-xs md:text-sm font-medium tracking-wide">
+        <div className="inline-block border border-black rounded-full px-5 py-1.5 md:px-6 md:py-2 bg-white text-xs md:text-sm font-medium tracking-wide">
           ABOUT US
         </div>
       </div>
@@ -216,23 +216,22 @@ function AboutLeft() {
             text-[32px] sm:text-[40px] md:text-[46px]
             leading-[1.05]
             tracking-[-0.03em]
-            text-[#3A001D] dark:text-white
+            text-[#3A001D]
           "
         >
           What is Catalysis?
         </h1>
       </div>
 
-      <div className="space-y-4 md:space-y-6 text-[#3b0a1e] dark:text-white/60 font-nunito text-[14px] md:text-[18px] leading-relaxed max-w-xl">
+      <div className="space-y-4 md:space-y-6 text-[#3b0a1e] font-nunito text-[14px] md:text-[18px] leading-relaxed max-w-xl">
         <p>
-          Catalysis V4.0 is more than just an event — it&apos;s a platform built to spark
-          innovation and push ideas into reality. Organised by <strong>Club Genesis</strong> of
-          the <strong>Department of Information Science &amp; Engineering, DSCE Bangalore</strong>,
-          Catalysis brings together the best minds across two action-packed days of technical challenges,
+          Catalysis is more than just an event. It&apos;s a platform built to spark
+          innovation and push ideas into reality. Across two action-packed days,
+          participants battle it out in six unique events spanning technical challenges,
           gaming, speed typing, and startup pitching.
         </p>
         <p>
-          April 17 &amp; 18, 2026 at DSCE Bangalore. Open to students from all branches across DSCE, DSU, and DSATM.
+          April 17 and 18 at DSCE Bangalore. Open to students from all branches.
           A space to learn, compete, collaborate, and grow.
         </p>
       </div>
@@ -306,7 +305,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative w-full bg-[#FFEEF0] dark:bg-[#0A0018] py-2 md:py-1 overflow-hidden"
+      className="relative w-full bg-[#FFEEF0] py-2 md:py-1 overflow-hidden"
     >
       <Container>
 

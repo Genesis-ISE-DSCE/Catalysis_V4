@@ -10,7 +10,7 @@ const EVENT_COLORS: Record<string, string> = {
 };
 const PAGE_SIZE = 15;
 
-export interface Member { name?: string; usn?: string; email?: string; phone?: string; semester?: number; branch?: string; college?: string }
+export interface Member { name?: string; usn?: string; email?: string; phone?: string; semester?: number; branch?: string }
 export interface Participant {
   _id: string;
   event: string;
@@ -262,7 +262,7 @@ export default function ParticipantsClient() {
                                   <p style={{ color: "#6366f1", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.8px", margin: "0 0 10px" }}>
                                     Member {i + 1} {i === 0 ? "(Lead)" : ""}
                                   </p>
-                                  {([["Name", m.name], ["USN", m.usn], ["Email", m.email], ["Phone", m.phone], ["Semester", m.semester], ["Branch", m.branch], ["College", m.college]] as [string, unknown][]).filter(([, v]) => v).map(([k, v]) => (
+                                  {([["Name", m.name], ["USN", m.usn], ["Email", m.email], ["Phone", m.phone], ["Semester", m.semester], ["Branch", m.branch]] as [string, unknown][]).filter(([, v]) => v).map(([k, v]) => (
                                     <p key={k} style={{ margin: "0 0 4px", fontSize: 12 }}>
                                       <span style={{ color: "#475569" }}>{k}: </span>
                                       <span style={{ color: "#94a3b8" }}>{String(v)}</span>

@@ -104,8 +104,8 @@ export const eventData: Record<string, EventDetails> = {
       "- Punctuality"
     ]
   },
-  "pitchdexs": {
-    title: "PitchDexs",
+  "pitch-wala": {
+    title: "Pitch Perfect",
     subtitle: "Turn your ideas into impact with the power of persuasion",
     image: "/pokemons/jigglypuff.svg",
     heroColor: "#FFB6C1",

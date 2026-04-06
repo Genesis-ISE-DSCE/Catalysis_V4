@@ -117,7 +117,7 @@ function RegisterCard() {
 
 function EventHighlightsCard() {
   return (
-    <div className="relative w-[246px] h-[250px] bg-white dark:bg-[#160030] border-[3px] border-black dark:border-white/20 rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm dark:shadow-[0_0_20px_rgba(52,199,89,0.15)]">
+    <div className="relative w-[246px] h-[250px] bg-white border-[3px] border-black rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm">
 
       <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 z-10">
         <Image
@@ -133,14 +133,14 @@ function EventHighlightsCard() {
       </div>
 
       <div className="mb-4">
-        <h1 className="text-black dark:text-white font-gliker font-semibold text-2xl">Event Highlights</h1>
+        <h1 className="text-black font-gliker font-semibold text-2xl">Event Highlights</h1>
         
       </div>
 
       <div className="flex flex-col items-center gap-1">
-        <p className="text-black dark:text-white font-black text-lg">2 Days</p>
-        <p className="text-black dark:text-white font-black text-lg">6 Events</p>
-        <p className="text-black dark:text-white font-black text-lg">100+ Participants</p>
+        <p className="text-black font-black text-lg">2 Days</p>
+        <p className="text-black font-black text-lg">6 Events</p>
+        <p className="text-black font-black text-lg">100+ Participants</p>
       </div>
 
       <div className="mt-auto mb-8 relative flex items-center justify-center w-full">
@@ -157,7 +157,7 @@ function EventHighlightsCard() {
 
 function LeaderboardCard() {
   return (
-    <div className="relative w-[246px] h-[250px] bg-[#FAF7ED] dark:bg-[#160030] border-[3px] border-black dark:border-white/20 rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm dark:shadow-[0_0_20px_rgba(255,45,85,0.15)]">
+    <div className="relative w-[246px] h-[250px] bg-[#FAF7ED] border-[3px] border-black rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm">
 
       <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 z-10">
         <Image
@@ -173,9 +173,9 @@ function LeaderboardCard() {
       </div>
 
       <div className="mb-2">
-        <h1 className="text-black dark:text-white font-gliker font-semibold text-2xl">Leaderboard</h1>
+        <h1 className="text-black font-gliker font-semibold text-2xl">Leaderboard</h1>
       </div>
-      <p className="text-black dark:text-white/60 text-center text-[15px] leading-tight font-medium px-2 mt-4">
+      <p className="text-black text-center text-[15px] leading-tight font-medium px-2 mt-4">
         #Climb the ranks and secure your spot at the top.
       </p>
 
@@ -203,7 +203,7 @@ export default function Hero() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-screen w-full bg-[#FFEEF0] dark:bg-[#0A0018] overflow-hidden flex flex-col items-center pt-12 pb-20"
+      className="relative min-h-screen w-full bg-[#FFEEF0] overflow-hidden flex flex-col items-center pt-12 pb-20"
     >
 
       <div className={`absolute
@@ -211,7 +211,7 @@ export default function Hero() {
         left-1/2 -translate-x-1/2
         w-[40px] sm:w-[60px] md:w-[84px]
         h-[620px] sm:h-[540px] md:h-[820px]
-        bg-white dark:bg-white/5
+        bg-white
         z-0
         reveal reveal-up ${inView}
       `} />
@@ -231,23 +231,12 @@ export default function Hero() {
 
       <div className={`relative z-10 text-center px-4 max-w-5xl reveal reveal-up ${inView} reveal-delay-1`}>
 
-        {/* Organiser badge */}
-        <div className="flex items-center justify-center gap-2 flex-wrap mb-3">
-          <span className="inline-flex items-center gap-1.5 bg-white dark:bg-[#160030] border-2 border-black dark:border-white/20 rounded-full px-4 py-1 text-[11px] font-black tracking-widest uppercase text-[#3A001D] dark:text-white/80 shadow-[2px_2px_0_rgba(0,0,0,1)] dark:shadow-none">
-            <span className="w-2 h-2 rounded-full bg-[#DD273E] inline-block" />
-            Club Genesis &nbsp;·&nbsp; ISE Dept, DSCE
-          </span>
-          <span className="inline-flex items-center bg-[#DD273E] border-2 border-black dark:border-transparent rounded-full px-4 py-1 text-[11px] font-black tracking-widest uppercase text-white shadow-[2px_2px_0_rgba(0,0,0,1)] dark:shadow-[0_0_10px_rgba(255,45,85,0.4)]">
-            V4.0
-          </span>
-        </div>
-
        <h1 className="
         font-gliker
         font-semibold
         text-[40px] md:text-[68px]
         leading-tight
-        text-[#3A001D] dark:text-white
+        text-[#3A001D]
         text-center
         w-full max-w-[984px]
         px-4
@@ -256,13 +245,13 @@ export default function Hero() {
         Innovation Accelerates.
       </h1>
 
-        <p className="mt-4 md:mt-6 text-[#3b0a1e] dark:text-white/60 font-medium
+        <p className="mt-4 md:mt-6 text-[#3b0a1e] font-medium
           max-w-[80%] sm:max-w-md md:max-w-3xl
           mx-auto
           text-[13px] sm:text-sm md:text-lg
           leading-relaxed md:leading-relaxed"
         >
-          Two days, six events, one arena. Catalysis V4.0 — organised by Club Genesis, ISE Dept, DSCE Bangalore — brings together coders, strategists, and creators to compete, collaborate, and rise to the top.
+          Two days, six events, one arena. Join us for Catalysis V4, where coders, strategists, and creators compete, collaborate, and rise to the top.
         </p>
       </div>
 <div className={`relative w-full max-w-6xl mt-4 md:mt-5 reveal reveal-up ${inView} reveal-delay-2`}>
@@ -281,17 +270,17 @@ export default function Hero() {
     </div>
   </div>
 
-  <div className="hidden md:flex justify-center items-end h-[360px] lg:h-[420px] relative w-full">
+  <div className="hidden md:flex justify-center items-end h-[400px] relative">
 
-    <div className="absolute left-2 lg:left-10 bottom-4 z-20 top-16 transition-transform hover:-translate-y-2 scale-75 lg:scale-100 origin-bottom-left">
+    <div className="absolute left-10 bottom-4 z-20 top-18 transition-transform hover:-translate-y-2">
       <LeaderboardCard />
     </div>
 
-    <div className="relative flex flex-col items-center z-30 scale-90 lg:scale-100">
+    <div className="relative flex flex-col items-center z-30">
       <RegisterCard />
     </div>
 
-    <div className="absolute right-2 lg:right-10 bottom-10 z-20 top-16 transition-transform hover:-translate-y-2 scale-75 lg:scale-100 origin-bottom-right">
+    <div className="absolute right-10 bottom-10 z-20 top-18 transition-transform hover:-translate-y-2">
       <EventHighlightsCard />
     </div>
 

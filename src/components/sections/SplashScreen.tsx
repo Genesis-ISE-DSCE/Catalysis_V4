@@ -62,7 +62,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] bg-[#FFEEF0] dark:bg-[#0A0018]"
+      className="fixed inset-0 z-[9999] bg-[#FFEEF0]"
       style={{
         opacity: phase === "shrink" ? 0 : 1,
         transition: "opacity 0.5s ease-in 0.3s",

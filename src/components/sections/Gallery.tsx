@@ -105,23 +105,23 @@ export default function Gallery() {
   const inView = isInView ? "in-view" : "";
 
   return (
-    <section ref={sectionRef} id="gallery" className="py-28 bg-[#FFEEF0] dark:bg-[#0A0018]">
+    <section ref={sectionRef} id="gallery" className="py-28 bg-[#FFEEF0]">
       <Container>
-        <div className="rounded-[3rem] p-7 md:p-20 border-2 border-black dark:border-white/15 bg-[#FAF7ED] dark:bg-[#0F0022] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,45,85,0.2)] relative overflow-hidden">
+        <div className="rounded-[3rem] p-7 md:p-20 border-2 border-black bg-[#FAF7ED] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
 
           <div className={`flex flex-col items-center text-center mb-16 reveal reveal-up ${inView}`}>
             
-            <div className="inline-block border-2 border-black dark:border-white/20 rounded-full px-7 py-2 bg-white dark:bg-[#160030] dark:text-white/70 text-sm md:text-base font-semibold mb-8">
+            <div className="inline-block border-2 border-black rounded-full px-7 py-2 bg-white text-sm md:text-base font-semibold mb-8">
               GALLERY
             </div>
 
             <div className="mb-8">
-              <h1 className="font-gliker font-medium text-[34px] sm:text-[42px] md:text-[52px] leading-[1.08] tracking-[-0.005em] text-[#3A001D] dark:text-white max-w-[650px]">
+              <h1 className="font-gliker font-medium text-[34px] sm:text-[42px] md:text-[52px] leading-[1.08] tracking-[-0.005em] text-[#3A001D] max-w-[650px]">
                 Moments from the Past
               </h1>
             </div>
 
-            <p className="text-[#3b0a1e] dark:text-white/55 font-nunito text-base md:text-xl max-w-2xl leading-relaxed">
+            <p className="text-[#3b0a1e] font-nunito text-base md:text-xl max-w-2xl leading-relaxed">
               Explore a detailed look at our past events and experience the vibrant energy that truly defines Catalysis, showcasing the passion and innovation that drive our community forward.
             </p>
           </div>
