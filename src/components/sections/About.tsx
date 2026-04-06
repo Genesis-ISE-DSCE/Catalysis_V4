@@ -41,7 +41,8 @@ function Badge({
         rounded-full
         overflow-visible
         bg-[#FAF5EC] dark:bg-[#160030]
-        border-2 border-black dark:border-white/15
+        border-2 border-black dark:border-white/15 cursor-pointer
+        transition-transform duration-200 hover:scale-105 active:scale-95
         shadow-[3px_3px_0px_0px_rgba(0,0,0,0.2)] dark:shadow-none
         w-full
       "
