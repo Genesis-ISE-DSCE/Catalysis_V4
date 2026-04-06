@@ -193,7 +193,7 @@ export default function AboutPage() {
           <div className="bg-[#3B6FC4] text-white border-4 border-[#1A0A0E] rounded-2xl p-8 lg:p-10 shadow-[6px_6px_0_#1A0A0E] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0_#1A0A0E] transition-all relative overflow-hidden group">
             <h3 className="font-gliker text-3xl tracking-[2px] mb-3 leading-none">Celebrate Growth</h3>
             <p className="text-[15px] leading-[1.65] text-white/85 font-semibold">
-              We don&apos;t just run competitions — we prepare you for the future. From "Tech-Scoffing" mock placements to alumni guidance for higher studies abroad.
+              We don&apos;t just run competitions — we prepare you for the future. From &quot;Tech-Scoffing&quot; mock placements to alumni guidance for higher studies abroad.
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2017–19</div>
               <h4 className="font-black text-[18px] text-white mb-2.5">The Foundation & Hackman</h4>
               <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
-                Genesis laid its groundwork by hosting foundational coding contests and its massive 24-hour hackathon, HACKMAN 2.0. We focused heavily on "Tech-Scoffing" mock placements and Machine Learning workshops.
+                Genesis laid its groundwork by hosting foundational coding contests and its massive 24-hour hackathon, HACKMAN 2.0. We focused heavily on &quot;Tech-Scoffing&quot; mock placements and Machine Learning workshops.
               </p>
             </div>
             <div className="hidden md:block flex-1"></div>
@@ -229,7 +229,7 @@ export default function AboutPage() {
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2019–22</div>
               <h4 className="font-black text-[18px] text-white mb-2.5">Industry & Expansion</h4>
               <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
-                We expanded horizons by connecting students with alumni from Amazon and Paytm, inaugurated the cultural "Spectrum Week", and launched the month-long Tech Fest 2K21 featuring events like Byte Me and Blind Coding.
+                We expanded horizons by connecting students with alumni from Amazon and Paytm, inaugurated the cultural &quot;Spectrum Week&quot;, and launched the month-long Tech Fest 2K21 featuring events like Byte Me and Blind Coding.
               </p>
             </div>
             <div className="hidden md:block flex-1"></div>
@@ -242,7 +242,7 @@ export default function AboutPage() {
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2022–24</div>
               <h4 className="font-black text-[18px] text-white mb-2.5">The Birth of Catalysis</h4>
               <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
-                A massive leap forward. We introduced "Catalysis V1.0", a multi-day inter-departmental tech fest featuring AirCrash and Technoseek. We also launched the "Code Café" series to master Front-end dev and Git.
+                A massive leap forward. We introduced &quot;Catalysis V1.0&quot;, a multi-day inter-departmental tech fest featuring AirCrash and Technoseek. We also launched the &quot;Code Café&quot; series to master Front-end dev and Git.
               </p>
             </div>
             <div className="hidden md:block flex-1"></div>
