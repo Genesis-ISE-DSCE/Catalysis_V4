@@ -30,7 +30,7 @@ export default function EventsPage() {
         px-4
         mt-4
       ">
-        Step into different battle zones, master your skills, and rise through the ranks. Each event is a unique challenge — pick your path wisely.
+        Step into different battle zones, master your skills, and rise through the ranks. Each event is a unique challenge, pick your path wisely.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-24 mt-20 px-6 max-w-7xl mx-auto w-full justify-items-center">

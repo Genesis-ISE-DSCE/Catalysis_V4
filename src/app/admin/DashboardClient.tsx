@@ -128,8 +128,8 @@ export default function DashboardClient() {
                   ) : (
                     stats.recentRegistrations.map((p) => (
                       <tr key={p._id} style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
-                        <td style={td}>{p.member1?.name || "—"}</td>
-                        <td style={td}><code style={{ color: "#94a3b8", fontSize: 12 }}>{p.member1?.usn || "—"}</code></td>
+                        <td style={td}>{p.member1?.name || "-"}</td>
+                        <td style={td}><code style={{ color: "#94a3b8", fontSize: 12 }}>{p.member1?.usn || "-"}</code></td>
                         <td style={td}>
                           <span style={{
                             padding: "3px 8px", borderRadius: 6,
@@ -140,7 +140,7 @@ export default function DashboardClient() {
                             {p.event.replace(/_/g, " ")}
                           </span>
                         </td>
-                        <td style={td}>{p.team_name || "—"}</td>
+                        <td style={td}>{p.team_name || "-"}</td>
                         <td style={td}>
                           <span style={{ color: "#475569" }}>
                             {new Date(p.registeredAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}

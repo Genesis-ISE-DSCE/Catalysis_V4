@@ -157,7 +157,20 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col h-full pt-28 px-8 pb-10">
+        <button 
+          onClick={() => setIsOpen(false)}
+          className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center bg-[#DD273E] text-white border-[3px] border-black rounded-full shadow-[4px_4px_0px_black] hover:shadow-[2px_2px_0px_black] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all duration-200 group z-[120] overflow-hidden"
+          aria-label="Close Menu"
+        >
+          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity" />
+          
+          <div className="relative w-6 h-6 transition-transform duration-300 group-hover:rotate-90 group-active:scale-75">
+            <span className="absolute top-1/2 left-0 w-6 h-[3px] bg-white rounded-full rotate-45 transform -translate-y-1/2" />
+            <span className="absolute top-1/2 left-0 w-6 h-[3px] bg-white rounded-full -rotate-45 transform -translate-y-1/2" />
+          </div>
+        </button>
+
+        <div className="flex flex-col h-full pt-20 px-8 pb-10">
           <div className="flex flex-col gap-5">
             {navItems.map((item, index) => {
               const isActive = isHome && activeSection === item.id;
@@ -190,7 +203,7 @@ export default function Navbar() {
               onClick={handleRegister}
               className="w-full relative group overflow-hidden bg-[#DD273E] text-white text-xl font-bold px-8 py-5 rounded-2xl border-4 border-black shadow-[6px_6px_0px_black] active:shadow-none active:translate-x-1.5 active:translate-y-1.5 transition-all"
             >
-              <div className="relative z-10 flex items-center justify-center gap-3">
+              <div className="relative z-10 text-lg flex items-center justify-center gap-3">
                 REGISTER NOW
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </div>

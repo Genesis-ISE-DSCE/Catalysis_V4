@@ -195,8 +195,8 @@ export default function ParticipantsClient() {
                       onMouseEnter={(e) => { if (expanded !== p._id) e.currentTarget.style.background = "rgba(255,255,255,0.02)"; }}
                       onMouseLeave={(e) => { if (expanded !== p._id) e.currentTarget.style.background = "transparent"; }}
                     >
-                      <td style={tdStyle}><span style={{ color: "#e2e8f0", fontWeight: 500 }}>{p.member1?.name || "—"}</span></td>
-                      <td style={tdStyle}><code style={{ color: "#94a3b8", fontSize: 12, background: "rgba(255,255,255,0.05)", padding: "2px 6px", borderRadius: 4 }}>{p.member1?.usn || "—"}</code></td>
+                      <td style={tdStyle}><span style={{ color: "#e2e8f0", fontWeight: 500 }}>{p.member1?.name || "-"}</span></td>
+                      <td style={tdStyle}><code style={{ color: "#94a3b8", fontSize: 12, background: "rgba(255,255,255,0.05)", padding: "2px 6px", borderRadius: 4 }}>{p.member1?.usn || "-"}</code></td>
                       <td style={tdStyle}>
                         <span style={{
                           padding: "3px 8px", borderRadius: 6,
@@ -207,7 +207,7 @@ export default function ParticipantsClient() {
                           {p.event.replace(/_/g, " ")}
                         </span>
                       </td>
-                      <td style={tdStyle}><span style={{ color: "#64748b" }}>{p.team_name || "—"}</span></td>
+                      <td style={tdStyle}><span style={{ color: "#64748b" }}>{p.team_name || "-"}</span></td>
                       <td style={tdStyle}>
                         <span style={{ color: "#475569", whiteSpace: "nowrap" }}>
                           {new Date(p.registeredAt).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
