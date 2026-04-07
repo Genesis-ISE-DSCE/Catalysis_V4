@@ -21,7 +21,7 @@ export default function TeamPage() {
   // Overall Core Leadership
   const coreLeads = [
     { name: 'Dhruv Puri', role: 'Genesis Lead', bgClass: 'bg-[#E8192C]', image: 'https://drive.google.com/file/d/1nE7ssrnQbW4m62fBhmqa281DgGZdUCQg/view?usp=drivesdk' },
-    { name: 'Khushi Agrawal', role: 'Genesis Lead', bgClass: 'bg-[#3B6FC4]', image: 'https://drive.google.com/file/d/16MGJo2vJItZ1dZsQhPiA0l_dds0lVaad/view?usp=drivesdk' }
+    { name: 'Khushi Agrawal', role: 'Genesis Lead', bgClass: 'bg-[#3B6FC4]', image: 'https://drive.google.com/file/d/16MGJo2vJItZ1dZsQhPiA0l_dds0lVaad/view?usp=drivesdk' },
   ];
 
   const departments = [
@@ -32,10 +32,11 @@ export default function TeamPage() {
       bgClass: 'bg-[#1A0A0E]',
       textClass: 'text-white',
       leads: [
-        { name: 'Arpit Srivastava', role: 'Tech Lead', image: 'https://drive.google.com/file/d/13yzt7WkiXlerRFkS8v_q1J80aD6rziBc/view?usp=drivesdk' }
+        { name: 'Arpit Srivastava', role: 'Tech Lead', image: 'https://drive.google.com/file/d/13yzt7WkiXlerRFkS8v_q1J80aD6rziBc/view?usp=drivesdk' },
+        { name: 'Pragati Raj', role: 'Member', image: 'https://drive.google.com/file/d/1CMxPRqGiHsj7uPc_8OKxEKWuwge9yOg0/view?usp=drivesdk' },
+
       ],
       members: [
-        { name: 'Pragati Raj', role: 'Member', image: 'https://drive.google.com/file/d/1CMxPRqGiHsj7uPc_8OKxEKWuwge9yOg0/view?usp=drivesdk' },
         { name: 'Yash Agarwal', role: 'Member', image: 'https://drive.google.com/file/d/1BPSPGhTiTKuymxJQcWSviaMj0eIVbX5t/view?usp=drivesdk' },
         { name: 'Tanmay Srivastava', role: 'Member', image: 'https://drive.google.com/file/d/19EqJ7bex2wrWWbb-GGCpCMXA-1ESQfas/view?usp=drivesdk' },
         { name: 'Ayush', role: 'Member', image: 'https://drive.google.com/file/d/1TWoXk9Cwu9VFvBstV10to-Z-178QVAyS/view?usp=drivesdk' },
@@ -63,11 +64,11 @@ export default function TeamPage() {
       leads: [
         { name: 'Angelica', role: 'Design Lead', image: 'https://drive.google.com/file/d/1jyS1gLd6g8qQjLw1VRt0LjmdsLnFWXni/view?usp=drivesdk' },
         { name: 'Tanish Srivastava', role: 'Design Lead', image: 'https://drive.google.com/file/d/1j_bMtyQVPX5CcIWuNG_96N88xwWFPYV4/view?usp=drivesdk' },
-        { name: 'Jai Kesarwani', role: 'Design Lead', image: 'https://drive.google.com/file/d/1umKEfcAcnpv1UcRtdccSQbz9Tt2l_bXi/view?usp=drivesdk' }
+        { name: 'Jai Kesarwani', role: 'Design Lead', image: 'https://drive.google.com/file/d/1umKEfcAcnpv1UcRtdccSQbz9Tt2l_bXi/view?usp=drivesdk' },
+        { name: 'Kushal', role: 'Member', image: 'https://drive.google.com/file/d/1nND_pH_682rZg9JatbnEn473CO-YCKOG/view?usp=drivesdk' },
+        
       ],
       members: [
-        { name: 'Kushal', role: 'Member', image: 'https://drive.google.com/file/d/1nND_pH_682rZg9JatbnEn473CO-YCKOG/view?usp=drivesdk' },
-        { name: 'Sachika', role: 'Member', image: 'https://drive.google.com/file/d/1pnfJsrJA1KeOwBHqt-vyNSxx_C8oBzId/view?usp=drivesdk' },
         { name: 'Pallavi P Kamath', role: 'Member', image: 'https://drive.google.com/file/d/1j5hQ4caVypegk4vrVfyrLzUI3TAGvnta/view?usp=drivesdk' },
         { name: 'Disha N G', role: 'Member', image: 'https://drive.google.com/file/d/1CIQq_g0h_DffXTm4KqBBfqhzcjEeaABq/view?usp=drivesdk' },
         { name: 'Prachi', role: 'Member', image: 'https://drive.google.com/file/d/1opqa7tEqmgDJqZwSugoHyV-GVJUl5CkW/view?usp=drivesdk' },
@@ -77,7 +78,7 @@ export default function TeamPage() {
         { name: 'Rithika', role: 'Member', image: 'https://drive.google.com/file/d/1o2XOU7iq_3X_RB49HuWgHHQxRwCdZgc1/view?usp=drivesdk' },
         { name: 'Gunasree', role: 'Member', image: 'https://drive.google.com/file/d/1RrmUAirkQfoIJRXcpnNHUL7QXMMxonW_/view?usp=drivesdk' },
         { name: 'Rigved', role: 'Member', image: 'https://drive.google.com/file/d/1KbhevIRf8idzv1M976e6DZjDon_Dgntt/view?usp=drivesdk' },
-        { name: 'Sinchana M Gowda 3sem', role: 'Member', image: 'https://drive.google.com/file/d/1jrMXvRXgQrmgK8j_C5EbG0cTVP6tOzmp/view?usp=drivesdk' },
+        { name: 'Sachika', role: 'Member', image: 'https://drive.google.com/file/d/1pnfJsrJA1KeOwBHqt-vyNSxx_C8oBzId/view?usp=drivesdk' },
         { name: 'Pavani', role: 'Member', image: 'https://drive.google.com/file/d/1ljd6trzGkOJHjjjrFk7OEHTXEtemdkK6/view?usp=drivesdk' },
         { name: 'Keesha R', role: 'Member', image: 'https://drive.google.com/file/d/11HOmy4vTDiiVyioA2_7GpWUmIjHtJByv/view?usp=drivesdk' },
         { name: 'Shrinidhi Patil', role: 'Member', image: 'https://drive.google.com/file/d/1FVQ81xk2_GPzl2_pMqDlA7Rzq5WlJuDF/view?usp=drivesdk' }
@@ -112,12 +113,12 @@ export default function TeamPage() {
       leads: [
         { name: 'Pranaav', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1GM6C_MiTspnDTx7TWi_656U8PoNGlta3/view?usp=drivesdk' },
         { name: 'Umesh', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1wtizwuBredu-8E-aj39P8hA1EhEfgT__/view?usp=drivesdk' },
-        { name: 'Gaargi', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/16fSE3dl_UGumyDLak8AtWp0MNrTWinq4/view?usp=drivesdk' }
+        { name: 'Gaargi', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/16fSE3dl_UGumyDLak8AtWp0MNrTWinq4/view?usp=drivesdk' },
+        { name: 'Lochan', role: 'Member', image: 'https://drive.google.com/file/d/1LHX2Ik7cNpC6LqSd9usbBE6vx0Kpa2mB/view?usp=drivesdk' },
+        { name: 'Manaswini G', role: 'Member', image: 'https://drive.google.com/file/d/1G-63PR1UBQl4owh-oymqXlPi25gWo-vc/view?usp=drivesdk' },
       ],
       members: [
         { name: 'LAISIRI N M', role: 'Member', image: 'https://drive.google.com/file/d/1Z4ZzOmiJRsN8n41_xrWowOSYvOWqWiVP/view?usp=drivesdk' },
-        { name: 'Lochan', role: 'Member', image: 'https://drive.google.com/file/d/1LHX2Ik7cNpC6LqSd9usbBE6vx0Kpa2mB/view?usp=drivesdk' },
-        { name: 'Manaswini G', role: 'Member', image: 'https://drive.google.com/file/d/1G-63PR1UBQl4owh-oymqXlPi25gWo-vc/view?usp=drivesdk' },
         { name: 'Ashwin', role: 'Member', image: 'https://drive.google.com/file/d/1Nrl7btcRDgm9BLAST2bTboOE60CBmulP/view?usp=drivesdk' },
         { name: 'Bharath Kumar', role: 'Member', image: 'https://drive.google.com/file/d/18E2nmIfkhaY0TkVT1BL4nqcG_3d8NnKW/view?usp=drivesdk' },
         { name: 'Chethan M S', role: 'Member', image: 'https://drive.google.com/file/d/1cclnC9pcCc1l_j6m4b8_RbtTbtH4KszV/view?usp=drivesdk' },
@@ -142,11 +143,11 @@ export default function TeamPage() {
       leads: [
         { name: 'Trisha', role: 'PR Lead', image: 'https://drive.google.com/file/d/1rMA5lCL41yciJJMCcuNpBQXihC76AltH/view?usp=drivesdk' },
         { name: 'Gautham KV', role: 'PR Lead', image: 'https://drive.google.com/file/d/1NCyFxfAS5lvMOdQIhWYUA1wmld3YnQog/view?usp=drivesdk' },
-        { name: 'Khushi Singh', role: 'PR Lead', image: 'https://drive.google.com/file/d/1e-IaCwRxvGIGVVPubOgSdOkRcjEXg-Km/view?usp=drivesdk' }
+        { name: 'Khushi Singh', role: 'PR Lead', image: 'https://drive.google.com/file/d/1e-IaCwRxvGIGVVPubOgSdOkRcjEXg-Km/view?usp=drivesdk' },
+        { name: 'Manaswini G', role: 'Member', image: 'https://drive.google.com/file/d/1vCjriug3ToCt9nTXXBM9fiys1HIhV0jB/view?usp=drivesdk' },
       ],
       members: [
         { name: 'Priyanka', role: 'Member', image: 'https://drive.google.com/file/d/1Sq4sjQQdouPb-to8sGVp0kWdHy0ccLkP/view?usp=drivesdk' },
-        { name: 'Manaswini G', role: 'Member', image: 'https://drive.google.com/file/d/1vCjriug3ToCt9nTXXBM9fiys1HIhV0jB/view?usp=drivesdk' },
         { name: 'Dhvani Agarwal', role: 'Member', image: 'https://drive.google.com/file/d/1x4ivz21gUuKfsgsJDe61_cKrQxNrubXB/view?usp=drivesdk' },
         { name: 'Eesha Hemani', role: 'Member', image: 'https://drive.google.com/file/d/1dnz7E_9M-LpgpAqzxZJuqAUS3PKwqWBS/view?usp=drivesdk' },
         { name: 'Aman Agarwal', role: 'Member', image: 'https://drive.google.com/file/d/1uj3FivsHYg7m0H66xXKMVkLbhIqgxXdJ/view?usp=drivesdk' },
@@ -291,7 +292,7 @@ export default function TeamPage() {
       {/* ── JOIN BAND ── */}
       <section className="bg-[#F5C518] border-t-4 border-[#1A0A0E] p-12 text-center">
         <h2 className="font-gliker text-4xl mb-4">Want to Join the Crew?</h2>
-        <p className="font-bold mb-8 max-w-lg mx-auto">Recruitments are currently closed. We usually open doors every semester—stay tuned!</p>
+        <p className="font-bold mb-8 max-w-lg mx-auto">Recruitments are currently closed. We usually open doors every year - stay tuned!</p>
         <div className="inline-block bg-[#1A0A0E] text-white font-gliker px-8 py-3 rounded-full border-4 border-[#1A0A0E] cursor-not-allowed opacity-80">COMING SOON</div>
       </section>
     </div>

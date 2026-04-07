@@ -199,23 +199,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── HISTORY SECTION ── */}
-      <section className="bg-[#1A0A0E] py-20 px-6 md:px-12 border-b-4 border-[#1A0A0E]">
-        <h2 className="font-gliker text-[48px] md:text-[56px] tracking-[3px] text-[#F5C518] text-center mb-16">
+      {/* ── OUR JOURNEY SECTION ── */}
+      <section className="bg-[#FDE8EC] py-20 px-6 md:px-12 border-b-4 border-[#1A0A0E]">
+        <h2 className="font-gliker text-[48px] md:text-[56px] tracking-[3px] text-[#1A0A0E] text-center mb-16">
           Our Journey
         </h2>
         
         <div className="max-w-[800px] mx-auto relative">
-          {/* Vertical Line */}
           <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-1 bg-[#E8192C] md:-translate-x-1/2"></div>
           
           {/* Timeline Item 1 */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-12 mb-12 items-start relative pl-12 md:pl-0">
             <div className="absolute left-[8px] top-[24px] md:static md:mt-7 w-6 h-6 bg-[#F5C518] border-[3px] border-[#1A0A0E] rounded-full shrink-0 shadow-[0_0_0_4px_#E8192C] z-10"></div>
-            <div className="flex-1 bg-white/5 border-2 border-white/10 rounded-2xl p-7 backdrop-blur-md md:order-first">
+            <div className="flex-1 bg-white border-4 border-[#1A0A0E] shadow-[6px_6px_0_#1A0A0E] rounded-2xl p-7 md:order-first transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0_#1A0A0E]">
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2017–19</div>
-              <h4 className="font-black text-[18px] text-white mb-2.5">The Foundation & Hackman</h4>
-              <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
+              <h4 className="font-black text-[18px] text-[#1A0A0E] mb-2.5">The Foundation & Hackman</h4>
+              <p className="text-[14px] text-[#555] leading-[1.6] font-semibold">
                 Genesis laid its groundwork by hosting foundational coding contests and its massive 24-hour hackathon, HACKMAN 2.0. We focused heavily on &quot;Tech-Scoffing&quot; mock placements and Machine Learning workshops.
               </p>
             </div>
@@ -225,10 +224,10 @@ export default function AboutPage() {
           {/* Timeline Item 2 */}
           <div className="flex flex-col md:flex-row-reverse gap-6 md:gap-12 mb-12 items-start relative pl-12 md:pl-0">
             <div className="absolute left-[8px] top-[24px] md:static md:mt-7 w-6 h-6 bg-[#F5C518] border-[3px] border-[#1A0A0E] rounded-full shrink-0 shadow-[0_0_0_4px_#E8192C] z-10"></div>
-            <div className="flex-1 bg-white/5 border-2 border-white/10 rounded-2xl p-7 backdrop-blur-md md:order-first">
+            <div className="flex-1 bg-white border-4 border-[#1A0A0E] shadow-[6px_6px_0_#1A0A0E] rounded-2xl p-7 md:order-first transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0_#1A0A0E]">
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2019–22</div>
-              <h4 className="font-black text-[18px] text-white mb-2.5">Industry & Expansion</h4>
-              <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
+              <h4 className="font-black text-[18px] text-[#1A0A0E] mb-2.5">Industry & Expansion</h4>
+              <p className="text-[14px] text-[#555] leading-[1.6] font-semibold">
                 We expanded horizons by connecting students with alumni from Amazon and Paytm, inaugurated the cultural &quot;Spectrum Week&quot;, and launched the month-long Tech Fest 2K21 featuring events like Byte Me and Blind Coding.
               </p>
             </div>
@@ -238,10 +237,10 @@ export default function AboutPage() {
           {/* Timeline Item 3 */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-12 mb-12 items-start relative pl-12 md:pl-0">
             <div className="absolute left-[8px] top-[24px] md:static md:mt-7 w-6 h-6 bg-[#F5C518] border-[3px] border-[#1A0A0E] rounded-full shrink-0 shadow-[0_0_0_4px_#E8192C] z-10"></div>
-            <div className="flex-1 bg-white/5 border-2 border-white/10 rounded-2xl p-7 backdrop-blur-md md:order-first">
+            <div className="flex-1 bg-white border-4 border-[#1A0A0E] shadow-[6px_6px_0_#1A0A0E] rounded-2xl p-7 md:order-first transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0_#1A0A0E]">
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2022–24</div>
-              <h4 className="font-black text-[18px] text-white mb-2.5">The Birth of Catalysis</h4>
-              <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
+              <h4 className="font-black text-[18px] text-[#1A0A0E] mb-2.5">The Birth of Catalysis</h4>
+              <p className="text-[14px] text-[#555] leading-[1.6] font-semibold">
                 A massive leap forward. We introduced &quot;Catalysis V1.0&quot;, a multi-day inter-departmental tech fest featuring AirCrash and Technoseek. We also launched the &quot;Code Café&quot; series to master Front-end dev and Git.
               </p>
             </div>
@@ -251,10 +250,10 @@ export default function AboutPage() {
           {/* Timeline Item 4 */}
           <div className="flex flex-col md:flex-row-reverse gap-6 md:gap-12 items-start relative pl-12 md:pl-0">
             <div className="absolute left-[8px] top-[24px] md:static md:mt-7 w-6 h-6 bg-[#F5C518] border-[3px] border-[#1A0A0E] rounded-full shrink-0 shadow-[0_0_0_4px_#E8192C] z-10"></div>
-            <div className="flex-1 bg-white/5 border-2 border-white/10 rounded-2xl p-7 backdrop-blur-md md:order-first">
+            <div className="flex-1 bg-white border-4 border-[#1A0A0E] shadow-[6px_6px_0_#1A0A0E] rounded-2xl p-7 md:order-first transition-transform hover:-translate-y-1 hover:shadow-[8px_8px_0_#1A0A0E]">
               <div className="font-gliker text-[40px] tracking-[3px] text-[#E8192C] mb-2 leading-none">2024–25</div>
-              <h4 className="font-black text-[18px] text-white mb-2.5">Ethical AI & Beyond</h4>
-              <p className="text-[14px] text-white/65 leading-[1.6] font-semibold">
+              <h4 className="font-black text-[18px] text-[#1A0A0E] mb-2.5">Ethical AI & Beyond</h4>
+              <p className="text-[14px] text-[#555] leading-[1.6] font-semibold">
                 Hackman v8 drew 60 teams to tackle Ethical AI and Cognitive Intelligence. We scaled to Catalysis V3.0 and led a profound outreach program teaching internet safety to rural school children in Mandya.
               </p>
             </div>

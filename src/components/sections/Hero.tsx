@@ -115,46 +115,48 @@ function RegisterCard() {
   );
 }
 
-function EventHighlightsCard() {
+function GenesisCard() {
+  const router = useRouter();
   return (
-    <div className="relative w-[246px] h-[250px] bg-white dark:bg-[#160030] border-[3px] border-black dark:border-white/20 rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm dark:shadow-[0_0_20px_rgba(52,199,89,0.15)]">
+    <div className="relative w-[246px] h-[250px] bg-[#FAF7ED] dark:bg-[#160030] border-[3px] border-black dark:border-white/20 rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm dark:shadow-[0_0_20px_rgba(255,45,85,0.15)]">
 
       <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 z-10">
-        <Image
-          src="/hero/star.png"
-          alt="star badge"
-          width={45}
-          height={45}
-          className="object-contain"
-          unoptimized
-            priority
-            quality={100}
-        />
+        <Image src="/hero/star.png" alt="star badge" width={45} height={45} className="object-contain" unoptimized priority quality={100} />
       </div>
 
-      <div className="mb-4">
-        <h1 className="text-black dark:text-white font-gliker font-semibold text-2xl">Event Highlights</h1>
-        
+      <div className="mb-2">
+        <h1 className="text-black dark:text-white font-gliker font-semibold text-2xl">About Genesis</h1>
       </div>
+      <p className="text-black dark:text-white/60 text-center text-[15px] leading-tight font-medium px-2 mt-4">
+        We empower students to turn ideas into impactful projects.
+      </p>
 
-      <div className="flex flex-col items-center gap-1">
-        <p className="text-black dark:text-white font-black text-lg">2 Days</p>
-        <p className="text-black dark:text-white font-black text-lg">7 Events</p>
-      </div>
-
-      <div className="mt-auto mb-8 relative flex items-center justify-center w-full">
-        <div className="relative z-10">
-          <h1 className="text-black font-gliker text-yellow-300 text-2xl">Register</h1>
-        </div>
-        <div className="relative z-0 opacity-80">
-          <h1 className="text-black font-gliker text-yellow-200 text-2xl">Register</h1>
-        </div>
+      <div className="relative mt-2"> 
+        <button
+          onClick={() => router.push("/about")}
+          className="
+            relative px-5 py-2 
+            bg-white text-black 
+            border-[2.5px] border-black rounded-xl
+            font-bold text-base
+            transition-all duration-75
+            
+            shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+            
+            active:translate-x-[2px] 
+            active:translate-y-[2px]
+            active:shadow-none
+          "
+        >
+          Know More
+        </button>
       </div>
     </div>
   );
 }
-
-function LeaderboardCard() {
+// Renamed the card names
+function CrewCard() {
+  const router = useRouter();
   return (
     <div className="relative w-[246px] h-[250px] bg-[#FAF7ED] dark:bg-[#160030] border-[3px] border-black dark:border-white/20 rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm dark:shadow-[0_0_20px_rgba(255,45,85,0.15)]">
 
@@ -172,23 +174,33 @@ function LeaderboardCard() {
       </div>
 
       <div className="mb-2">
-        <h1 className="text-black dark:text-white font-gliker font-semibold text-2xl">Leaderboard</h1>
+        <h1 className="text-black dark:text-white font-gliker font-semibold text-2xl">Our Crew</h1>
       </div>
       <p className="text-black dark:text-white/60 text-center text-[15px] leading-tight font-medium px-2 mt-4">
-        #Climb the ranks and secure your spot at the top.
+        Meet the minds behind Catalysis.
       </p>
 
-      <div className="mt-auto mb-6">
-        <Image
-          src="/hero/five-pokeballs.png"
-          alt="progress"
-          width={180}
-          height={40}
-          className="object-contain"
-          unoptimized
-          priority
-          quality={100}
-        />
+      <div className="relative mt-2">
+        <button
+          onClick={() => router.push("/team")}
+          className="
+            relative px-5 py-2 
+            bg-white text-black 
+            border-[2.5px] border-black rounded-xl
+            font-bold text-base
+            transition-all duration-75
+            
+            /* Use a CSS shadow instead of an extra div */
+            shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
+            
+            /* Subtle movement instead of 12px */
+            active:translate-x-[2px] 
+            active:translate-y-[2px]
+            active:shadow-none
+          "
+        >
+          View Crew
+        </button>
       </div>
     </div>
   );
@@ -261,18 +273,18 @@ export default function Hero() {
     </div>
 
     <div className="scale-95">
-      <EventHighlightsCard />
+      <GenesisCard />
     </div>
 
     <div className="scale-95">
-      <LeaderboardCard />
+      <CrewCard />
     </div>
   </div>
 
   <div className="hidden md:flex justify-center items-end h-[360px] lg:h-[420px] relative w-full">
 
     <div className="absolute left-2 lg:left-10 bottom-4 z-20 top-16 transition-transform hover:-translate-y-2 scale-75 lg:scale-100 origin-bottom-left">
-      <LeaderboardCard />
+      <CrewCard />
     </div>
 
     <div className="relative flex flex-col items-center z-30 scale-90 lg:scale-100">
@@ -280,7 +292,7 @@ export default function Hero() {
     </div>
 
     <div className="absolute right-2 lg:right-10 bottom-10 z-20 top-16 transition-transform hover:-translate-y-2 scale-75 lg:scale-100 origin-bottom-right">
-      <EventHighlightsCard />
+      <GenesisCard />
     </div>
 
   </div>
