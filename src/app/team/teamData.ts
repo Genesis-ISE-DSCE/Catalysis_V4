@@ -17,6 +17,17 @@ export interface Department {
   members: TeamMember[];
 }
 
+// Add this to your existing teamData.ts
+export const pastMembers = [
+  { name: "Ananya Pramod", role: "Former Genesis Lead",image: "" },
+  { name: "Himakar MS", role: "Former Genesis Lead", image: "" },
+  { name: 'Pragati Raj', role: 'Former Tech Lead', image: 'https://drive.google.com/file/d/1CMxPRqGiHsj7uPc_8OKxEKWuwge9yOg0/view?usp=drivesdk' },
+  { name: 'Kushal', role: 'Design Lead', image: 'https://drive.google.com/file/d/1nND_pH_682rZg9JatbnEn473CO-YCKOG/view?usp=drivesdk' },
+  { name: 'Manaswini G', role: 'Former PR Lead', image: 'https://drive.google.com/file/d/1vCjriug3ToCt9nTXXBM9fiys1HIhV0jB/view?usp=drivesdk' },
+
+  // ... add more past members
+];
+
 export const coreLeads: TeamMember[] = [
   { 
     name: 'Dhruv Puri', 
@@ -41,7 +52,6 @@ export const departments: Department[] = [
     textClass: 'text-white',
     leads: [
       { name: 'Arpit Srivastava', role: 'Tech Lead', image: 'https://drive.google.com/file/d/13yzt7WkiXlerRFkS8v_q1J80aD6rziBc/view?usp=drivesdk' },
-      { name: 'Pragati Raj', role: 'Tech Lead', image: 'https://drive.google.com/file/d/1CMxPRqGiHsj7uPc_8OKxEKWuwge9yOg0/view?usp=drivesdk' },
     ],
     members: [
       { name: 'Yash Agarwal', role: 'Member', image: 'https://drive.google.com/file/d/1BPSPGhTiTKuymxJQcWSviaMj0eIVbX5t/view?usp=drivesdk' },
@@ -72,7 +82,7 @@ export const departments: Department[] = [
       { name: 'Angelica', role: 'Design Lead', image: 'https://drive.google.com/file/d/1jyS1gLd6g8qQjLw1VRt0LjmdsLnFWXni/view?usp=drivesdk' },
       { name: 'Tanish Srivastava', role: 'Design Lead', image: 'https://drive.google.com/file/d/1j_bMtyQVPX5CcIWuNG_96N88xwWFPYV4/view?usp=drivesdk' },
       { name: 'Jai Kesarwani', role: 'Design Lead', image: 'https://drive.google.com/file/d/1umKEfcAcnpv1UcRtdccSQbz9Tt2l_bXi/view?usp=drivesdk' },
-      { name: 'Kushal', role: 'Design Lead', image: 'https://drive.google.com/file/d/1nND_pH_682rZg9JatbnEn473CO-YCKOG/view?usp=drivesdk' },
+      
     ],
     members: [
       { name: 'Pallavi P Kamath', role: 'Member', image: 'https://drive.google.com/file/d/1j5hQ4caVypegk4vrVfyrLzUI3TAGvnta/view?usp=drivesdk' },
@@ -121,7 +131,6 @@ export const departments: Department[] = [
       { name: 'Umesh', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1wtizwuBredu-8E-aj39P8hA1EhEfgT__/view?usp=drivesdk' },
       { name: 'Gaargi', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/16fSE3dl_UGumyDLak8AtWp0MNrTWinq4/view?usp=drivesdk' },
       { name: 'Lochan', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1LHX2Ik7cNpC6LqSd9usbBE6vx0Kpa2mB/view?usp=drivesdk' },
-      { name: 'Manaswini G', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1G-63PR1UBQl4owh-oymqXlPi25gWo-vc/view?usp=drivesdk' },
     ],
     members: [
       { name: 'LAISIRI N M', role: 'Member', image: 'https://drive.google.com/file/d/1Z4ZzOmiJRsN8n41_xrWowOSYvOWqWiVP/view?usp=drivesdk' },
@@ -150,7 +159,6 @@ export const departments: Department[] = [
       { name: 'Trisha', role: 'PR Lead', image: 'https://drive.google.com/file/d/1rMA5lCL41yciJJMCcuNpBQXihC76AltH/view?usp=drivesdk' },
       { name: 'Gautham KV', role: 'PR Lead', image: 'https://drive.google.com/file/d/1NCyFxfAS5lvMOdQIhWYUA1wmld3YnQog/view?usp=drivesdk' },
       { name: 'Khushi Singh', role: 'PR Lead', image: 'https://drive.google.com/file/d/1e-IaCwRxvGIGVVPubOgSdOkRcjEXg-Km/view?usp=drivesdk' },
-      { name: 'Manaswini G', role: 'PR Lead', image: 'https://drive.google.com/file/d/1vCjriug3ToCt9nTXXBM9fiys1HIhV0jB/view?usp=drivesdk' },
     ],
     members: [
       { name: 'Priyanka', role: 'Member', image: 'https://drive.google.com/file/d/1Sq4sjQQdouPb-to8sGVp0kWdHy0ccLkP/view?usp=drivesdk' },
