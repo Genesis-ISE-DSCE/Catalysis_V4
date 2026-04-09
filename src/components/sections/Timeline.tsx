@@ -94,14 +94,6 @@ const timeline: TimelineEvent[] = [
   },
   {
     day: 2, date: "18/04", dayLabel: "SATURDAY",
-    title: "FUN EVENTS", venue: "MAIN HALL",
-    timeFrom: "14:00", timeTill: "16:00",
-    description: "Mini-games, giveaways, and surprises await.",
-    isEvent: false, imagePath: null, panelColor: "#EEF8F0", hasRegister: false,
-    leftPct: 0, widthPct: 48,
-  },
-  {
-    day: 2, date: "18/04", dayLabel: "SATURDAY",
     title: "PROMPT WARS", venue: "ROOM 206",
     timeFrom: "14:00", timeTill: "15:00",
     description: "Craft the perfect prompt. Engineer creative, precise, and powerful AI responses to win.",
