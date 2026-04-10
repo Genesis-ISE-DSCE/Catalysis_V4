@@ -45,7 +45,15 @@ export const sendRegistrationEmail = async ({ to, name, eventName, teamName }: E
             ${teamName ? `<p style="margin: 0; font-size: 14px;"><strong>🛡️ TEAM:</strong> ${teamName}</p>` : ''}
           </div>
 
-          <p style="font-size: 16px; font-weight: bold; margin-bottom: 20px;">
+          <div style="background-color: #d4edda; border: 2px solid #000000; border-radius: 12px; padding: 15px; margin: 25px 0; text-align: center;">
+            <p style="margin: 0 0 10px 0; font-size: 14px; font-weight: bold;">📢 Join the Participants Community</p>
+            <p style="margin: 0 0 12px 0; font-size: 13px; opacity: 0.8;">Stay updated with all event announcements, schedules, and important notices.</p>
+            <a href="https://chat.whatsapp.com/K814lnQORHWIQ9KvggySGF" target="_blank" style="display: inline-block; background-color: #25D366; color: #ffffff; text-decoration: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: bold; border: 2px solid #000000;">
+              💬 Join WhatsApp Group
+            </a>
+          </div>
+
+          <p style="font-size: 16px; font-weight: bold; margin-bottom: 0;">
             See you at the battleground!
           </p>
 
