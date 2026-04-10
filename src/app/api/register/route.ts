@@ -6,12 +6,13 @@ import Participant, { TEAM_EVENTS } from "@/models/Participant";
 import { sendRegistrationEmail } from "@/lib/emailService";
 
 const EVENT_NAMES: Record<string, string> = {
-  pitch_perfect: "PitchDexs",
+  pitch_perfect: "Ideathon",
   typemaster: "Typemaster",
-  clash_royale: "Valorant Tournament",
+  clash_royale: "Clash Royale",
   coding_relay: "Coding Relay",
   dsa_smackdown: "DSA Smackdown",
   technoseek: "Technoseek",
+  prompt_wars: "Prompt Wars",
 };
 
 //emailServiceCode

@@ -71,27 +71,51 @@ export default function Events() {
               Explore an extensive variety of events designed to inspire and engage innovators of all kinds, offering unique opportunities to learn, connect, and grow in your creative journey.
             </p>
 
-            <button
-              onClick={() => router.push("/events")}
-              className="
-                hidden lg:inline-block
-                bg-[#E63946]
-                text-white
-                font-semibold cursor-pointer
-                font-nunito
-                text-sm md:text-base
-                px-6 md:px-8
-                py-3 md:py-4
-                rounded-2xl
-                border-2 border-black
-                shadow-[3px_3px_0px_black]
-                hover:scale-105
-                active:scale-95
-                transition
-              "
-            >
-              VIEW ALL EVENTS
-            </button>
+            <div className="hidden lg:flex gap-3">
+              <button
+                onClick={() => router.push("/events")}
+                className="
+                  bg-[#E63946]
+                  text-white
+                  font-semibold cursor-pointer
+                  font-nunito
+                  text-sm md:text-base
+                  px-6 md:px-8
+                  py-3 md:py-4
+                  rounded-2xl
+                  border-2 border-black
+                  shadow-[3px_3px_0px_black]
+                  hover:scale-105
+                  active:scale-95
+                  transition
+                "
+              >
+                VIEW ALL EVENTS
+              </button>
+              <a
+                href="/rulebook.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  bg-white dark:bg-white/10
+                  text-black dark:text-white
+                  font-semibold cursor-pointer
+                  font-nunito
+                  text-sm md:text-base
+                  px-6 md:px-8
+                  py-3 md:py-4
+                  rounded-2xl
+                  border-2 border-black dark:border-white/30
+                  shadow-[3px_3px_0px_black]
+                  hover:scale-105
+                  active:scale-95
+                  transition
+                  no-underline
+                "
+              >
+                VIEW RULE BOOK
+              </a>
+            </div>
           </div>
 
           <div
@@ -110,7 +134,7 @@ export default function Events() {
             </div>
           </div>
 
-          <div className="lg:hidden flex justify-center w-full mt-8">
+          <div className="lg:hidden flex gap-3 justify-center w-full mt-8">
             <button
               onClick={() => router.push("/events")}
               className="
@@ -130,6 +154,28 @@ export default function Events() {
             >
               VIEW ALL EVENTS
             </button>
+            <a
+              href="/rulebook.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                bg-white dark:bg-white/10
+                text-black dark:text-white
+                font-semibold
+                font-nunito
+                text-sm
+                px-6 py-3
+                rounded-2xl
+                border-2 border-black dark:border-white/30
+                shadow-[3px_3px_0px_black]
+                hover:scale-105
+                active:scale-95
+                transition
+                no-underline
+              "
+            >
+              VIEW RULE BOOK
+            </a>
           </div>
         </div>
       </Container>

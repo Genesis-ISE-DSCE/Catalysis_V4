@@ -78,7 +78,7 @@ const timeline: TimelineEvent[] = [
   // ── Day 2 · SATURDAY 18/04 ────────────────────────────────────────────────
   {
     day: 2, date: "18/04", dayLabel: "SATURDAY",
-    title: "DSA EVENT", venue: "ROOM 205",
+    title: "DSA SMACKDOWN", venue: "ROOM 205",
     timeFrom: "10:00", timeTill: "12:00",
     description: "Crack algorithms under a strict time limit. Efficiency is your only ally.",
     isEvent: true, imagePath: "/pokemons/alakazam.svg", panelColor: "#D6F0DC", hasRegister: true, slug: "dsa-smackdown",
@@ -196,7 +196,7 @@ function AllDayBanner({ day, isDark }: { day: 1 | 2; isDark: boolean }) {
               </span>
             </div>
             <p className={`text-[9px] font-semibold tracking-widest uppercase mt-0.5 ${isDark ? "text-white/30" : "text-black/40"}`}>
-              {event.venue} · {event.timeFrom}–{event.timeTill}
+              {event.timeFrom}–{event.timeTill}
             </p>
           </div>
 
@@ -303,10 +303,6 @@ function EventCard({ item, delay = 0, isDark }: { item: TimelineEvent; delay?: n
         {item.title}
       </p>
 
-      {/* Venue */}
-      <p className={`text-[9px] font-semibold tracking-widest uppercase leading-none mt-0.5 ${isDark ? "text-white/25" : "text-black/40"}`}>
-        {item.venue}
-      </p>
 
       {/* Description */}
       {item.description && (

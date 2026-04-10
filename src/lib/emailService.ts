@@ -1,5 +1,7 @@
 // lib/emailService.ts
 import nodemailer from "nodemailer";
+import fs from "fs";
+import path from "path";
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -43,23 +45,39 @@ export const sendRegistrationEmail = async ({ to, name, eventName, teamName }: E
             ${teamName ? `<p style="margin: 0; font-size: 14px;"><strong>🛡️ TEAM:</strong> ${teamName}</p>` : ''}
           </div>
 
-          <p style="font-size: 16px; font-weight: bold; margin-bottom: 0;">
+          <p style="font-size: 16px; font-weight: bold; margin-bottom: 20px;">
             See you at the battleground!
+          </p>
+
+          <a href="https://chat.whatsapp.com/K814lnQORHWIQ9KvggySGF"
+            target="_blank"
+            style="display: inline-block; background-color: #25D366; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 900; padding: 12px 24px; border-radius: 50px; border: 2px solid #000000; letter-spacing: 1px;">
+            📢 Join Community for Updates
+          </a>
+
+          <p style="font-size: 12px; color: #999999; margin-top: 12px;">
+            Find the event rulebook attached below.
           </p>
         </div>
       </div>
-      
+
       <div style="margin-top: 20px; font-size: 12px; color: #a0a0a0;">
         <p>This is an automated message. Please do not reply.</p>
       </div>
     </div>
   `;
 
+  const ruleBookPath = path.join(process.cwd(), "public", "rulebook.pdf");
+  const attachments = fs.existsSync(ruleBookPath)
+    ? [{ filename: "Catalysis_RuleBook.pdf", path: ruleBookPath }]
+    : [];
+
   const mailOptions = {
     from: `"Event Registration" <${process.env.EMAIL_USER}>`,
     to,
     subject: `Registration Confirmed: ${eventName} 🎉`,
     html: htmlContent,
+    attachments,
   };
 
   try {
