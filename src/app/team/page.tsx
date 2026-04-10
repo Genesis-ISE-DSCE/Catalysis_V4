@@ -3,17 +3,18 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { coreLeads, departments } from './teamData';
+import { coreLeads, departments} from './teamData';
 
-// Helper to convert Google Drive viewer links to direct image links
+// Helper to convert Google Drive viewer links to our custom caching API
 const getDirectImageLink = (url: string) => {
   if (!url) return '';
   const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
   if (match && match[1]) {
-    return `https://drive.google.com/thumbnail?id=${match[1]}&sz=w400`;
+    return `/api/image/${match[1]}`; 
   }
   return url;
 };
+
 
 export default function TeamPage() {
   const [activeFilter, setActiveFilter] = useState('All');

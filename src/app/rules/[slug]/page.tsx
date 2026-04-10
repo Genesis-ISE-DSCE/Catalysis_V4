@@ -3,19 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// Import your colocated data file
 import { eventData } from "./events";
 
-// Next.js 15 requires params to be a Promise for dynamic routes
 const RulesPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  // Await the params to unwrap them to fix the Next.js sync API error
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
   
-  // Look up the event data based on the URL
   const event = eventData[slug];
 
-  // If the event doesn't exist in our events.ts file, show a 404 page
   if (!event) {
     notFound();
   }

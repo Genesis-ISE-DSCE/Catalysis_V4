@@ -17,20 +17,31 @@ export interface Department {
   members: TeamMember[];
 }
 
+// Add this to your existing teamData.ts
+export const pastMembers = [
+
+
+
+  // ... add more past members
+];
+
 export const coreLeads: TeamMember[] = [
   { 
     name: 'Dhruv Puri', 
-    role: 'Genesis Lead', 
+    role: '2026 Genesis Lead', 
     bgClass: 'bg-[#E8192C]', 
     image: 'https://drive.google.com/file/d/1nE7ssrnQbW4m62fBhmqa281DgGZdUCQg/view?usp=drivesdk' 
   },
   { 
     name: 'Khushi Agrawal', 
-    role: 'Genesis Lead', 
+    role: '2026 Genesis Lead', 
     bgClass: 'bg-[#3B6FC4]', 
     image: 'https://drive.google.com/file/d/16MGJo2vJItZ1dZsQhPiA0l_dds0lVaad/view?usp=drivesdk' 
   },
+  { name: "Ananya Pramod", role: "2025 Genesis Lead", image: "" },
+  { name: "Himakar MS", role: "2025 Genesis Lead", image: "" },
 ];
+
 
 export const departments: Department[] = [
   {
@@ -40,8 +51,8 @@ export const departments: Department[] = [
     bgClass: 'bg-[#3A001D]',
     textClass: 'text-white',
     leads: [
-      { name: 'Arpit Srivastava', role: 'Tech Lead', image: 'https://drive.google.com/file/d/13yzt7WkiXlerRFkS8v_q1J80aD6rziBc/view?usp=drivesdk' },
-      { name: 'Pragati Raj', role: 'Tech Lead', image: 'https://drive.google.com/file/d/1CMxPRqGiHsj7uPc_8OKxEKWuwge9yOg0/view?usp=drivesdk' },
+      { name: 'Arpit Srivastava', role: '2026 Tech Lead', image: 'https://drive.google.com/file/d/13yzt7WkiXlerRFkS8v_q1J80aD6rziBc/view?usp=drivesdk' },
+      { name: 'Pragati Raj', role: '2025 Tech Lead', image: 'https://drive.google.com/file/d/1CMxPRqGiHsj7uPc_8OKxEKWuwge9yOg0/view?usp=drivesdk' },
     ],
     members: [
       { name: 'Yash Agarwal', role: 'Member', image: 'https://drive.google.com/file/d/1BPSPGhTiTKuymxJQcWSviaMj0eIVbX5t/view?usp=drivesdk' },
@@ -69,10 +80,11 @@ export const departments: Department[] = [
     bgClass: 'bg-[#DD273E]',
     textClass: 'text-white',
     leads: [
-      { name: 'Angelica', role: 'Design Lead', image: 'https://drive.google.com/file/d/1jyS1gLd6g8qQjLw1VRt0LjmdsLnFWXni/view?usp=drivesdk' },
-      { name: 'Tanish Srivastava', role: 'Design Lead', image: 'https://drive.google.com/file/d/1j_bMtyQVPX5CcIWuNG_96N88xwWFPYV4/view?usp=drivesdk' },
-      { name: 'Jai Kesarwani', role: 'Design Lead', image: 'https://drive.google.com/file/d/1umKEfcAcnpv1UcRtdccSQbz9Tt2l_bXi/view?usp=drivesdk' },
-      { name: 'Kushal', role: 'Design Lead', image: 'https://drive.google.com/file/d/1nND_pH_682rZg9JatbnEn473CO-YCKOG/view?usp=drivesdk' },
+      { name: 'Angelica', role: '2026 Design Lead', image: 'https://drive.google.com/file/d/1jyS1gLd6g8qQjLw1VRt0LjmdsLnFWXni/view?usp=drivesdk' },
+      { name: 'Tanish Srivastava', role: '2026 Design Lead', image: 'https://drive.google.com/file/d/1j_bMtyQVPX5CcIWuNG_96N88xwWFPYV4/view?usp=drivesdk' },
+      { name: 'Jai Kesarwani', role: '2026 Design Lead', image: 'https://drive.google.com/file/d/1umKEfcAcnpv1UcRtdccSQbz9Tt2l_bXi/view?usp=drivesdk' },
+      { name: 'Kushal', role: '2025 Design Lead', image: 'https://drive.google.com/file/d/1nND_pH_682rZg9JatbnEn473CO-YCKOG/view?usp=drivesdk' },
+      
     ],
     members: [
       { name: 'Pallavi P Kamath', role: 'Member', image: 'https://drive.google.com/file/d/1j5hQ4caVypegk4vrVfyrLzUI3TAGvnta/view?usp=drivesdk' },
@@ -97,8 +109,8 @@ export const departments: Department[] = [
     bgClass: 'bg-[#FDDF6B]',
     textClass: 'text-[#1A0A0E]',
     leads: [
-      { name: 'Disha T P', role: 'Media Lead', image: 'https://drive.google.com/file/d/1KgZjGn-SRhphRt0MrQUwibB6HuTd0wKj/view?usp=drivesdk' },
-      { name: 'Aditya', role: 'Media Lead', image: 'https://drive.google.com/file/d/1XA6AkmS8fs3Jznr1gCTrqw_xdGLo6Tsn/view?usp=drivesdk' }
+      { name: 'Disha T P', role: '2026 Media Lead', image: 'https://drive.google.com/file/d/1KgZjGn-SRhphRt0MrQUwibB6HuTd0wKj/view?usp=drivesdk' },
+      { name: 'Aditya', role: '2026 Media Lead', image: 'https://drive.google.com/file/d/1XA6AkmS8fs3Jznr1gCTrqw_xdGLo6Tsn/view?usp=drivesdk' },
     ],
     members: [
       { name: 'Varshini', role: 'Member', image: 'https://drive.google.com/file/d/11eE71H6L2tlRAyVarlS_eni7uUZQdc-L/view?usp=drivesdk' },
@@ -117,11 +129,10 @@ export const departments: Department[] = [
     bgClass: 'bg-[#3065A6]',
     textClass: 'text-white',
     leads: [
-      { name: 'Pranaav', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1GM6C_MiTspnDTx7TWi_656U8PoNGlta3/view?usp=drivesdk' },
-      { name: 'Umesh', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1wtizwuBredu-8E-aj39P8hA1EhEfgT__/view?usp=drivesdk' },
-      { name: 'Gaargi', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/16fSE3dl_UGumyDLak8AtWp0MNrTWinq4/view?usp=drivesdk' },
-      { name: 'Lochan', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1LHX2Ik7cNpC6LqSd9usbBE6vx0Kpa2mB/view?usp=drivesdk' },
-      { name: 'Manaswini G', role: 'Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1G-63PR1UBQl4owh-oymqXlPi25gWo-vc/view?usp=drivesdk' },
+      { name: '2026 Pranaav', role: '2026 Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1GM6C_MiTspnDTx7TWi_656U8PoNGlta3/view?usp=drivesdk' },
+      { name: '2026 Umesh', role: '2026 Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1wtizwuBredu-8E-aj39P8hA1EhEfgT__/view?usp=drivesdk' },
+      { name: '2026 Gaargi', role: '2026 Logistics/Docu Lead', image: 'https://drive.google.com/file/d/16fSE3dl_UGumyDLak8AtWp0MNrTWinq4/view?usp=drivesdk' },
+      { name: '2025 Lochan', role: '2025 Logistics/Docu Lead', image: 'https://drive.google.com/file/d/1LHX2Ik7cNpC6LqSd9usbBE6vx0Kpa2mB/view?usp=drivesdk' },
     ],
     members: [
       { name: 'LAISIRI N M', role: 'Member', image: 'https://drive.google.com/file/d/1Z4ZzOmiJRsN8n41_xrWowOSYvOWqWiVP/view?usp=drivesdk' },
@@ -147,10 +158,10 @@ export const departments: Department[] = [
     bgClass: 'bg-[#DD273E]',
     textClass: 'text-white',
     leads: [
-      { name: 'Trisha', role: 'PR Lead', image: 'https://drive.google.com/file/d/1rMA5lCL41yciJJMCcuNpBQXihC76AltH/view?usp=drivesdk' },
-      { name: 'Gautham KV', role: 'PR Lead', image: 'https://drive.google.com/file/d/1NCyFxfAS5lvMOdQIhWYUA1wmld3YnQog/view?usp=drivesdk' },
-      { name: 'Khushi Singh', role: 'PR Lead', image: 'https://drive.google.com/file/d/1e-IaCwRxvGIGVVPubOgSdOkRcjEXg-Km/view?usp=drivesdk' },
-      { name: 'Manaswini G', role: 'PR Lead', image: 'https://drive.google.com/file/d/1vCjriug3ToCt9nTXXBM9fiys1HIhV0jB/view?usp=drivesdk' },
+      { name: 'Trisha', role: '2026 PR Lead', image: 'https://drive.google.com/file/d/1rMA5lCL41yciJJMCcuNpBQXihC76AltH/view?usp=drivesdk' },
+      { name: 'Gautham KV', role: '2026 PR Lead', image: 'https://drive.google.com/file/d/1NCyFxfAS5lvMOdQIhWYUA1wmld3YnQog/view?usp=drivesdk' },
+      { name: 'Khushi Singh', role: '2026 PR Lead', image: 'https://drive.google.com/file/d/1e-IaCwRxvGIGVVPubOgSdOkRcjEXg-Km/view?usp=drivesdk' },
+      { name: 'Manaswini G', role: '2025 PR Lead', image: 'https://drive.google.com/file/d/1vCjriug3ToCt9nTXXBM9fiys1HIhV0jB/view?usp=drivesdk' },
     ],
     members: [
       { name: 'Priyanka', role: 'Member', image: 'https://drive.google.com/file/d/1Sq4sjQQdouPb-to8sGVp0kWdHy0ccLkP/view?usp=drivesdk' },
@@ -170,8 +181,8 @@ export const departments: Department[] = [
     bgClass: 'bg-[#FDDF6B]',
     textClass: 'text-[#1A0A0E]',
     leads: [
-      { name: 'Chandan Hegde', role: 'Cultural Lead', image: 'https://drive.google.com/file/d/1R6tScom3tq9grlIisNHYLzte6iTU65nh/view?usp=drivesdk' },
-      { name: 'Ritu Shree', role: 'Cultural Lead', image: 'https://drive.google.com/file/d/16fxSDU-3hulbXDNLVZdGg7lwOmFeDb9u/view?usp=drivesdk' }
+      { name: 'Chandan Hegde', role: '2026 Cultural Lead', image: 'https://drive.google.com/file/d/1R6tScom3tq9grlIisNHYLzte6iTU65nh/view?usp=drivesdk' },
+      { name: 'Ritu Shree', role: '2026 Cultural Lead', image: 'https://drive.google.com/file/d/16fxSDU-3hulbXDNLVZdGg7lwOmFeDb9u/view?usp=drivesdk' }
     ],
     members: [
       { name: 'Vishesh Kumar', role: 'Member', image: 'https://drive.google.com/file/d/1BNiMtBE1SG17qqzbYKbuMbBYUtlB1Ffg/view?usp=drivesdk' },
