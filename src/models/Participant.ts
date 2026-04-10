@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-export type EventName = "technoseek" | "typemaster" | "clash_royale" | "coding_relay" | "dsa_smackdown" | "pitch_perfect";
+export type EventName = "technoseek" | "typemaster" | "clash_royale" | "coding_relay" | "dsa_smackdown" | "pitch_perfect" | "prompt_wars";
 
 export const TEAM_EVENTS: EventName[] = ["technoseek", "coding_relay"];
 
@@ -35,7 +35,7 @@ const ParticipantSchema = new Schema<IParticipant>({
   team_name: { type: String, default: "" },
   event: {
     type: String,
-    enum: ["technoseek","typemaster","clash_royale","coding_relay","dsa_smackdown","pitch_perfect"],
+    enum: ["technoseek","typemaster","clash_royale","coding_relay","dsa_smackdown","pitch_perfect","prompt_wars"],
     required: true
   },
   member1: { type: MemberSchema, required: true },
