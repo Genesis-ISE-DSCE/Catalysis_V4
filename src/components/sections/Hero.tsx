@@ -57,7 +57,7 @@ function RegisterCard() {
             quality={100}
           />
         </div>
-        <div className="relative ml-30 transition-transform duration-200 hover:scale-115 active:scale-95 -bottom-3 z-20">
+        <div className="cursor-pointer relative ml-30 transition-transform duration-200 hover:scale-115 active:scale-95 -bottom-3 z-20">
           <Image
             src="/hero/button.png"
             alt="press button"
@@ -142,7 +142,7 @@ function GenesisCard() {
             transition-all duration-75
             
             shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
-            
+            hover:scale-105 hover:-translate-y-1 cursor-pointer
             active:translate-x-[2px] 
             active:translate-y-[2px]
             active:shadow-none
@@ -192,7 +192,7 @@ function CrewCard() {
             
             /* Use a CSS shadow instead of an extra div */
             shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
-            
+            hover:scale-105 hover:-translate-y-1 cursor-pointer
             /* Subtle movement instead of 12px */
             active:translate-x-[2px] 
             active:translate-y-[2px]
