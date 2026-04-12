@@ -155,6 +155,23 @@ export default function RegisterPage() {
     const hasErrors = errors.some(obj => Object.values(obj).some(val => val !== ""));
     if (hasErrors) return setModalError("Please fix the validation errors in the fields.");
 
+    if (isTeam) {
+      for (let i = 0; i < 3; i++) {
+        const m = members[i];
+        if (!m.name || !m.usn || !m.email || !m.phone || !m.semester || !m.branch) {
+          return setModalError(`Member ${i + 1} details are incomplete. Exactly 3 members are required for this event.`);
+        }
+        if (!/^[a-zA-Z\s]{3,50}$/.test(m.name))
+          return setModalError(`Member ${i + 1}: Name must be letters only (min 3 chars).`);
+        if (!/^[a-zA-Z0-9]{10,20}$/.test(m.usn))
+          return setModalError(`Member ${i + 1}: Invalid USN format (10–20 alphanumeric chars).`);
+        if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(m.email))
+          return setModalError(`Member ${i + 1}: Must be a valid @gmail.com address.`);
+        if (!/^[6-9]\d{9}$/.test(m.phone))
+          return setModalError(`Member ${i + 1}: Enter a valid 10-digit Indian phone number.`);
+      }
+    }
+
     setLoading(true);
 
     const payload = {
@@ -285,6 +302,9 @@ export default function RegisterPage() {
             {isTeam && (
               <div className="space-y-8 transition-all duration-300">
                 <Section title="TEAM DETAILS" />
+                <p className="text-center text-yellow-300 text-[11px] font-black uppercase tracking-widest -mt-4">
+                  ⚠ Exactly 3 members required — no more, no less
+                </p>
                 <div className="max-w-3xl mx-auto">
                   <InputField label="Team Name" placeholder="Enter your team name" value={teamName} onChange={setTeamName} required />
                 </div>
@@ -303,7 +323,7 @@ export default function RegisterPage() {
               <>
                 <div className="space-y-8">
                   <Section title="MEMBER 2 DETAILS" />
-                  <MemberForm member={members[1]} errors={errors[1]} index={1} label="Member 2" onChange={updateMember} showLabel />
+                  <MemberForm member={members[1]} errors={errors[1]} index={1} label="Member 2" onChange={updateMember} showLabel required />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-3xl mx-auto">
                     <SelectField label="Semester" placeholder="Select semester" value={members[1].semester} options={["2","4","6","8"].map((o) => ({ value: o, label: `Semester ${o}` }))} onChange={(v) => updateMember(1, "semester", v)} />
                     <BranchSelectField label="Branch" placeholder="Select branch" value={members[1].branch} error={errors[1]?.branch} onChange={(v) => updateMember(1, "branch", v)} />
@@ -311,7 +331,7 @@ export default function RegisterPage() {
                 </div>
                 <div className="space-y-8">
                   <Section title="MEMBER 3 DETAILS" />
-                  <MemberForm member={members[2]} errors={errors[2]} index={2} label="Member 3" onChange={updateMember} showLabel />
+                  <MemberForm member={members[2]} errors={errors[2]} index={2} label="Member 3" onChange={updateMember} showLabel required />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-3xl mx-auto">
                     <SelectField label="Semester" placeholder="Select semester" value={members[2].semester} options={["2","4","6","8"].map((o) => ({ value: o, label: `Semester ${o}` }))} onChange={(v) => updateMember(2, "semester", v)} />
                     <BranchSelectField label="Branch" placeholder="Select branch" value={members[2].branch} error={errors[2]?.branch} onChange={(v) => updateMember(2, "branch", v)} />
@@ -358,10 +378,11 @@ interface MemberFormProps {
   label: string;
   onChange: (i: 0 | 1 | 2, f: keyof MemberData, v: string) => void;
   showLabel: boolean;
+  required?: boolean;
 }
 
-function MemberForm({ member, errors, index, onChange, showLabel }: MemberFormProps) {
-  const req = index === 0;
+function MemberForm({ member, errors, index, onChange, showLabel, required: requiredProp }: MemberFormProps) {
+  const req = requiredProp ?? (index === 0);
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       {showLabel && <p className="text-white/60 text-xs font-bold uppercase tracking-widest text-center -mb-2">— Member {index + 1} —</p>}

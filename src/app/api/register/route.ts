@@ -73,8 +73,8 @@ export async function POST(req: Request) {
       if (!team_name || team_name.trim().length < 2) {
         return NextResponse.json({ error: "Team name is required for team events." }, { status: 400 });
       }
-      if (activeUsns.length < 2) {
-        return NextResponse.json({ error: "Team events require at least two unique participants." }, { status: 400 });
+      if (activeUsns.length !== 3) {
+        return NextResponse.json({ error: "This event requires exactly 3 members — no more, no less." }, { status: 400 });
       }
     }
 
