@@ -15,7 +15,6 @@ const EVENT_NAMES: Record<string, string> = {
 };
 
 export async function POST(req: Request) {
-  // Helpdesk authentication (separate from admin)
   const session = await getHelpdeskSession();
   if (!session) {
     return NextResponse.json({ error: "Unauthorized. Helpdesk access required." }, { status: 401 });
@@ -26,7 +25,6 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { event, team_name, member1, member2, member3 } = body;
 
-    // Validation logic (same as public register)
     if (!event || !member1?.usn) {
       return NextResponse.json({ error: "Lead member USN is required." }, { status: 400 });
     }
@@ -43,8 +41,7 @@ export async function POST(req: Request) {
         error: "Duplicate USNs detected in the same team. Each member must be unique."
       }, { status: 400 });
     }
-
-    const isTeam = TEAM_EVENTS.includes(event as string);
+    const isTeam = TEAM_EVENTS.includes(event as typeof TEAM_EVENTS[number]);
     if (isTeam) {
       if (!team_name || team_name.trim().length < 2) {
         return NextResponse.json({ error: "Team name is required for team events." }, { status: 400 });
@@ -97,7 +94,6 @@ export async function POST(req: Request) {
       member3: sanitizedMember3,
     });
 
-    // Send email (don't await)
     try {
       const readableEventName = EVENT_NAMES[event] || event;
       if (sanitizedMember1?.email) {
