@@ -1,4 +1,3 @@
-// src/components/helpdesk/HelpDeskForm.tsx
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -42,10 +41,15 @@ const BRANCHES = [
 const SEMESTERS = [2, 4, 6, 8];
 
 export default function HelpDeskForm() {
+
+  type RegistrationResult = {
+    success: boolean;
+    data: { error?: string; message?: string };
+  };
+
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [selectedEvent, setSelectedEvent] = useState("");
+  const [result, setResult] = useState<RegistrationResult | null>(null);  const [selectedEvent, setSelectedEvent] = useState("");
   const [showTeamFields, setShowTeamFields] = useState(false);
 
   const handleEventChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -68,7 +72,24 @@ export default function HelpDeskForm() {
     const event = formData.get("event") as string;
     const isTeam = TEAM_EVENTS.includes(event);
     
-    const data: any = {
+    type MemberData = {
+      name: FormDataEntryValue | null;
+      usn: FormDataEntryValue | null;
+      email: FormDataEntryValue | null;
+      phone: FormDataEntryValue | null;
+      semester: number;
+      branch: FormDataEntryValue | null;
+    };
+
+    type RegistrationPayload = {
+      event: string;
+      team_name: string;
+      member1: MemberData;
+      member2?: MemberData;
+      member3?: MemberData;
+    };
+
+    const data: RegistrationPayload = {
       event,
       team_name: isTeam ? (formData.get("team_name") as string) : "",
       member1: {
@@ -121,7 +142,6 @@ export default function HelpDeskForm() {
       
       if (res.ok) {
         setResult({ success: true, data: responseData });
-        // Fix: Use e.target instead of e.currentTarget
         (e.target as HTMLFormElement).reset();
         setSelectedEvent("");
         setShowTeamFields(false);
@@ -144,7 +164,6 @@ export default function HelpDeskForm() {
 
   return (
     <div>
-      {/* Header with Logout */}
       <div style={{ marginBottom: 32, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
           <h1 style={{ color: "#f1f5f9", fontSize: 28, fontWeight: 700, margin: "0 0 6px", letterSpacing: "-0.5px" }}>
@@ -172,7 +191,6 @@ export default function HelpDeskForm() {
       </div>
       
       <form onSubmit={handleSubmit}>
-        {/* Event Selection */}
         <div style={cardStyle}>
           <label style={labelStyle}>Select Event <span style={{ color: "#f87171" }}>*</span></label>
           <select name="event" required value={selectedEvent} onChange={handleEventChange} style={selectStyle}>
@@ -189,7 +207,6 @@ export default function HelpDeskForm() {
           )}
         </div>
         
-        {/* Team Name */}
         {showTeamFields && (
           <div style={cardStyle}>
             <label style={labelStyle}>Team Name <span style={{ color: "#f87171" }}>*</span></label>
@@ -197,7 +214,6 @@ export default function HelpDeskForm() {
           </div>
         )}
         
-        {/* Member 1 */}
         <div style={cardStyle}>
           <div style={{ marginBottom: 16 }}><h3 style={{ color: "#a5b4fc", margin: 0 }}>Member 1 (Team Lead) <span style={{ color: "#f87171" }}>*</span></h3></div>
           <div style={gridStyle}>
@@ -216,7 +232,6 @@ export default function HelpDeskForm() {
           </div>
         </div>
         
-        {/* Member 2 */}
         {showTeamFields && (
           <div style={cardStyle}>
             <div style={{ marginBottom: 16 }}><h3 style={{ color: "#a5b4fc", margin: 0 }}>Member 2 <span style={{ color: "#f87171" }}>*</span></h3></div>
@@ -237,7 +252,6 @@ export default function HelpDeskForm() {
           </div>
         )}
         
-        {/* Member 3 */}
         {showTeamFields && (
           <div style={cardStyle}>
             <div style={{ marginBottom: 16 }}><h3 style={{ color: "#a5b4fc", margin: 0 }}>Member 3 <span style={{ color: "#f87171" }}>*</span></h3></div>
@@ -258,12 +272,10 @@ export default function HelpDeskForm() {
           </div>
         )}
         
-        {/* Submit Button */}
         <button type="submit" disabled={loading} style={buttonStyle}>
           {loading ? "Registering..." : "Register Student"}
         </button>
         
-        {/* Result Message */}
         {result && (
           <div style={{
             padding: "12px 16px",
@@ -319,7 +331,6 @@ export default function HelpDeskForm() {
   );
 }
 
-// Styles
 const cardStyle: React.CSSProperties = {
   background: "rgba(255,255,255,0.04)",
   border: "1px solid rgba(255,255,255,0.07)",

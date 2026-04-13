@@ -44,7 +44,7 @@ export async function POST(req: Request) {
       }, { status: 400 });
     }
 
-    const isTeam = TEAM_EVENTS.includes(event as any);
+    const isTeam = TEAM_EVENTS.includes(event as string);
     if (isTeam) {
       if (!team_name || team_name.trim().length < 2) {
         return NextResponse.json({ error: "Team name is required for team events." }, { status: 400 });
