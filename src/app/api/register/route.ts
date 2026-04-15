@@ -47,7 +47,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { event, team_name, member1, member2, member3 } = body;
 
-    if (event === "clash_royale") {
+    if (event === "clash_royale" || event === "Ideathon") {
       return NextResponse.json({ error: "Registrations for Clash Royale are closed." }, { status: 400 });
     }
 

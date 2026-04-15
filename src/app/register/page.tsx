@@ -18,7 +18,7 @@ interface EventCard {
 }
 
 const ALL_EVENTS: EventCard[] = [
-  { id: "pitch_perfect",  name: "Ideathon",     type: "STRATEGY TYPE", imgSrc: "/events/pitch.png",        iconBg: "#e74c3c" },
+  // { id: "pitch_perfect",  name: "Ideathon",     type: "STRATEGY TYPE", imgSrc: "/events/pitch.png",        iconBg: "#e74c3c" },
   { id: "prompt_wars",    name: "Prompt Wars",  type: "CREATIVE TYPE", imgSrc: "/pokemons/chatot.png",     iconBg: "#4A8FD4" },
   { id: "typemaster",     name: "Typemaster",   type: "SKILL TYPE",    imgSrc: "/events/typemaster.png",   iconBg: "#27ae60" },
   // { id: "clash_royale",   name: "Clash Royale", type: "COMBAT TYPE",   imgSrc: "/events/clash-royale.png", iconBg: "#2980b9" },

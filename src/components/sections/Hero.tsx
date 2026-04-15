@@ -270,7 +270,7 @@ export default function Hero() {
           text-[13px] sm:text-sm md:text-lg
           leading-relaxed md:leading-relaxed"
         >
-          <span className="font-black text-[15px] sm:text-base md:text-xl">CLASH ROYALE REGISTRATIONS ARE NOW CLOSED!</span> <span className="font-semibold">Please register for other exciting events.</span> <span className="text-[#22c55e] dark:text-[#4ade80] font-bold">On-spot registrations will be available on the day of the fest!</span>
+          <span className="font-black text-[15px] sm:text-base md:text-xl">CLASH ROYALE AND IDEATHON REGISTRATIONS ARE NOW CLOSED!</span> <span className="font-semibold">Please register for other exciting events.</span> <span className="text-[#22c55e] dark:text-[#4ade80] font-bold">On-spot registrations will be available on the day of the fest!</span>
         </p>
       </div>
 <div className={`relative w-full max-w-6xl mt-4 md:mt-5 reveal reveal-up ${inView} reveal-delay-2`}>
