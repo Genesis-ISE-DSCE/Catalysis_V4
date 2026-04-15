@@ -195,43 +195,43 @@ export const eventData: Record<string, EventDetails> = {
       "Punctuality"
     ]
   },
-  "technoseek": {
-    title: "Technoseek",
-    subtitle: "Hunt the tech, solve the clues, and conquer the challenge",
-    image: "/pokemons/zoroark.svg",
-    heroColor: "#C45B5B",
-    selectionColor: "#C45B5B",
-    tags: ["Scavenger Hunt", "Tech Puzzles", "Team of 3"],
-    description: "Starting at the Amphitheatre, navigate through mind-bending technical puzzles and clues spread across the entire campus. Teams of 3 race against the clock — winning is determined by total time including penalties. Use fewer hints to break ties.",
-    rules: [
-      "Team of exactly 3 members required",
-      "Starting point: Amphitheatre; entire event takes place on campus",
-      "Teams must carry at least one laptop",
-      "Solve technical clues and puzzles to progress",
-      "Winning determined by total completion time (including penalties)",
-      "Hint requests are allowed but carry a time penalty",
-      "Tiebreaker: Team using fewer hints wins",
-      "Bonus round conducted if a tie still persists",
-      "No outside internet assistance for offline clues",
-      "Any destruction of campus property leads to immediate disqualification",
-      "Decisions by clue-masters are final"
-    ],
-    prizes: [
-      "🥇 1st Place Team: ₹5,000 + Trophy",
-      "🥈 2nd Place Team: ₹2,500 + Certificate",
-      "Total Prize Pool: ₹7,500"
-    ],
-    schedule: [
-      "Date: Day 1 - Friday, 17 April",
-      "Time: 10:30 AM - 4:00 PM"
-    ],
-    requirements: [
-      "Team of exactly 3 members",
-      "At least one laptop per team",
-      "QR Code Scanner app installed",
-      "Valid college ID proof for all members"
-    ]
-  },
+  // "technoseek": {
+  //   title: "Technoseek",
+  //   subtitle: "Hunt the tech, solve the clues, and conquer the challenge",
+  //   image: "/pokemons/zoroark.svg",
+  //   heroColor: "#C45B5B",
+  //   selectionColor: "#C45B5B",
+  //   tags: ["Scavenger Hunt", "Tech Puzzles", "Team of 3"],
+  //   description: "Starting at the Amphitheatre, navigate through mind-bending technical puzzles and clues spread across the entire campus. Teams of 3 race against the clock — winning is determined by total time including penalties. Use fewer hints to break ties.",
+  //   rules: [
+  //     "Team of exactly 3 members required",
+  //     "Starting point: Amphitheatre; entire event takes place on campus",
+  //     "Teams must carry at least one laptop",
+  //     "Solve technical clues and puzzles to progress",
+  //     "Winning determined by total completion time (including penalties)",
+  //     "Hint requests are allowed but carry a time penalty",
+  //     "Tiebreaker: Team using fewer hints wins",
+  //     "Bonus round conducted if a tie still persists",
+  //     "No outside internet assistance for offline clues",
+  //     "Any destruction of campus property leads to immediate disqualification",
+  //     "Decisions by clue-masters are final"
+  //   ],
+  //   prizes: [
+  //     "🥇 1st Place Team: ₹5,000 + Trophy",
+  //     "🥈 2nd Place Team: ₹2,500 + Certificate",
+  //     "Total Prize Pool: ₹7,500"
+  //   ],
+  //   schedule: [
+  //     "Date: Day 1 - Friday, 17 April",
+  //     "Time: 10:30 AM - 4:00 PM"
+  //   ],
+  //   requirements: [
+  //     "Team of exactly 3 members",
+  //     "At least one laptop per team",
+  //     "QR Code Scanner app installed",
+  //     "Valid college ID proof for all members"
+  //   ]
+  // },
   "code-relay": {
     title: "Coding Relay",
     subtitle: "Pass the logic, carry the code, and race to victory together",
