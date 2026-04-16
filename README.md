@@ -1,6 +1,6 @@
 # Catalysis V4
 
-Main website for the Catalysis project.
+Main website for the Catalysis 4.0 project.
 
 ## Design
 
