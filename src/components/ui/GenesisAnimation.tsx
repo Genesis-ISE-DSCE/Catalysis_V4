@@ -78,23 +78,76 @@ function Stars() {
 function Pokeball() {
   return (
     <motion.div
-      className="pokeball-container absolute z-20 flex flex-col items-center"
-      style={{ scale: 0 }}
+      className="pokeball-container absolute z-20"
+      style={{
+        scale: 0,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        position: "relative",
+      }}
     >
-      <motion.div className="pokeball-top" style={{ width: 160, height: 80 }}>
-        <div style={{ width: 160, height: 80, background: "linear-gradient(180deg,#e63030 0%,#c41f1f 100%)", borderRadius: "80px 80px 0 0", border: "6px solid #111", borderBottom: "3px solid #111", boxShadow: "inset 0 6px 18px rgba(255,255,255,0.12), 0 0 32px rgba(220,50,50,0.6)", position: "relative" }}>
-          <div style={{ position: "absolute", bottom: -14, left: "50%", transform: "translateX(-50%)", width: 32, height: 16, background: "#fff", border: "6px solid #111", borderRadius: "16px 16px 0 0", borderBottom: "none" }} />
-        </div>
-      </motion.div>
-      <div style={{ width: 160, height: 6, background: "#111" }} />
-      <motion.div className="pokeball-bottom" style={{ width: 160, height: 80 }}>
-        <div style={{ width: 160, height: 80, background: "linear-gradient(0deg,#e8e8e8 0%,#fff 100%)", borderRadius: "0 0 80px 80px", border: "6px solid #111", borderTop: "3px solid #111", boxShadow: "inset 0 -6px 18px rgba(0,0,0,0.08), 0 0 32px rgba(200,200,200,0.15)", position: "relative" }}>
-          <div style={{ position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)", width: 32, height: 16, background: "#fff", border: "6px solid #111", borderRadius: "0 0 16px 16px", borderTop: "none" }} />
-        </div>
-      </motion.div>
+      {/* Red top half.
+          borderBottom is thick → forms the TOP of the belt.
+          When this half animates y: -180, the belt strip goes with it. */}
+      <motion.div
+        className="pokeball-top"
+        style={{
+          width: 160,
+          height: 80,
+          background: "linear-gradient(180deg, #e63030 0%, #c41f1f 100%)",
+          borderRadius: "80px 80px 0 0",
+          border: "4px solid #111",
+          borderBottom: "6px solid #111",
+          boxShadow:
+            "inset 0 8px 22px rgba(255,255,255,0.15), 0 0 32px rgba(220,50,50,0.5)",
+          flexShrink: 0,
+        }}
+      />
+
+      {/* White bottom half.
+          borderTop is thick → forms the BOTTOM of the belt.
+          When this half animates y: +180, its belt strip goes with it. */}
+      <motion.div
+        className="pokeball-bottom"
+        style={{
+          width: 160,
+          height: 80,
+          background: "linear-gradient(0deg, #c8c8c8 0%, #f2f2f2 100%)",
+          borderRadius: "0 0 80px 80px",
+          border: "4px solid #111",
+          borderTop: "6px solid #111",
+          boxShadow:
+            "inset 0 -8px 22px rgba(0,0,0,0.07), 0 0 20px rgba(0,0,0,0.08)",
+          flexShrink: 0,
+        }}
+      />
+
+      {/* Center button — ONE full circle, centred on the container.
+          z-index 2 puts it on top of both halves.
+          It fades with .pokeball-container (opacity: 0) during Phase 6. */}
+      <div
+        className="pokeball-center"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: 32,
+          height: 32,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle at 36% 36%, #ffffff 0%, #d4d4d4 100%)",
+          border: "5px solid #111",
+          boxShadow:
+            "inset 0 2px 5px rgba(255,255,255,0.7), 0 2px 6px rgba(0,0,0,0.25)",
+          zIndex: 2,
+        }}
+      />
     </motion.div>
   );
 }
+
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 export default function GenesisAnimation() {
@@ -107,7 +160,6 @@ export default function GenesisAnimation() {
   const [charged, setCharged] = useState(false);
   const [globalFlash, setGlobalFlash] = useState(false);
   const [shaking, setShaking] = useState(false);
-  const [whosThat, setWhosThat] = useState(false);
 
   useEffect(() => {
     setDims({ w: window.innerWidth, h: window.innerHeight });
@@ -169,35 +221,17 @@ export default function GenesisAnimation() {
 
       // ── PHASE 6: Pokéball splits ──────────────────────────────────────────
       await Promise.all([
-        animate(".pokeball-top", { y: -180 }, { duration: 1, ease: "easeInOut" }),
-        animate(".pokeball-bottom", { y: 180 }, { duration: 1, ease: "easeInOut" }),
+        animate(".pokeball-top",    { y: -180 }, { duration: 1,    ease: "easeInOut" }),
+        animate(".pokeball-bottom", { y:  180  }, { duration: 1,    ease: "easeInOut" }),
+        // Shrink the center circle immediately so it doesn't float in the gap
+        animate(".pokeball-center", { opacity: 0, scale: 0 }, { duration: 0.35, ease: "easeIn" }),
         animate(".pokeball-container", { opacity: 0 }, { duration: 1, delay: 0.5 }),
       ]);
 
-      // ── PHASE 7: "Who's That Pokémon?" — yellow panel + silhouette ────────
-      setWhosThat(true);
-      await animate(".catalysis-logo", { opacity: 1, filter: "brightness(0)" }, { duration: 0.55, ease: "easeOut" });
-      await animate(".whos-that-text", { opacity: 1, y: [14, 0] }, { duration: 0.45, ease: "easeOut" });
-      await new Promise<void>((r) => setTimeout(r, 2200));
+      // ── PHASE 7: Pokéball opens → logo fades in ──────────────────────────
+      await animate(".catalysis-logo", { opacity: 1 }, { duration: 0.8, ease: "easeOut" });
 
-      // ── PHASE 8: Reveal flash → full colour logo + Genesis text ───────────
-      await animate(".whos-that-text", { opacity: 0, y: [0, -8] }, { duration: 0.2 });
-      setGlobalFlash(true);
-      triggerShake();
-      setTimeout(() => setGlobalFlash(false), 350);
-      setWhosThat(false);
-      await new Promise<void>((r) => setTimeout(r, 120));
-
-      // Logo colour reveals + "It's CATALYSIS 4.0!" pops in together
-      await Promise.all([
-        animate(".catalysis-logo", { filter: "brightness(1)" }, { duration: 1, ease: "easeOut" }),
-        animate(".reveal-text", { opacity: 1, scale: [0.75, 1.08, 1] }, { duration: 0.55, ease: "easeOut" }),
-      ]);
-
-      // Hold the reveal moment — like the anime announcer saying the name
-      await new Promise<void>((r) => setTimeout(r, 750));
-
-      // "WELCOME TO GENESIS" fades in below
+      // ── PHASE 8: "WELCOME TO CATALYSIS" fades in ──────────────────────────
       await animate(".genesis-text", { opacity: 1, y: [24, 0] }, { duration: 0.9, ease: "easeOut" });
 
       // ── PHASE 9: Idle glow ∞ ──────────────────────────────────────────────
@@ -319,13 +353,6 @@ export default function GenesisAnimation() {
           the useEffect animation sequence that begins on `started = true`.
       ───────────────────────────────────────────────────────────────────── */}
 
-      {/* "Who's That?" yellow panel (z-5, below logo at z-10) */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none"
-        style={{ zIndex: 5, background: "linear-gradient(135deg, #FFE200 0%, #FFF9A0 45%, #FFD700 100%)" }}
-        animate={{ opacity: whosThat ? 1 : 0 }}
-        transition={{ duration: whosThat ? 0.3 : 0.45 }}
-      />
 
       {/* Global flash overlay */}
       <motion.div
@@ -411,76 +438,14 @@ export default function GenesisAnimation() {
       {/* Pokéball */}
       <Pokeball />
 
-      {/* ── Logo + "Who's That?" banner + Genesis text ── */}
+      {/* ── Logo + reveal text + genesis text ── */}
       <div className="absolute flex flex-col items-center justify-center" style={{ zIndex: 10, gap: "24px" }}>
 
-        {/* "WHO'S THAT POKÉMON?" — site-consistent neobrutalism red banner */}
-        <motion.div
-          className="whos-that-text"
-          style={{
-            opacity: 0,
-            fontFamily: "var(--font-gliker), sans-serif",
-            fontSize: "clamp(1rem, 2.8vw, 2rem)",
-            fontWeight: 900,
-            color: "#ffffff",
-            letterSpacing: "0.08em",
-            textTransform: "uppercase",
-            textAlign: "center",
-            // Site brand red bg, black border (neobrutalism — matches the site's card/button style)
-            background: "#DD273E",
-            padding: "0.4em 1.4em",
-            borderRadius: "8px",
-            border: "3px solid #000000",
-            boxShadow: "4px 4px 0 #000000",
-            whiteSpace: "nowrap",
-          }}
-        >
-          WHO&apos;S THAT POKÉMON?
+        {/* Catalysis logo — fades in directly at full colour when Pokéball opens */}
+        <motion.div className="catalysis-logo" style={{ opacity: 0 }}>
+          <Image src="/catalysis.png" alt="Catalysis Logo" width={340} height={340} className="object-contain" priority />
         </motion.div>
 
-        {/* Catalysis logo — ambient glow wrapper keeps the halo visible on the yellow bg */}
-        <div
-          style={{
-            filter: whosThat
-              ? "drop-shadow(0 0 28px rgba(221,39,62,0.75)) drop-shadow(0 0 55px rgba(221,39,62,0.3))"
-              : "none",
-            transition: "filter 0.4s ease",
-          }}
-        >
-          <motion.div className="catalysis-logo" style={{ opacity: 0, filter: "brightness(0)" }}>
-            <Image src="/catalysis.png" alt="Catalysis Logo" width={240} height={240} className="object-contain" priority />
-          </motion.div>
-        </div>
-
-        {/* "It's CATALYSIS 4.0!" — anime-style reveal text, pops in with logo colour */}
-        <motion.div
-          className="reveal-text"
-          style={{ opacity: 0, textAlign: "center", lineHeight: 1.2 }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--font-nunito), sans-serif",
-              fontSize: "clamp(0.9rem, 2vw, 1.25rem)",
-              fontWeight: 700,
-              color: "rgba(58,0,29,0.7)",
-              display: "block",
-            }}
-          >
-            It&apos;s...
-          </span>
-          <span
-            style={{
-              fontFamily: "var(--font-gliker), sans-serif",
-              fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)",
-              fontWeight: 900,
-              color: "#DD273E",
-              letterSpacing: "0.06em",
-              display: "block",
-            }}
-          >
-            CATALYSIS 4.0!
-          </span>
-        </motion.div>
 
         {/* "WELCOME TO GENESIS" — clean white, site font */}
         <motion.h1
