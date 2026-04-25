@@ -24,16 +24,19 @@ export default function RegistrationClosedPage() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(timer);
   }, []);
 
   // Particles config
-  const particles = Array.from({ length: 12 }, (_, i) => ({
-    delay: Math.random() * 5,
-    size: 6 + Math.random() * 14,
-    left: Math.random() * 100,
-    duration: 6 + Math.random() * 6,
-  }));
+  const [particles] = useState(() => 
+    Array.from({ length: 12 }, () => ({
+      delay: Math.random() * 5,
+      size: 6 + Math.random() * 14,
+      left: Math.random() * 100,
+      duration: 6 + Math.random() * 6,
+    }))
+  );
 
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#FFF5F6]">
