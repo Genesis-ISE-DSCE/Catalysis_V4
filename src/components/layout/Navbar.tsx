@@ -51,6 +51,7 @@ export default function Navbar() {
 
   if (pathname?.startsWith("/admin")) return null;
   if (pathname?.startsWith("/helpdesk")) return null;
+  if (pathname === "/closed") return null;
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

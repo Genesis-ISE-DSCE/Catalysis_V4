@@ -5,6 +5,7 @@ export default function Footer() {
   const pathname = usePathname();
   if (pathname?.startsWith("/admin")) return null;
   if (pathname?.startsWith("/helpdesk")) return null;
+  if (pathname === "/closed") return null;
 
 
   return (
